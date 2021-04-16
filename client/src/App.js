@@ -1,8 +1,8 @@
 import React from "react"; 
 // eslint-disable-next-line
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Login from "./components/Login";
-import SignUp from "./components/SignUp";
+import Login from "./components/pages/Login";
+import SignUp from "./components/pages/SignUp";
 
 
 function App() {
