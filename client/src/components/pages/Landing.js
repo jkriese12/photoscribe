@@ -1,29 +1,20 @@
 import React from "react";
-import Container from "react-bootstrap/Container";
-import Navbar from "react-bootstrap/Navbar";
-import Col from "react-bootstrap/Col";
-import Image from "react-bootstrap/Image";
 
-const Landing = () => {
-    return (
-        
-       <Container>
-            <Navbar bg="light">
-                <Navbar.Brand href="/">PhotoScribe</Navbar.Brand>
-                <Navbar.Toggle />
-                <Navbar.Collapse className="justify-content-end">
-                    <Navbar.Text>
-                        <a href="/login">Sign In</a>
-                    </Navbar.Text>
-                </Navbar.Collapse>
-            </Navbar>
-            <Col md={{ span:6, offset:3 }} style={{ marginTop:200 }} className="text-center"> 
-                    
-                <Image src="./components/Images/pslogo.jpg" alt="photoscribe logo"/>  
-                <h2>Welcome to PhotoScribe</h2>
-            </Col>
-        </Container>  
-    );
+export default class Landing extends Component {
+    render() {
+        return (
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="/">PhotoScribe</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <span class="navbar-text"><a href="/login">Sign In</a></span>
+            </div>
+        </nav>
+        );
+    }
 }  
 
 export default Landing;
