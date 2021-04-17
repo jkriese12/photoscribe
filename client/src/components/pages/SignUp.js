@@ -1,40 +1,47 @@
-import React from 'react';
+import React, { Component } from "react";
+import Col from "react-bootstrap/Col";
+import Form from "react-bootstrap/Form";
+import Button from "react-bootstrap/Button";
 
 const SignUp = () => {
     return ( 
-        
-        <form>
-            <h3>Create an account</h3>
 
-            <div className="form-group">
-                <label>First name</label>
-                <input type="text" className="form-control" placeholder="First name" />
-            </div>
+       <Col md={{ span:6, offset:3 }} style={{ marginTop:200 }}>
+            <Form>
+                <h3>Create an account</h3>
 
-            <div className="form-group">
-                <label>Last name</label>
-                <input type="text" className="form-control" placeholder="Last name" />
-            </div>
+                    <Form.Group>
+                        <Form.Label>First name</Form.Label>
+                        <Form.Control type="text" placeholder="First name" />
+                    </Form.Group>
 
-            <div className="form-group">
-                <label>Email</label>
-                <input type="email" className="form-control" placeholder="Enter email" />
-            </div>
+                    <Form.Group>
+                        <Form.Label>Last name</Form.Label>
+                        <Form.Control type="text" placeholder="Last name" />
+                    </Form.Group>
 
-            <div className="form-group">
-                <label>Password</label>
-                <input type="password" className="form-control" placeholder="Enter password" />
-            </div>
+                    <Form.Group>
+                        <Form.Label>Email</Form.Label>
+                        <Form.Control type="email" placeholder="Enter email" />
+                    </Form.Group>
 
-            <button type="submit" className="btn btn-dark btn-lg btn-block">Register</button>
-            <p className="forgot-password text-right">
-                Already registered <a href="#">log in?</a>
-            </p>
-        </form>
+                    <Form.Group>
+                        <Form.Label>Password</Form.Label>
+                        <Form.Control type="password" placeholder="Enter password" />
+                    </Form.Group>
+
+                    <Button variant="dark" type="submit" block> Create Account</Button>
+                    <p className="forgot-password text-right">
+                        Already registered <a href="/login">log in?</a>
+                    </p>
+            </Form> 
+        </Col> 
     );     
-}
+} 
 
 export default SignUp;
+
+
 
 
 

@@ -1,8 +1,7 @@
 * {
   box-sizing: border-box;
 }
- 
-@font-face {
+ @font-face {
     font-family: 'Montserrat';
     src: local('Montserrat-Light'),
         url('../components/Fonts/Montserrat-Light.ttf') format('truetype');

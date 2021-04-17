@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Navbar = () => {
+const Navbar = (props) => {
     return (
-        <div>
-            
-        </div>
-    )
+        <Navbar>
+            <Navbar style={props.style}>{props.children}</Navbar>
+        </Navbar>
+    );
 }
 
 export default Navbar;
