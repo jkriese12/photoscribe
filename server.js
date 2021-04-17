@@ -2,7 +2,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
-const routes = require("./routes/routes.js");
+const routes = require("./routes");
 // Setting up express
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -11,6 +11,9 @@ const PORT = process.env.PORT || 3001;
 app.use(express.urlencoded({ limit: "30mb", extended: true }));
 app.use(express.json({ limit: "30mb", extended: true }));
 app.use(cors());
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+}
 app.use(routes);
 // Mongo atlas DB set up
 const CONNECTION_URL =
