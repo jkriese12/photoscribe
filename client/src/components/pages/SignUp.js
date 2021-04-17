@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
@@ -6,7 +6,7 @@ import Button from "react-bootstrap/Button";
 const SignUp = () => {
     return ( 
 
-       <Col md={{ span:6, offset:3 }} style={{ marginTop:200 }}>
+       <Col md={{ span:6, offset:3 }} style={{ marginTop:100 }}>
             <Form>
                 <h3>Create an account</h3>
 

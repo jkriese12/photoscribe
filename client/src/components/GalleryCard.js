@@ -11,9 +11,7 @@ const GalleryCard = (props) => {
                 </Col>
                 <Col>
                 <Card.Body>
-                    <Card.Text>
-                    
-                    </Card.Text>
+                    <Card.Text />
                 </Card.Body>
                 </Col>
             </Row>

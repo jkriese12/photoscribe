@@ -1,11 +1,25 @@
 import React from 'react'
 
-const Navbar = (props) => {
+const Navbar = () => {
     return (
-        <Navbar>
-            <Navbar style={props.style}>{props.children}</Navbar>
-        </Navbar>
-    );
+        
+        <Navbar bg="light">
+            <Navbar.Brand href="/">PhotoScribe</Navbar.Brand>
+                <Navbar.Toggle />
+                <Navbar.Collapse className="justify-content-end">
+                    <Navbar.Text>
+                        <a href="/login">Sign In</a>
+                    </Navbar.Text>
+                </Navbar.Collapse>
+        </Navbar> 
+   
+
+    )
 }
 
 export default Navbar;
+
+
+
+
+
