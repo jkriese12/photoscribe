@@ -7,7 +7,7 @@ import Img from "react-bootstrap/Image";
 const Landing = () => {
     return (
         
-       <Container fluid style={{ maxWidth: 2200 }}>
+       <Container>
             <Navbar bg="light">
                 <Navbar.Brand href="/">PhotoScribe</Navbar.Brand>
                 <Navbar.Toggle />
