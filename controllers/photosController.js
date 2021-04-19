@@ -7,8 +7,13 @@ module.exports = {
       .catch((err) => res.status(422).json(err));
   },
   create: (req, res) => {
-    db.Book.create(req.body)
+    db.Photo.create(req.body)
       .then((dbModel) => res.json(dbModel))
-      .catch((err) => res.stauts(422).json(err));
+      .catch((err) => res.status(422).json(err));
+  },
+  update: (req, res) => {
+    db.Photo.findOneAndUpdate({ _id: req.params.id }, req.body)
+      .then((dbModel) => res.json(dbModel))
+      .catch((err) => res.status(422).json(err));
   },
 };

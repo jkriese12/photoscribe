@@ -4,8 +4,9 @@ const Schema = mongoose.Schema;
 const photoSchema = new Schema({
   photoTitle: { type: String, required: true },
   peopleInPhoto: String,
-  dateTaken: { type: Date, default: new Date() },
+  dateTaken: String,
   synopsis: String,
+  photoLocation: String,
   selectedFile: String,
 });
 

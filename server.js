@@ -5,7 +5,7 @@ const cors = require("cors");
 const routes = require("./routes");
 // Setting up express
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 
 // Middleware denfined
 app.use(express.urlencoded({ limit: "30mb", extended: true }));
