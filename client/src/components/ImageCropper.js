@@ -1,7 +1,6 @@
 import React from "react";
 import Cropper from "cropperjs";
 import "./Scribe.css";
-  
 
 class ImageCropper extends React.Component {
 
@@ -15,8 +14,8 @@ class ImageCropper extends React.Component {
 
     componentDidMount() {
     const cropper = new Cropper(this.imageElement.current, {
-        zoomable: false,
-        scalable: false,
+        zoomable: true,
+        scalable: true,
         aspectRatio: 1,
         crop: () => {
             const canvas = cropper.getCroppedCanvas();

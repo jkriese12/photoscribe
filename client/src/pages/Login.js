@@ -1,36 +1,47 @@
-import React, { Component } from "react";
+import React, { useState } from 'react';
 import Container from "../components/Container";
 
-export default class Login extends Component {
-    render() {
-        return ( 
-            <Container style={{ marginTop: 100, marginRight: 300, marginLeft: 300 }}>
-                <form id="login">
-                    <h3 className="text-center">Log In</h3>
+const Login = ({ Login, error }) => { 
 
-                    <div className="form-group">
-                        <label>Email address</label>
-                        <input type="email" className="form-control" placeholder="Enter email" />
-                    </div>
+    const [details, setDetails] = useState({name: "", email: "", password: ""});
 
-                    <div className="form-group">
-                        <label>Password</label>
-                        <input type="password" className="form-control" placeholder="Enter password" />
-                    </div>
+    const submitHandler = e => {
+        e.preventDefault();
 
-                    <div className="form-group">
-                        <div className="custom-control custom-checkbox">
-                            <input type="checkbox" className="custom-control-input" id="customCheck1" />
-                            <label className="custom-control-label" htmlFor="customCheck1">Remember me</label>
-                        </div>
-                    </div>
-
-                    <button type="submit" className="btn btn-primary btn-block">Submit</button>
-                    <p className="forgot-password text-right">
-                        Forgot <a href="signup">password?</a> 
-                    </p>
-                </form> 
-            </Container>
-        );
+        Login(details);
     }
+
+    return (
+
+        <Container className="login">
+            <form onSubmit={submitHandler}>  
+                <div className="form-inner"></div>
+                    <h2></h2>
+                    {(error =! "") ? ( <div className="error">{error}</div>)  : ""}
+                    <div className="form-group">
+                        <label inputName="name">Name:</label>
+                        <input type="text" name="name" id="name" onChange={e => setDetails({...details, name: e.target.value})} value={details.name}/>
+                    </div>
+                    <div className="form-group">
+                        <label inputEmail="name">Email</label>
+                        <input type="email" name="email" id="email" onChange={e => setDetails({...details, email: e.target.value})} value={details.email}/>
+                    </div> 
+                    <div className="form-group">
+                        <label inputPassword="password">Password:</label>
+                        <input type="password" name="password" id="password" onChange={e => setDetails({...details, password: e.target.value})} value={details.password}/>
+                    </div>
+                    <input type="submit" value="LOGIN"/>
+            </form> 
+            <p className="forgot-password text-right">
+                Forgot <a herf="/signup">password?</a>
+            </p>
+        </Container>
+        
+      
+    );
 }
+
+export default Login;
+
+
+
