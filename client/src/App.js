@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import LoginForm from "./components/LoginForm";
 
-import SignUp from "./pages/SignUp";
+import SignUpForm from "./components/SignUpForm";
 import Scribe from "./pages/Scribe";
 
 import { useDispatch } from "react-redux";
@@ -21,7 +21,7 @@ function App() {
           <>
             <Route exact path="/" component={LoginForm} />
             <Route path="/login" component={LoginForm} />
-            <Route path="/signup" component={SignUp} />
+            <Route path="/signup" component={SignUpForm} />
             <Route path="/scribe" component={Scribe} />
           </>
         </Switch>
