@@ -1,26 +1,28 @@
-import React from "react";
-import "./GalleryCard.css"
+import React from 'react'
 
-const GalleryCard = (props) => {
-    return ( 
-
-        <div className="card text-left shadow">
-            <div className="overflow">
-               <img src={props.image} alt="" className="card-img-top"/>
+const GalleryCard = () => {
+    return 
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 mt-3">
+                    <div class="card">
+                        <div class="card-horizontal">
+                            <div class="img-square-wrapper">
+                                <img class="" src={props} alt="Card image cap" />
+                            </div>
+                            <div class="card-body">
+                                <h4 class="card-title">Card title</h4>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">Last updated 3 mins ago</small>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div className="card-body text-dark">
-                <h4 className="card-title">{props.title}</h4>
-                <p className="card-text text-secondary"></p> 
-                <div class="input-group mb-3">
-                <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Add to Gallery</button>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#"></a></li>
-                </ul>
-                <input type="text" class="form-control" aria-label="Text input with dropdown button" />    
-            </div>
-            </div>
-        </div>       
-    );
+    )
 }
 
 export default GalleryCard;
+

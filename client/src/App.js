@@ -1,8 +1,9 @@
 import React, { useEffect } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-import Login from "./pages/Login";
-import SignUp from "./pages/SignUp";
+import LoginForm from "./components/LoginForm";
+
+import SignUpForm from "./components/SignUpForm";
 import Scribe from "./pages/Scribe";
 
 import { useDispatch } from "react-redux";
@@ -18,9 +19,9 @@ function App() {
       <Router>
         <Switch>
           <>
-            <Route exact path="/" component={Login} />
-            <Route path="/login" component={Login} />
-            <Route path="/signup" component={SignUp} />
+            <Route exact path="/" component={LoginForm} />
+            <Route path="/login" component={LoginForm} />
+            <Route path="/signup" component={SignUpForm} />
             <Route path="/scribe" component={Scribe} />
           </>
         </Switch>
