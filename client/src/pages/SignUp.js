@@ -1,95 +1,48 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import Container from "../components/Container";
 
-export default class SignUp extends Component {
-  render() {
-    return (
-      <Container style={{ marginTop: 100, marginRight: 300, marginLeft: 300 }}>
-        <form id="signup">
-          <h3 className="text-center">Sign Up</h3>
+const SignUp = ({ Signup, error }) => {
+  const [details, setDetails] = useState({ name: "", email: "", password: "" });
 
-          <div className="form-group">
-            <label>First name</label>
-            <input type="text" className="form-control" placeholder="First name" />
-          </div>
+  const submitHandler = (e) => {
+    e.preventDefault();
 
-          <div className="form-group">
-            <label>Last name</label>
-            <input type="text" className="form-control" placeholder="Last name" />
-          </div>
+    Signup(details);
+  };
 
-          <div className="form-group">
-            <label>Email address</label>
-            <input type="email" className="form-control" placeholder="Enter email" />
-          </div>
+  return (
+    <Container className="signup">
+      <form onSubmit={submitHandler}>
+        <div className="form-inner"></div>
+        <h2>Create an account</h2>
+        {(error = !"") ? <div className="error">{error}</div> : ""}
+        <div className="form-group">
+          <label inputEmail="name">Email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            onChange={(e) => setDetails({ ...details, email: e.target.value })}
+            value={details.email}
+          />
+        </div>
+        <div className="form-group">
+          <label inputPassword="password">Password:</label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            onChange={(e) => setDetails({ ...details, password: e.target.value })}
+            value={details.password}
+          />
+        </div>
+        <input className="btn btn-dark btn-block" type="submit" value="Sign Up" />
+      </form>
+      <p className="forgot-password text-right">
+        Already registered <a herf="/login">sign in?</a>
+      </p>
+    </Container>
+  );
+};
 
-          <div className="form-group">
-            <label>Password</label>
-            <input
-              type="password"
-              className="form-control"
-              placeholder="Enter password"
-            />
-          </div>
-
-          <button type="submit" className="btn btn-primary btn-block">
-            Sign Up
-          </button>
-          <p className="forgot-password text-right">
-            Already registered <a href="/login">sign in?</a>
-          </p>
-        </form>
-      </Container>
-    );
-  }
-}
-// import React from "react";
-// import Container from "../components/Container";
-// const SignUp = () => {
-//   return (
-//     <Container style={{ marginTop: 100, marginRight: 300, marginLeft: 300 }}>
-//       <form id="signup">
-//         <h3 className="text-center">Sign Up</h3>
-
-//         <div className="form-group">
-//           <label>First name</label>
-//           <input type="text" className="form-control" placeholder="First name" required />
-//         </div>
-
-//         <div className="form-group">
-//           <label>Last name</label>
-//           <input type="text" className="form-control" placeholder="Last name" required />
-//         </div>
-
-//         <div className="form-group">
-//           <label>Email address</label>
-//           <input
-//             type="email"
-//             className="form-control"
-//             placeholder="Enter email"
-//             required
-//           />
-//         </div>
-
-//         <div className="form-group">
-//           <label>Password</label>
-//           <input
-//             type="password"
-//             className="form-control"
-//             placeholder="Enter password"
-//             required
-//           />
-//         </div>
-
-//         <button type="submit" className="btn btn-primary btn-block">
-//           Sign Up
-//         </button>
-//         <p className="forgot-password text-right">
-//           Already registered <a href="/login">sign in?</a>
-//         </p>
-//       </form>
-//     </Container>
-//   );
-// };
-
-// export default SignUp;
+export default SignUp;

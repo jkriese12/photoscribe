@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-import Login from "./pages/Login";
+import LoginForm from "./components/LoginForm";
+
 import SignUp from "./pages/SignUp";
 import Scribe from "./pages/Scribe";
 
@@ -18,8 +19,8 @@ function App() {
       <Router>
         <Switch>
           <>
-            <Route exact path="/" component={Login} />
-            <Route path="/login" component={Login} />
+            <Route exact path="/" component={LoginForm} />
+            <Route path="/login" component={LoginForm} />
             <Route path="/signup" component={SignUp} />
             <Route path="/scribe" component={Scribe} />
           </>
