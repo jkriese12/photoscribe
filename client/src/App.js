@@ -16,9 +16,10 @@ function App() {
   return (
     <div>
       <Router>
+        <Navbar />
         <Switch>
           <>
-            <Route exact path="/" component={Landing} />
+            <Route exact path="/" component={Login} />
             <Route path="/login" component={Login} />
             <Route path="/signup" component={SignUp} />
             <Route path="/scribe" component={Scribe} />
