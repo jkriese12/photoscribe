@@ -42,6 +42,3 @@ const Login = ({ Login, error }) => {
 }
 
 export default Login;
-
-
-

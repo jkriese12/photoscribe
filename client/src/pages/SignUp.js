@@ -34,5 +34,3 @@ const SignUp = ({ Signup, error }) => {
         </Container>
     );
 }
-
-export default SignUp;

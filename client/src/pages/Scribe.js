@@ -1,11 +1,27 @@
 import React from 'react';
-import ImageCropper from '../components/ImageCropper';
+import ImageCropper from "../components/ImageCropper";
+import ScribeForm from "../components/ScribeForm";
 
 const Scribe = () => {
     return (
-        <div>
-            <ImageCropper src="https://neilpatel.com/wp-content/uploads/2017/09/image-editing-tools.jpg" />
-            
+        <div className="container fluid">
+            <div className="row">
+                <div className="col">
+                    <ImageCropper />   
+                </div>
+                <div className="col">
+                    <ScribeForm />
+                </div>
+            </div>
+            <div classname="row">
+                <div className="col-4">
+                    Create a Gallery Form
+                </div>
+                <div className="col-7">
+                  Image and Text Render 
+                  Save to Gallery dropdown
+                </div>
+            </div>
         </div>
     )
 }

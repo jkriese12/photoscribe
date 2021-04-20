@@ -1,32 +1,28 @@
-import React, { useEffect } from "react";
+import React from "react";
+// estlint-disable-next-line
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
+
+import Navbar from "./components/Navbar";
 import Login from "./pages/Login";
-import SignUp from "./pages/SignUp"; 
+import SignUp from "./pages/SignUp";
 import Scribe from "./pages/Scribe";
 
-
-
-import { useDispatch } from "react-redux";
-import { getPosts } from "./actions/posts";
 function App() {
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(getPosts);
-  }, [dispatch]);
   return (
-    <div> 
-      <Router> 
+     <Router> 
+       <Navbar />
         <Switch>
           <> 
+
+
+          <Route exact path="/" component={Login} />
           <Route path="/login" component={Login} /> 
           <Route path="/signup" component={SignUp} /> 
           <Route path="/scribe" component={Scribe} />
           </>
         </Switch>
       </Router>
-      
-
-    </div>
   );
 }
 
