@@ -1,10 +1,30 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
+import Login from "./pages/Login";
+import SignUp from "./pages/SignUp";
+import Scribe from "./pages/Scribe";
+
+import { useDispatch } from "react-redux";
+import { getPosts } from "./actions/posts";
+
 function App() {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getPosts);
+  }, [dispatch]);
   return (
     <div>
-      <h1>Photoscribe... Coming soon</h1>
+      <Router>
+        <Switch>
+          <>
+            <Route exact path="/" component={Login} />
+            <Route path="/login" component={Login} />
+            <Route path="/signup" component={SignUp} />
+            <Route path="/scribe" component={Scribe} />
+          </>
+        </Switch>
+      </Router>
     </div>
   );
 }
