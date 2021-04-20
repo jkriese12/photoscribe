@@ -9,6 +9,7 @@ const Testget = () => {
   }, [dispatch]);
   const posts = useSelector((state) => state.posts);
   console.log(posts);
+  console.log(posts[0]);
   return (
     <div>
       <h1>Testing...</h1>
