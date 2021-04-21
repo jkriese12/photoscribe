@@ -5,7 +5,7 @@ import LoginForm from "./components/LoginForm";
 
 import SignUpForm from "./components/SignUpForm";
 import Scribe from "./pages/Scribe";
-
+import Testget from "./Testing/Testget";
 import { useDispatch } from "react-redux";
 import { getPosts } from "./actions/posts";
 
@@ -23,6 +23,7 @@ function App() {
             <Route path="/login" component={LoginForm} />
             <Route path="/signup" component={SignUpForm} />
             <Route path="/scribe" component={Scribe} />
+            <Route path="/get" component={Testget} />
           </>
         </Switch>
       </Router>

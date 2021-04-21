@@ -16,7 +16,7 @@ console.log(posts);
 import React, { useState } from "react";
 import FileBase from "react-file-base64";
 import { useDispatch } from "react-redux";
-import { createPost } from "../src/actions/posts";
+import { createPost } from "../actions/posts";
 const [postData, setPostData] = useState({
   photoTitle: "",
   peopleInPhoto: "",
@@ -61,7 +61,7 @@ const dispatch = useDispatch();
 </div>;
 // Button click handler for creating a post
 const submitForm = (event) => {
-  event.preventDefault;
+  event.preventDefault();
   dispatch(createPost(postData));
 };
 

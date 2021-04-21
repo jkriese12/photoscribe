@@ -1,39 +1,81 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
+import FileBase from "react-file-base64";
+import { useDispatch } from "react-redux";
+import { createPost } from "../actions/posts";
+
 import "./ScribeForm.css";
 
-const ScribeForm = ({ Scribe, error }) => { 
+const ScribeForm = () => {
+  const [details, setDetails] = useState({
+    dateTaken: "",
+    photoLocation: "",
+    synopsis: "",
+    selectedFile: "",
+  });
+  const dispatch = useDispatch();
+  const submitHandler = (e) => {
+    e.preventDefault();
 
-    const [details, setDetails] = useState({ year: "", location: "", description:"" });
+    dispatch(createPost(details));
+  };
 
-    const submitHandler = e => {
-        e.preventDefault();
-
-        Scribe(details);
-    }
-
-    return (  
-
-        <div className="form-container">
-            <form
-                onSubmit={submitHandler}>  
-        
-            <div>
-                <label for="FormControlInput1" className="form-label">Photo Year</label>
-                <input type="email" className="form-control" id="FormControlInput1" onChange={e => setDetails({...details, year: e.target.value})} value={details.year}/>
-            </div>
-            <div>
-                <label for="FormControlInput2" className="form-label">Photo Location</label>
-                <input type="email" className="form-control" id="FormControlInput2" onChange={e => setDetails({...details, location: e.target.value})} value={details.location}/>
-            </div>
-            <div>
-                <label for="FormControlTextarea1" className="form-label">Photo Details</label>
-                <textarea className="form-control" id="FormControlTextarea1" rows="8" onChange={e => setDetails({...details, description: e.target.value})} value={details.description}></textarea>
-            </div>
-        </form>
-        <br/>
-        <button type="submit" className="btn btn-secondary btn-block">Add Text </button>
+  return (
+    <div className="form-container">
+      <form onSubmit={submitHandler}>
+        <div>
+          <label htmlFor="FormControlInput1" className="form-label">
+            Photo Year
+          </label>
+          <input
+            type="email"
+            className="form-control"
+            id="FormControlInput1"
+            onChange={(e) => setDetails({ ...details, dateTaken: e.target.value })}
+            value={details.dateTaken}
+          />
+        </div>
+        <div>
+          <label htmlFor="FormControlInput2" className="form-label">
+            Photo Location
+          </label>
+          <input
+            type="email"
+            className="form-control"
+            id="FormControlInput2"
+            onChange={(e) => setDetails({ ...details, photoLocation: e.target.value })}
+            value={details.photoLocation}
+          />
+        </div>
+        <div>
+          <label htmlFor="FormControlTextarea1" className="form-label">
+            Photo Details
+          </label>
+          <textarea
+            className="form-control"
+            id="FormControlTextarea1"
+            rows="8"
+            onChange={(e) => setDetails({ ...details, synopsis: e.target.value })}
+            value={details.synopsis}
+          ></textarea>
+        </div>
+        <div>
+          <FileBase
+            type="file"
+            multiple={false}
+            onDone={({ base64 }) => setDetails({ ...details, selectedFile: base64 })}
+          />
+        </div>
+      </form>
+      <br />
+      <button
+        type="submit"
+        className="btn btn-secondary btn-block"
+        onClick={submitHandler}
+      >
+        Add Text{" "}
+      </button>
     </div>
-    )
-}
+  );
+};
 
 export default ScribeForm;
