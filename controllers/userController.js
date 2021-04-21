@@ -1,7 +1,7 @@
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const db = require("../models");
-
+const secret = "test";
 module.exports = {
   signin: async (req, res) => {
     const { email, password } = req.body;
@@ -41,7 +41,7 @@ module.exports = {
         name: `${name}`,
       });
 
-      const token = jwt.sign({ email: result.email, id: result._id }, "test", {
+      const token = jwt.sign({ email: result.email, id: result._id }, secret, {
         expiresIn: "1h",
       });
 

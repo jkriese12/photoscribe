@@ -3,6 +3,7 @@ import "./LoginForm.css";
 import { GoogleLogin } from "react-google-login";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
+import { signIn } from "../actions/auth";
 const LoginForm = ({ Login, error }) => {
   const [details, setDetails] = useState({ email: "", password: "" });
   // Setting up hooks for imports
@@ -11,8 +12,7 @@ const LoginForm = ({ Login, error }) => {
   // Handles submit for non google login
   const submitHandler = (e) => {
     e.preventDefault();
-
-    Login(details);
+    dispatch(signIn(details, history));
   };
   // Google functions
   const googleSuccess = async (res) => {
@@ -31,7 +31,7 @@ const LoginForm = ({ Login, error }) => {
   };
   // Setting user profile on local storage
   const [user, setUser] = useState(JSON.parse(localStorage.getItem("profile")));
-  console.log(user.result.email);
+
   useEffect(() => {
     const token = user?.token;
     //JWT
