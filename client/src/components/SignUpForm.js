@@ -1,40 +1,17 @@
 import React, { useState } from "react";
 import "./SignUpForm.css";
-// import { GoogleLogin } from "react-google-login";
-// import { useDispatch } from "react-redux";
-// import { useHistory } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { useHistory } from "react-router-dom";
+import { signUp } from "../actions/auth";
 const SignUpForm = ({ SignUp, error }) => {
   const [details, setDetails] = useState({ name: "", email: "", password: "" });
-  //   const dispatch = useDispatch();
-  //   const history = useHistory();
+  const dispatch = useDispatch();
+  const history = useHistory();
   const submitHandler = (e) => {
     e.preventDefault();
-
-    SignUp(details);
+    dispatch(signUp(details, history));
   };
 
-  //   const googleSuccess = async (res) => {
-  //     const result = res?.profileObj;
-  //     const token = res?.tokenId;
-
-  //     try {
-  //       dispatch({ type: "AUTH", data: { result, token } });
-  //       history.push("/scribe");
-  //     } catch (error) {
-  //       console.log(error);
-  //     }
-  //   };
-  //   const googleFailure = () => {
-  //     console.log("Google Sign In unsuccessful");
-  //   };
-  // Showing correct username logic
-  //   const [user, setUser] = useState(JSON.parse(localStorage.getItem("profile")));
-  //   console.log(user);
-  //   useEffect(() => {
-  //     const token = user?.token;
-  //     //JWT
-  //     setUser(JSON.parse(localStorage.getItem("profile")));
-  //   });
   return (
     <div class="root-container">
       <form className="form" onSubmit={submitHandler}>
@@ -49,8 +26,8 @@ const SignUpForm = ({ SignUp, error }) => {
             className="form-control"
             placeholder="Enter name"
             id="name"
-            onChange={(e) => setDetails({ ...details, email: e.target.value })}
-            value={details.email}
+            onChange={(e) => setDetails({ ...details, name: e.target.value })}
+            value={details.name}
           />
         </div>
 
@@ -90,22 +67,7 @@ const SignUpForm = ({ SignUp, error }) => {
         <button type="submit" className="btn btn-primary btn-block">
           Submit
         </button>
-        {/* <GoogleLogin
-          clientId="782624440107-ro26a2oc9duk8ok81lkd18kduknln1r2.apps.googleusercontent.com"
-          render={(renderProps) => (
-            <button
-              type="submit"
-              className="btn btn-primary btn-block"
-              onClick={renderProps.onClick}
-              disabled={renderProps.disabled}
-            >
-              Google Sign-in
-            </button>
-          )}
-          onSuccess={googleSuccess}
-          onFailure={googleFailure}
-          cookiePolicy="single_host_origin"
-        /> */}
+
         <p className="forgot-password text-right">
           Already have an account? <a href="/login">Sign in here</a>
         </p>
