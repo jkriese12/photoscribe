@@ -75,7 +75,9 @@ const ScribeForm = () => {
         Add Text{" "}
       </button>
     </div>
+
   );
 };
+
 
 export default ScribeForm;

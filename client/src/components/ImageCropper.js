@@ -6,7 +6,7 @@ import "./imagecropper.css";
 const defaultSrc =
   "https://raw.githubusercontent.com/roadmanfong/react-cropper/master/example/img/child.jpg";
 
-export const Demo = () => {
+export const Crop = () => {
   const [image, setImage] = useState(defaultSrc);
   const [cropData, setCropData] = useState("#");
   const [cropper, setCropper] = useState("");
@@ -84,4 +84,4 @@ export const Demo = () => {
   );
 };
 
-export default Demo;
+export default Crop;
