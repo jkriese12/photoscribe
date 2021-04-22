@@ -27,7 +27,7 @@ const SaveToGalleryForm = () => {
         <label htmlFor="gallery">Gallery:</label>
         <input
           value={props.search}
-          onChange={props.handleInputChange}
+          onChange={this.props.handleInputChange}
           name="gallery"/>
           <datalist id="gallery">
           {props.gallery.map(gallery => (
