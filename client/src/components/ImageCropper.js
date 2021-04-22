@@ -3,7 +3,8 @@ import Cropper from "react-cropper";
 import "cropperjs/dist/cropper.css";
 import "./imagecropper.css";
 
-const defaultSrc="https://raw.githubusercontent.com/roadmanfong/react-cropper/master/example/img/child.jpg";
+const defaultSrc =
+  "https://raw.githubusercontent.com/roadmanfong/react-cropper/master/example/img/child.jpg";
 
 export const Demo = () => {
   const [image, setImage] = useState(defaultSrc);
@@ -27,6 +28,10 @@ export const Demo = () => {
   const getCropData = () => {
     if (typeof cropper !== "undefined") {
       setCropData(cropper.getCroppedCanvas().toDataURL());
+      // Need to set cropData as what gets posted to the DB
+      console.log(cropData);
+      console.log(cropper);
+      console.log(image);
     }
   };
 
@@ -64,10 +69,7 @@ export const Demo = () => {
             style={{ width: "100%", float: "left", height: "300px" }}
           />
         </div>
-        <div
-          className="box"
-          style={{ width: "50%", float: "right", height: "300px" }}
-        >
+        <div className="box" style={{ width: "50%", float: "right", height: "300px" }}>
           <div>
             <span>Crop</span>
             <button style={{ float: "right" }} onClick={getCropData}>

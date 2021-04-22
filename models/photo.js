@@ -5,6 +5,7 @@ const photoSchema = new Schema({
   dateTaken: Number,
   synopsis: String,
   photoLocation: String,
+  createdBy: String,
   selectedFile: String,
 });
 
