@@ -67,10 +67,6 @@ const SignUpForm = ({ SignUp, error }) => {
         <button type="submit" className="btn btn-primary btn-block">
           Submit
         </button>
-
-        <p className="forgot-password text-right">
-          Already have an account? <a href="/login">Sign in here</a>
-        </p>
       </form>
       {/* <div>{userName}</div> */}
     </div>

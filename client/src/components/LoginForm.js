@@ -99,10 +99,6 @@ const LoginForm = ({ Login, error }) => {
           onFailure={googleFailure}
           cookiePolicy="single_host_origin"
         />
-
-        <p className="forgot-password text-right">
-          Forgot <a href="/signup">password?</a>
-        </p>
       </form>
       <div></div>
     </div>

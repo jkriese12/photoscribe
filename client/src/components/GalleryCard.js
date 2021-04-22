@@ -29,7 +29,7 @@ function GalleryCard() {
                 </div>
             </div>   
         </div>
-    )
+    );
 }
 
 export default GalleryCard;

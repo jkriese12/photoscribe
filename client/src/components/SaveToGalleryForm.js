@@ -5,8 +5,6 @@ import { createPost } from "../actions/posts";
 
 import "./SaveToGalleryForm.css";
 
-import React from 'react'
-
 const SaveToGalleryForm = () => { 
 
   const [details, setDetails] = useState({
