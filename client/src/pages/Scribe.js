@@ -14,7 +14,9 @@ const Scribe = () => {
           <ScribeForm />
         </div>
       </div>
-      <div classname="row" >
+
+      <div className="row">
+
         <div className="col-4">Create a Gallery Form</div>
 
         <div className="col-7">Image and Text Render Save to Gallery dropdown</div>

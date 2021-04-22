@@ -17,6 +17,7 @@ export const createPost = (post) => async (dispatch) => {
     console.log(error.message);
   }
 };
+// Action creator to update a specific photo
 export const updatePost = (id, post) => async (dispatch) => {
   try {
     const { data } = await api.updatePost(id, post);
