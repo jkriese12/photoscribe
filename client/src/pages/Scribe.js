@@ -3,7 +3,8 @@ import ImageCropper from "../components/ImageCropper";
 import ScribeForm from "../components/ScribeForm";
 
 const Scribe = () => {
-  return (
+  return ( 
+    
     <div className="container">
       <div className="row">
         <div className="col">
@@ -13,8 +14,9 @@ const Scribe = () => {
           <ScribeForm />
         </div>
       </div>
-      <div classname="row">
+      <div classname="row" >
         <div className="col-4">Create a Gallery Form</div>
+
         <div className="col-7">Image and Text Render Save to Gallery dropdown</div>
       </div>
     </div>
