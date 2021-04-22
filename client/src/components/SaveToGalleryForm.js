@@ -1,10 +1,27 @@
-import React from "react";
+import React, { useState } from "react";  
+import FileBase from "react-file-base64";
+import { useDispatch } from "react-redux";
+import { createPost } from "../actions/posts";
+
 import "./SaveToGalleryForm.css";
 
-// Using the datalist element we can create autofill suggestions based on the props.breeds array
-function SaveToGalleryForm(props) {
+const SaveToGalleryForm = () => { 
+
+  const [details, setDetails] = useState({
+    dateTaken: "",
+    photoLocation: "",
+    synopsis: "",
+    selectedFile: "",
+  });
+  const dispatch = useDispatch();
+  const submitHandler = (e) => {
+    e.preventDefault();
+
+    dispatch(createPost(details));
+  };
+
   return ( 
-    
+
     <form className="search">
       <div className="form-group">
         <label htmlFor="gallery">Gallery:</label>
@@ -26,3 +43,6 @@ function SaveToGalleryForm(props) {
 }
 
 export default SaveToGalleryForm;
+
+
+    
