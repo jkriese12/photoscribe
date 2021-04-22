@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
+import Navbar from "./components/Navbar";
 import LoginForm from "./components/LoginForm";
 
 import SignUpForm from "./components/SignUpForm";
@@ -10,13 +11,14 @@ import { useDispatch } from "react-redux";
 import { getPosts } from "./actions/posts";
 
 function App() {
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(getPosts);
-  }, [dispatch]);
+  // const dispatch = useDispatch();
+  // useEffect(() => {
+  //   dispatch(getPosts);
+  // }, [dispatch]);
   return (
     <div>
       <Router>
+        <Navbar />
         <Switch>
           <>
             <Route exact path="/" component={LoginForm} />

@@ -33,7 +33,7 @@ const ScribeForm = ({ Scribe, error }) => {
         <br/>
         <button type="submit" className="btn btn-secondary btn-block">Add Text </button>
     </div>
-    )
+    );
 }
 
 export default ScribeForm;

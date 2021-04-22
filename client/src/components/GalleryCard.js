@@ -1,26 +1,31 @@
 import React from 'react'
 
-const GalleryCard = () => {
-    return 
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-12 mt-3">
-                    <div class="card">
-                        <div class="card-horizontal">
-                            <div class="img-square-wrapper">
-                                <img class="" src={props} alt="Card image cap" />
+const GalleryCard = (props) => {
+    return (  
+
+
+        <div className="card"> 
+            <div className="container">
+                <div className="row">
+                    <div className="col-4 mt-3">
+                        <div className="card">
+                            <div className="card-horizontal">
+                                <div className="img-square-wrapper">
+                                    <img className="" src={props.image} alt="photo gallery name" /> 
+                                </div>
+                                <div className="card-body">
+        
+                                    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                </div>
                             </div>
-                            <div class="card-body">
-                                <h4 class="card-title">Card title</h4>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <div className="card-footer">
+                                <small className="text-muted">Last updated 3 mins ago</small>
                             </div>
-                        </div>
-                        <div class="card-footer">
-                            <small class="text-muted">Last updated 3 mins ago</small>
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>   
+        </div>
     )
 }
 
