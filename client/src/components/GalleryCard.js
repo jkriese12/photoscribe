@@ -1,8 +1,9 @@
-import React from 'react'
+import React from 'react';
+import "./GalleryCard.css";
 
-const GalleryCard = (props) => {
+function GalleryCard() { 
+
     return (  
-
 
         <div className="card"> 
             <div className="container">
@@ -11,15 +12,17 @@ const GalleryCard = (props) => {
                         <div className="card">
                             <div className="card-horizontal">
                                 <div className="img-square-wrapper">
-                                    <img className="" src={props.image} alt="photo gallery name" /> 
+                                    <img className="" src={props.photo} alt="photo gallery card" /> 
                                 </div>
                                 <div className="card-body">
         
-                                    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <p className="card-text">
+                                        {prop.dateTaken},
+                                        {prop.photoLocation},
+                                        {prop.synopsis}.
+                                        {prop.selectedFile}
+                                    </p>
                                 </div>
-                            </div>
-                            <div className="card-footer">
-                                <small className="text-muted">Last updated 3 mins ago</small>
                             </div>
                         </div>
                     </div>
