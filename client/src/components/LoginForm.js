@@ -110,3 +110,7 @@ const LoginForm = ({ Login, error }) => {
 };
 
 export default LoginForm;
+
+// Google sign in
+// authenticate then go to server and check to see if user exists - looking for user record that matches google id, if not find create
+// return user to client and store in local storage
