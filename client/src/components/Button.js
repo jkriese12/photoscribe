@@ -1,33 +1,15 @@
 import React from 'react';
-import './Button.css';
 
-const STYLES = ['btn--primary', 'btn--outline'];
+const Button = () => {
+  return ( 
 
-const SIZES = ['btn--small', 'btn--medium', 'btn--large'];
+    <div className="button"
+        type={props.type}
+        style={props.style}
+        onClick={props.onClick}
+        text={props.text} />
+  )
+}
 
-export const Button = ({
-  children,
-  type,
-  onClick,
-  buttonStyle,
-  buttonSize
-}) => {
-  const checkButtonStyle = STYLES.includes(buttonStyle)
-    ? buttonStyle
-    : STYLES[0];
+export default Button;
 
-  const checkButtonSize = SIZES.includes(buttonSize) ? buttonSize : SIZES[0];
-
-  return (
-      
-    <div className='btn'>
-      <button
-        className={`btn ${checkButtonStyle} ${checkButtonSize}`}
-        onClick={onClick}
-        type={type}
-      >
-        {children}
-      </button>
-    </div>
-  );
-};
