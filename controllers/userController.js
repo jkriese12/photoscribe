@@ -52,4 +52,16 @@ module.exports = {
       console.log(error);
     }
   },
+  test: async (req, res) => {
+    const { email, password, name } = req.body;
+
+    try {
+      const result = await db.User.findById(req.params.id);
+      res.json(result);
+    } catch (error) {
+      res.status(500).json({ message: "Something went wrong" });
+
+      console.log(error);
+    }
+  },
 };

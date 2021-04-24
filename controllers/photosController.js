@@ -1,26 +1,31 @@
 const db = require("../models");
-const jwt = require("jsonwebtoken");
-const auth = require("../middleware/auth");
+const Mongoose = require("mongoose");
 // Creating mongoose methods to use for our router calls
 module.exports = {
-  find: (req, res) => {
-    // const decode = jwt.verify(token, config.get("jwtPrivateKey"));
-    // var userId = decode.id;
-    // console.log(userId);
-    console.log();
-    db.User.find({ email: "testuser@test.com" })
+  find: ({ userId }, res) => {
+    console.log(userId);
+    db.User.find({ _id: userId })
       .populate("photos")
       .then((dbModel) => {
         res.json(dbModel);
       })
       .catch((err) => res.status(422).json(err));
   },
-  create: ({ body }, res) => {
+  create: ({ body, userId }, res) => {
+    console.log(userId, "User Token");
+    console.log(body);
     db.Photo.create(body)
-      .then(({ _id }) =>
-        db.User.findOneAndUpdate({}, { $push: { photos: _id } }, { new: true })
-      )
+      .then(({ _id }) => {
+        console.log(_id, "New Photo");
+        return db.User.findByIdAndUpdate(
+          userId,
+          { $push: { photos: _id } },
+          { new: true }
+        );
+      })
+
       .then((dbUser) => {
+        console.log(dbUser);
         res.json(dbUser);
       })
       .catch((err) => {
