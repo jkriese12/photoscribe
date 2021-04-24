@@ -7,9 +7,8 @@ const Button = () => {
         type={props.type}
         style={props.style}
         onClick={props.onClick}
-        text={props.text} />
+        text={props.text} /> 
+
   )
 }
-
-export default Button;
 

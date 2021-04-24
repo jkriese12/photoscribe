@@ -24,7 +24,6 @@ const SignUpForm = ({ SignUp, error }) => {
           <input
             type="name"
             className="form-control"
-            placeholder="Enter name"
             id="name"
             onChange={(e) => setDetails({ ...details, name: e.target.value })}
             value={details.name}
@@ -36,7 +35,6 @@ const SignUpForm = ({ SignUp, error }) => {
           <input
             type="email"
             className="form-control"
-            placeholder="Enter email"
             id="email"
             onChange={(e) => setDetails({ ...details, email: e.target.value })}
             value={details.email}
@@ -48,7 +46,6 @@ const SignUpForm = ({ SignUp, error }) => {
           <input
             type="password"
             className="form-control"
-            placeholder="Enter password"
             id="password"
             onChange={(e) => setDetails({ ...details, password: e.target.value })}
             value={details.password}
@@ -58,9 +55,6 @@ const SignUpForm = ({ SignUp, error }) => {
         <div className="form-group">
           <div className="custom-control custom-checkbox">
             <input type="checkbox" className="custom-control-input" id="customCheck1" />
-            <label className="custom-control-label" htmlFor="customCheck1">
-              Remember me
-            </label>
           </div>
         </div>
 

@@ -1,27 +1,39 @@
-import React from "react";
+import React from "react"; 
+import Navbar from "../components/Navbar"; 
+import Container from "../components/Container";
+import CreateGalleryListForm from "../components/CreateGalleryListForm"
+import GalleryList from "../components/GalleryList";
 import ImageCropper from "../components/ImageCropper";
-import ScribeForm from "../components/ScribeForm";
+import GalleryCardText from "../components/GalleryCardText"; 
+import GalleryCardTemplate from "../components/GalleryCardTemplate"; 
+import "./Scribe.css"
+
 
 const Scribe = () => {
-  return ( 
-    
-    <div className="container">
-      <div className="row">
-        <div className="col">
-          <ImageCropper />
-        </div>
-        <div className="col">
-          <ScribeForm />
-        </div>
+  return (   
+
+        <div>
+        <Container>
+          <div className="row">
+            <div className="col-3">
+              <CreateGalleryListForm />
+              <GalleryList />
+            </div> 
+            <div className="col-9">
+              <ImageCropper />
+            </div>
+          </div>
+          <hr/>
+          <div className="row">
+            <div className="col-5">
+              <GalleryCardText />
+            </div> 
+            <div className="col"> 
+              <GalleryCardTemplate />
+            </div>
+          </div>
+        </Container>
       </div>
-
-      <div className="row">
-
-        <div className="col-4">Create a Gallery Form</div>
-
-        <div className="col-7">Image and Text Render Save to Gallery dropdown</div>
-      </div>
-    </div>
   );
 };
 

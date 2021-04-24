@@ -39,7 +39,7 @@ export const Crop = () => {
     <div>
       <div style={{ width: "100%" }}>
         <input type="file" onChange={onChange} />
-        <button>Use default img</button>
+        <button className="btn btn-sm btn-secondary">Use default image</button>
         <br />
         <br />
         <Cropper
@@ -72,7 +72,7 @@ export const Crop = () => {
         <div className="box" style={{ width: "50%", float: "right", height: "300px" }}>
           <div>
             <span>Crop</span>
-            <button style={{ float: "right" }} onClick={getCropData}>
+            <button className="btn btn-sm btn-secondary" style={{ float: "right" }} onClick={getCropData}>
               Crop Image
             </button>
           </div>

@@ -1,0 +1,10 @@
+.navbar { 
+    margin: 0;
+    padding: 10px;
+    height: 80px; 
+    margin-bottom: 50px;
+} 
+
+.navbar-brand a {
+    color: #fff;
+}
