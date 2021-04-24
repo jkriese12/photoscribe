@@ -1,11 +1,11 @@
 import React, { useState } from 'react'; 
 import { Link } from "react-router-dom";
-import Grid from "./Grid"; 
+
 
 
 const Gallery = (props) => {   
 
-    const [details, setDetails] = useState({selectedGalleryName: "", selectedGalleryCards:[]}); 
+    
    
     return (
         <div className="selectedGallery"> 

@@ -1,5 +1,4 @@
 import React from "react"; 
-import Navbar from "../components/Navbar"; 
 import Container from "../components/Container";
 import CreateGalleryListForm from "../components/CreateGalleryListForm"
 import GalleryList from "../components/GalleryList";

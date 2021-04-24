@@ -21,7 +21,7 @@ const [galleryName, setGalleryName] = useState({
 
         <form className="create-name">
             <div className="form-group">
-                <label htmlFor="gallery-name">Create a Gallery</label><br/>
+                <label htmlFor="gallery-name">Create a Gallery:</label><br/>
                 <input
                     type="name"
                     placeholder="Name"

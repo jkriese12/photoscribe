@@ -39,7 +39,7 @@ export const Crop = () => {
     <div>
       <div style={{ width: "100%" }}>
         <input type="file" onChange={onChange} />
-        <button className="btn btn-sm btn-secondary">Use default image</button>
+        {/* <button className="btn btn-sm btn-secondary"></button> */}
         <br />
         <br />
         <Cropper
@@ -50,33 +50,34 @@ export const Crop = () => {
           src={image}
           viewMode={1}
           guides={true}
-          minCropBoxHeight={5}
-          minCropBoxWidth={5}
+          minCropBoxHeight={7}
+          minCropBoxWidth={7}
           background={false}
           responsive={true}
           autoCropArea={1}
-          checkOrientation={false} // https://github.com/fengyuanchen/cropperjs/issues/671
+          checkOrientation={true} // https://github.com/fengyuanchen/cropperjs/issues/671
           onInitialized={(instance) => {
             setCropper(instance);
           }}
         />
       </div>
-      <div className="box-container">
+      <div className="box-container"><br/>
         <div className="box" style={{ width: "50%", float: "right" }}>
-          <h5>Preview</h5>
-          <div
-            className="img-preview"
-            style={{ width: "100%", float: "left", height: "300px" }}
-          />
-        </div>
-        <div className="box" style={{ width: "50%", float: "right", height: "300px" }}>
-          <div>
-            <span>Crop</span>
+          <p>Preview</p>
             <button className="btn btn-sm btn-secondary" style={{ float: "right" }} onClick={getCropData}>
               Crop Image
             </button>
+          <div
+            className="img-preview"
+            style={{ width: "100%", float: "left", height: "300px", marginBottom: 10 }}
+          />
+        </div>
+        <div className="box" style={{ width: "50%", float: "right", height: "300px", marginBottom: 10 }}>
+          <div>
+            <span>Crop</span>
+            
           </div>
-          <img style={{ width: "100%" }} src={cropData} alt="cropped" />
+          <img style={{ width: "auto", height: "300px" }} src={cropData} alt="cropped" />
         </div>
       </div>
       <br style={{ clear: "both" }} />
