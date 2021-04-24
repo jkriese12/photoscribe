@@ -3,5 +3,6 @@ const userController = require("../../controllers/userController");
 // Setting post routes to talk to database
 router.route("/signin").post(userController.signin);
 router.route("/signup").post(userController.signup);
+router.route("/test/:id").get(userController.test);
 
 module.exports = router;
