@@ -3,14 +3,11 @@ import FileBase from "react-file-base64";
 import { useDispatch } from "react-redux";
 import { createPost } from "../actions/posts";
 
-import "./SaveToGalleryForm.css";
 
-const SaveToGalleryForm = () => { 
-
+const GalleryList = () => { 
+ 
   const [details, setDetails] = useState({
-    dateTaken: "",
-    photoLocation: "",
-    synopsis: "",
+    name: "",
     selectedFile: "",
   });
   const dispatch = useDispatch();
@@ -24,10 +21,10 @@ const SaveToGalleryForm = () => {
 
     <form className="search">
       <div className="form-group">
-        <label htmlFor="gallery">Gallery:</label>
-        <input
+        <label htmlFor="gallery">Gallery List:</label>
+        {/* <input
           value={props.search}
-          onChange={props.handleInputChange}
+          onChange={this.props.handleInputChange}
           name="gallery"/>
           <datalist id="gallery">
           {props.gallery.map(gallery => (
@@ -36,13 +33,11 @@ const SaveToGalleryForm = () => {
         </datalist>
         <button type="submit" onClick={props.handleFormSubmit} className="btn btn-secondary">
           Select Gallery
-        </button>
+        </button> */}
       </div>
     </form>
-  );
+    
+    );
 }
 
-export default SaveToGalleryForm;
-
-
-    
+export default GalleryList;

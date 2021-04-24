@@ -3,9 +3,9 @@ import FileBase from "react-file-base64";
 import { useDispatch } from "react-redux";
 import { createPost } from "../actions/posts";
 
-import "./ScribeForm.css";
+import "./GalleryCardText.css";
 
-const ScribeForm = () => {
+const GalleryCardText = () => {
   const [details, setDetails] = useState({
     dateTaken: "",
     photoLocation: "",
@@ -67,17 +67,17 @@ const ScribeForm = () => {
         </div>
       </form>
       <br />
-      <button
+      {/* <button
         type="submit"
-        className="btn btn-secondary btn-block"
+        className="btn btn-secondary btn-sm"
         onClick={submitHandler}
       >
         Add Text{" "}
-      </button>
+      </button> */}
     </div>
 
   );
 };
 
 
-export default ScribeForm;
+export default GalleryCardText;

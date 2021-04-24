@@ -1,16 +1,17 @@
-import React from 'react';
+import React from 'react'; 
+import { Link } from "react-router-dom"
 import { FaAddressCard } from "react-icons/fa";
+import "./Navbar.css";
 
-const Navbar = () => {
+const Navbar = () => { 
+
     return ( 
 
-        <nav navbar-light bg-light>
-            <div class="container-fluid">
-                <a class="navbar-brand" href="/login"><FaAddressCard />
-                <h1><b>PhotoScribe</b></h1>
-                </a>
-            </div>
-        </nav>
+        <div className="navbar navbar-dark bg-dark">
+            <div className="navbar-brand"> 
+                <Link to="/login"><FaAddressCard size="2em" color="#fff"/><b> PhotoScribe</b></Link>
+            </div> 
+        </div>
     )
 }
 

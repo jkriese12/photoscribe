@@ -4,34 +4,35 @@ import { createPost } from "../actions/posts";
 
 import "./CreateGalleryListForm.css";
 
-const CreateGalleryListForm = () => { 
+const CreateGalleryListForm = (props) => { 
 
 const [galleryName, setGalleryName] = useState({
      name: "",
  }); 
 
-const dispatch = useDispatch();
-const submitHandler = (e) => {
-    e.preventDefault();
+// const dispatch = useDispatch();
+// const submitHandler = (e) => {
+//     e.preventDefault();
 
-    dispatch(createPost(details));
-  };
+//     dispatch(createPost(details));
+//   };
 
     return (  
 
         <form className="create-name">
             <div className="form-group">
-                <label htmlFor="gallery-name">Create a Gallery</label>
+                <label htmlFor="gallery-name">Create a Gallery:</label><br/>
                 <input
                     type="name"
+                    placeholder="Name"
                     className="form-group"
-                    placeholder="Gallery Name"
-                    onSubmit={(e) => setDetails({  name : e.target.value })}
-                    value={details.name}
+                    // onSubmit={(e) => setDetails({  name : e.target.value })}
+                    // value={details.name}
                  /> 
             </div> 
-            <button type="submit" onClick={props.handleFormSubmit} className="btn btn-secondary">Create</button>
-        </form>                
+            <button type="submit" onClick={props.handleFormSubmit} className="btn btn-sm btn-secondary">Create</button>
+        </form> 
+                     
     );
 }
 

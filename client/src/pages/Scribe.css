@@ -1,12 +1,13 @@
+.galley-list {
+
+}
 .img-container {
-    width: 640px;
+    width: 650px;
     height: 480px;
-    float: left;
 }
 
 .img-preview {
     width: 200px;
     height: 200px;
     float: left;
-    margin-left: 10px;
 }
