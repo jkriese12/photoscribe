@@ -2,8 +2,8 @@ const db = require("../models");
 const Mongoose = require("mongoose");
 // Creating mongoose methods to use for our router calls
 module.exports = {
-  find: ({ userId, params }, res) => {
-    console.log(userId);
+  find: ({ userId }, res) => {
+    console.log("hey");
     db.User.find({ _id: userId })
       .populate("photos")
       .then((dbModel) => {
@@ -11,14 +11,16 @@ module.exports = {
       })
       .catch((err) => res.status(422).json(err));
   },
-  findGalleries: (req, res) => {
-    db.User.find({ _id: req.userId })
-      .populate({
-        path: "photos",
-        albumName: req.params.albumName,
-      })
+  findGalleries: ({ userId, params }, res) => {
+    console.log(params);
+    db.User.find({ _id: userId })
+      .populate("photos")
       .then((dbModel) => {
-        res.json(dbModel);
+        const array = dbModel[0].photos.filter((data) => data.albumName === "Test");
+        console.log(params);
+
+        // dbModel[0].photos.filter()
+        res.json(array);
       })
       .catch((err) => res.status(422).json(err));
   },
