@@ -1,39 +1,62 @@
-import React, { useState } from "react";  
+import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { createPost } from "../actions/posts";
+import { useSelector } from "react-redux";
 
-import "./CreateGalleryListForm.css";
+import "./CreateGalleryLIstForm.css";
 
-const CreateGalleryListForm = (props) => { 
+const CreateGalleryListForm = (props) => {
+  const [galleryName, setGalleryName] = useState({
+    name: "",
+  });
 
-const [galleryName, setGalleryName] = useState({
-     name: "",
- }); 
+  const posts = useSelector((state) => state.posts);
 
-// const dispatch = useDispatch();
-// const submitHandler = (e) => {
-//     e.preventDefault();
+  const galleryArray = [{ name: "test" }];
 
-//     dispatch(createPost(details));
-//   };
+  // const dispatch = useDispatch();
+  const submitHandler = (e) => {
+    e.preventDefault();
 
-    return (  
+    galleryArray.push(galleryName);
+    console.log(galleryArray);
+  };
 
-        <form className="create-name">
-            <div className="form-group">
-                <label htmlFor="gallery-name">Create a Gallery:</label><br/>
-                <input
-                    type="name"
-                    placeholder="Name"
-                    className="form-group"
-                    // onSubmit={(e) => setDetails({  name : e.target.value })}
-                    // value={details.name}
-                 /> 
-            </div> 
-            <button type="submit" onClick={props.handleFormSubmit} className="btn btn-sm btn-secondary">Create</button>
-        </form> 
-                     
-    );
-}
+  return (
+    <div>
+      <form className="create-name" onSubmit={submitHandler}>
+        <div className="form-group">
+          <label htmlFor="gallery-name">Create a Gallery:</label>
+          <br />
+          <input
+            type="name"
+            placeholder="Name"
+            className="form-group"
+            onChange={(e) => setGalleryName({ name: e.target.value })}
+            value={galleryName.name}
+          />
+        </div>
+        <button
+          type="submit"
+          onClick={props.handleFormSubmit}
+          className="btn btn-sm btn-secondary"
+        >
+          Create
+        </button>
+      </form>
+      <div>{galleryName.name}</div>
+      <div>
+        {posts.map((data) => (
+          <div key={data._id}>
+            {data.photos.map((arrayData) => (
+              <div key={arrayData._id}>{arrayData.albumName}</div>
+            ))}
+            <img src={data.selectedFile} />
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
 
 export default CreateGalleryListForm;

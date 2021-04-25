@@ -5,6 +5,6 @@ const auth = require("../../middleware/auth.js");
 router.route("/").get(auth, photosController.find).post(auth, photosController.create);
 
 // Specifc routes by ID to update, delete and get
-router.route("/:id").put(photosController.update);
+router.route("/:albumName").get(auth, photosController.findGalleries);
 
 module.exports = router;

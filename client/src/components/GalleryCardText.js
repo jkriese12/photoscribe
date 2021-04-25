@@ -10,6 +10,7 @@ const GalleryCardText = () => {
     dateTaken: "",
     photoLocation: "",
     synopsis: "",
+    albumName: "",
     selectedFile: "",
   });
   const dispatch = useDispatch();
@@ -59,6 +60,18 @@ const GalleryCardText = () => {
           ></textarea>
         </div>
         <div>
+          <label htmlFor="FormControlTextarea1" className="form-label">
+            Gallery Name
+          </label>
+          <textarea
+            className="form-control"
+            id="FormControlTextarea1"
+            rows="8"
+            onChange={(e) => setDetails({ ...details, albumName: e.target.value })}
+            value={details.albumName}
+          ></textarea>
+        </div>
+        <div>
           <FileBase
             type="file"
             multiple={false}
@@ -67,17 +80,11 @@ const GalleryCardText = () => {
         </div>
       </form>
       <br />
-      {/* <button
-        type="submit"
-        className="btn btn-secondary btn-sm"
-        onClick={submitHandler}
-      >
+      <button type="submit" className="btn btn-secondary btn-sm" onClick={submitHandler}>
         Add Text{" "}
-      </button> */}
+      </button>
     </div>
-
   );
 };
-
 
 export default GalleryCardText;

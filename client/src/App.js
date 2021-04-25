@@ -7,18 +7,17 @@ import SignUpForm from "./components/SignUpForm";
 import Scribe from "./pages/Scribe";
 import GalleryTemplate from "./components/GalleryTemplate";
 import Testget from "./Testing/Testget";
-import { getPosts } from "./actions/posts";
-import { useDispatch } from "react-redux";
-function App() {
+import TestGalleryGet from "./Testing/TestGalleryGet";
 
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(getPosts());
-  }, [dispatch]);
+function App() {
+  // const dispatch = useDispatch();
+  // useEffect(() => {
+  //   dispatch(getPosts());
+  // }, [dispatch]);
 
   return (
     <div>
-      <Router> 
+      <Router>
         <Navbar />
         <Switch>
           <>
@@ -26,7 +25,8 @@ function App() {
             <Route path="/login" component={LoginForm} />
             <Route path="/signup" component={SignUpForm} />
             <Route path="/scribe" component={Scribe} />
-            <Route path="/get" component={Testget} /> 
+            <Route path="/get" component={Testget} />
+            <Route exact path="/gets/:albumName" component={TestGalleryGet} />
             <Route path="/gallery" component={GalleryTemplate} />
           </>
         </Switch>

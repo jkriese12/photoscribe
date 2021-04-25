@@ -8,6 +8,14 @@ export const getPosts = () => async (dispatch) => {
     console.log(error.message);
   }
 };
+export const getPostsGallery = () => async (dispatch) => {
+  try {
+    const { data } = await api.getPhotosByGallery();
+    dispatch({ type: "FETCH_ALL", payload: data });
+  } catch (error) {
+    console.log(error.message);
+  }
+};
 // Action Creator to send a post to DB
 export const createPost = (post) => async (dispatch) => {
   try {
