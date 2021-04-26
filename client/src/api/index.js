@@ -14,7 +14,10 @@ API.interceptors.request.use((req) => {
 
 export const getPhotos = () => API.get("/photos");
 export const getPhotosByGallery = (albumName) => API.get("/photos/" + albumName);
+export const getPhotosNoAuth = (id, albumName) =>
+  API.get("/photos/" + id + "/" + albumName);
 export const createPost = (newPost) => API.post("/photos", newPost);
 // export const updatePost = (id, updatedPost) => axios.put(`${url}/${id}`, updatedPost);
+// Authentication routes
 export const signIn = (details) => API.post("/auth/signin", details);
 export const signUp = (details) => API.post("/auth/signup", details);

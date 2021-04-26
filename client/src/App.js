@@ -8,6 +8,7 @@ import Scribe from "./pages/Scribe";
 import GalleryTemplate from "./components/GalleryTemplate";
 import Testget from "./Testing/Testget";
 import TestGalleryGet from "./Testing/TestGalleryGet";
+import TestNoAuth from "./Testing/TestNoAuth";
 
 function App() {
   // const dispatch = useDispatch();
@@ -27,6 +28,7 @@ function App() {
             <Route path="/scribe" component={Scribe} />
             <Route path="/get" component={Testget} />
             <Route exact path="/gets/:albumName" component={TestGalleryGet} />
+            <Route exact path="/go/:id/:albumName" component={TestNoAuth} />
             <Route path="/gallery" component={GalleryTemplate} />
           </>
         </Switch>

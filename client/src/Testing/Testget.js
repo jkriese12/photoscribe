@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
 import { getPosts } from "../actions/posts";
 import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
+
 const Testget = () => {
   const dispatch = useDispatch();
   useEffect(() => {
@@ -16,14 +18,9 @@ const Testget = () => {
       {posts.map((data) => (
         <div key={data._id}>
           {data.photos.map((arrayData) => (
-            <div
-              key={arrayData._id}
-              onClick={() => {
-                alert(arrayData.synopsis);
-              }}
-            >
+            <Link to={"/gets/" + arrayData.albumName} key={arrayData._id}>
               {arrayData.albumName}
-            </div>
+            </Link>
           ))}
           <img src={data.selectedFile} />
         </div>

@@ -8,9 +8,17 @@ export const getPosts = () => async (dispatch) => {
     console.log(error.message);
   }
 };
-export const getPostsGallery = () => async (dispatch) => {
+export const getPostsGallery = (albumName) => async (dispatch) => {
   try {
-    const { data } = await api.getPhotosByGallery();
+    const { data } = await api.getPhotosByGallery(albumName);
+    dispatch({ type: "FETCH_ALL", payload: data });
+  } catch (error) {
+    console.log(error.message);
+  }
+};
+export const getPostsGalleryNoAuth = (id, albumName) => async (dispatch) => {
+  try {
+    const { data } = await api.getPhotosNoAuth(id, albumName);
     dispatch({ type: "FETCH_ALL", payload: data });
   } catch (error) {
     console.log(error.message);
