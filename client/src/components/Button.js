@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Button = () => {
+const Button = (props) => {
   return ( 
 
     <div className="button"
@@ -8,7 +8,6 @@ const Button = () => {
         style={props.style}
         onClick={props.onClick}
         text={props.text} /> 
-
-  )
+  );
 }
 

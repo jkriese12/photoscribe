@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-
+import LandingPage from "./pages/LandingPage"
 import Navbar from "./components/Navbar";
 import LoginForm from "./components/LoginForm";
 import SignUpForm from "./components/SignUpForm";
@@ -28,6 +28,7 @@ function App() {
             <Route path="/scribe" component={Scribe} />
             <Route path="/get" component={Testget} /> 
             <Route path="/gallery" component={GalleryTemplate} />
+            <Route path="/landing" component={LandingPage} />
           </>
         </Switch>
       </Router>
