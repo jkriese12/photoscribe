@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
@@ -11,11 +11,6 @@ import TestGalleryGet from "./Testing/TestGalleryGet";
 import TestNoAuth from "./Testing/TestNoAuth";
 
 function App() {
-  // const dispatch = useDispatch();
-  // useEffect(() => {
-  //   dispatch(getPosts());
-  // }, [dispatch]);
-
   return (
     <div>
       <Router>

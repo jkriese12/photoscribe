@@ -1,5 +1,5 @@
 import * as api from "../api/index.js";
-import { FETCH_ALL, CREATE } from "../constants/actionTypes";
+import { FETCH_ALL, CREATE, DELETE } from "../constants/actionTypes";
 // Gets all posts for the user
 export const getPosts = () => async (dispatch) => {
   try {
@@ -36,12 +36,12 @@ export const createPost = (post) => async (dispatch) => {
     console.log(error.message);
   }
 };
-// Action creator to update a specific photo
-// export const updatePost = (id, post) => async (dispatch) => {
-//   try {
-//     const { data } = await api.updatePost(id, post);
-//     dispatch({ type: "UPDATE", payload: data });
-//   } catch (error) {
-//     console.log(error.message);
-//   }
-// };
+// Delete creator to delete a specific post
+export const deletePhoto = (id) => async (dispatch) => {
+  try {
+    await api.deletePhoto(id);
+    dispatch({ type: DELETE, payload: id });
+  } catch (error) {
+    console.log(error);
+  }
+};

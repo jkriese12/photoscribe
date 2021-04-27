@@ -7,5 +7,7 @@ router.route("/").get(auth, photosController.find).post(auth, photosController.c
 router.route("/:albumName").get(auth, photosController.findGalleries);
 // Get route to target a users id and an album without auth that can be sent as a URL via email
 router.route("/:id/:albumName").get(photosController.findGalleriesNoAuth);
+// Delete route to delete a single post
+router.route("/:id").delete(photosController.deleteOne);
 
 module.exports = router;

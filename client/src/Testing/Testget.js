@@ -30,13 +30,3 @@ const Testget = () => {
 };
 
 export default Testget;
-
-// const data = arrayData;
-// let galleryPosts = arrayData
-//   .filter(function (gallery) {
-//     return gallery.albumName === data.albumName;
-//   })
-//   .map(function (gallery) {
-//     return gallery.synopsis;
-//   });
-// console.log(arrayData);

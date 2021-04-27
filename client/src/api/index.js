@@ -29,6 +29,7 @@ export const createPdf = (pdf) =>
 // Routes for updating data
 // export const updatePost = (id, updatedPost) => axios.put(`${url}/${id}`, updatedPost);
 // Routes for deleting data
+export const deletePhoto = (id) => API.delete("/photos/" + id);
 // Authentication routes
 export const signIn = (details) => API.post("/auth/signin", details);
 export const signUp = (details) => API.post("/auth/signup", details);

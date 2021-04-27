@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { getPostsGallery } from "../actions/posts";
+import { getPostsGallery, deletePhoto } from "../actions/posts";
 import { useDispatch } from "react-redux";
 import emailjs from "emailjs-com";
 const TestGalleryGet = () => {
@@ -46,7 +46,13 @@ const TestGalleryGet = () => {
             Location: {data.photoLocation}
             Synopsis: {data.synopsis}
             <img src={data.selectedFile} />
-            <button onClick={() => {}}>PDF</button>
+            <button
+              onClick={() => {
+                dispatch(deletePhoto(data._id));
+              }}
+            >
+              delete
+            </button>
           </div>
         ))}
       </div>

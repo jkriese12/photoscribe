@@ -64,12 +64,14 @@ module.exports = {
       .then((dbModel) => res.json(dbModel))
       .catch((err) => res.status(422).json(err));
   },
-  deleteOne: ({ userId, params }, res) => {
-    db.User.find({ _id: userId })
-      .populate("photos")
-      .then((dbModel) => {
-        res.json(dbModel);
-      })
-      .catch((err) => res.status(422).json(err));
+  deleteOne: async (req, res) => {
+    const { id } = req.params;
+
+    if (!Mongoose.Types.ObjectId.isValid(id))
+      return res.status(404).send(`No post with id: ${id}`);
+
+    await db.Photo.findByIdAndRemove(id);
+
+    res.json({ message: "Post deleted successfully." });
   },
 };
