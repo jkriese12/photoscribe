@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Container = ({children, className }) => {
+const Col = ({children, className }) => {
     return (
            <div className={className}>
            {children}</div>
        )
    }
-   
-export default Container;
+
+export default Col;

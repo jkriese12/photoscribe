@@ -13,7 +13,7 @@ const SignUpForm = ({ SignUp, error }) => {
   };
 
   return (
-    <div class="root-container">
+    <div class="container">
       <form className="form" onSubmit={submitHandler}>
         <div className="form-inner"></div>
         <h3 className="text-center">Create An Account</h3>

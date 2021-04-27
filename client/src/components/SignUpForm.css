@@ -10,8 +10,7 @@ body {
     align-items: center;
     padding: 35px;
     display: block;
-    position: relative;
-    width: 450px;
+    max-width: 450px;
 } 
 
 h3 {
