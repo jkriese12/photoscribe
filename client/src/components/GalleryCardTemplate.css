@@ -1,6 +1,20 @@
+.card {
+    border: 1px solid lightgrey;
+    height: 250px;
+    max-width: 540px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    margin: 0 auto;
+    margin-top: 30px;
+}
 
-
-.card-horizontal {
+.img-square-wrapper {
+    background-size: cover;
+    background-position: center;
+    background-clip: content-box;
+   
+  }
+  
+  .card-horizontal {
     display: flex;
     flex: 1 1 auto;
-}
+} 

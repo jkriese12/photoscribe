@@ -59,6 +59,7 @@ const GalleryCardText = () => {
             value={details.synopsis}
           ></textarea>
         </div>
+
         <div>
           <label htmlFor="FormControlTextarea1" className="form-label">
             Gallery Name
@@ -81,6 +82,15 @@ const GalleryCardText = () => {
       </form>
       <br />
       <button type="submit" className="btn btn-secondary btn-sm" onClick={submitHandler}>
+
+      </form>
+      <br />
+      <button
+        type="submit"
+        className="btn btn-secondary btn-sm"
+        onClick={submitHandler}
+      >
+
         Add Text{" "}
       </button>
     </div>

@@ -1,9 +1,9 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-
 import Navbar from "./components/Navbar";
-import LoginForm from "./components/LoginForm";
-import SignUpForm from "./components/SignUpForm";
+import LandingPage from "./pages/LandingPage"
+import SignUp from "./pages/SignUp";
+import Login from "./pages/Login";
 import Scribe from "./pages/Scribe";
 import GalleryTemplate from "./components/GalleryTemplate";
 import Testget from "./Testing/Testget";
@@ -17,9 +17,9 @@ function App() {
         <Navbar />
         <Switch>
           <>
-            <Route exact path="/" component={LoginForm} />
-            <Route path="/login" component={LoginForm} />
-            <Route path="/signup" component={SignUpForm} />
+            <Route exact path="/" component={LandingPage} />
+            <Route path="/login" component={Login} />
+            <Route path="/signup" component={SignUp} />
             <Route path="/scribe" component={Scribe} />
             <Route path="/get" component={Testget} />
             <Route exact path="/gets/:albumName" component={TestGalleryGet} />
