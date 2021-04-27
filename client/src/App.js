@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import LandingPage from "./pages/LandingPage"
@@ -7,18 +7,13 @@ import Login from "./pages/Login";
 import Scribe from "./pages/Scribe";
 import GalleryTemplate from "./components/GalleryTemplate";
 import Testget from "./Testing/Testget";
-import { getPosts } from "./actions/posts";
-import { useDispatch } from "react-redux";
+import TestGalleryGet from "./Testing/TestGalleryGet";
+import TestNoAuth from "./Testing/TestNoAuth";
+
 function App() {
-
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(getPosts());
-  }, [dispatch]);
-
   return (
     <div>
-      <Router> 
+      <Router>
         <Navbar />
         <Switch>
           <>
@@ -26,7 +21,10 @@ function App() {
             <Route path="/login" component={Login} />
             <Route path="/signup" component={SignUp} />
             <Route path="/scribe" component={Scribe} />
-            <Route path="/get" component={Testget} /> 
+            <Route path="/get" component={Testget} />
+            <Route exact path="/gets/:albumName" component={TestGalleryGet} />
+            <Route exact path="/go/:id/:albumName" component={TestNoAuth} />
+
             <Route path="/gallery" component={GalleryTemplate} />
           </>
         </Switch>
