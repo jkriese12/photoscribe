@@ -1,0 +1,25 @@
+.login-page-title-svg {
+    text-align:center;
+    justify-content: center;
+} 
+
+.login-page-title{
+  text-align: center;
+}
+
+.login-page-svg svg {
+    width: 250px;
+    height: 250px;
+}
+
+.login-page-form-graphic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+
+.login-page-form {
+    width: 400px;
+    margin-top: -39px;
+
+}

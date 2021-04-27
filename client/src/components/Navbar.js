@@ -11,7 +11,7 @@ const Navbar = () => {
             <div className="navbar-brand"> 
                 <Link to="/login"><FaAddressCard size="2em" color="#fff"/><b> PhotoScribe</b></Link>
             </div> 
-        </div>
+        </div> 
     )
 }
 

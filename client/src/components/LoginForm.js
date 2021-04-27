@@ -96,7 +96,8 @@ const LoginForm = ({ Login, error }) => {
               cookiePolicy="single_host_origin"
             /> 
             </div> 
-          </form>
+          </form><br/> 
+          <p className="small">Don't have your account yet? <a href="/signup">sign up</a> here</p>
       <div></div>
     </div>
   );

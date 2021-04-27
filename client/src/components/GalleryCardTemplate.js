@@ -4,7 +4,7 @@ import "./GalleryCardTemplate.css";
 function GalleryCard(props) { 
 
     return (  
- 
+
         <div className="container">
             <div className="card mb-3">
                 <div className="row g-0">

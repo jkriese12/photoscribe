@@ -5,14 +5,14 @@ import GalleryList from "../components/GalleryList";
 import ImageCropper from "../components/ImageCropper";
 import GalleryCardText from "../components/GalleryCardText"; 
 import GalleryCardTemplate from "../components/GalleryCardTemplate"; 
-import "./Scribe.css"
+import "./styles/Scribe.css"
 
 
 const Scribe = () => {
   return (   
 
         <div>
-        <Container>
+        <Container className="scribe-page">
           <div className="row">
             <div className="col-3">
               <CreateGalleryListForm />

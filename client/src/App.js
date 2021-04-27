@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import LandingPage from "./pages/LandingPage"
+import Logout from "./components/Logout";
+import Landing from "./pages/Landing"
 import SignUp from "./pages/SignUp";
 import Login from "./pages/Login";
 import Scribe from "./pages/Scribe";
@@ -9,6 +10,7 @@ import GalleryTemplate from "./components/GalleryTemplate";
 import Testget from "./Testing/Testget";
 import { getPosts } from "./actions/posts";
 import { useDispatch } from "react-redux";
+
 function App() {
 
   const dispatch = useDispatch();
@@ -19,10 +21,11 @@ function App() {
   return (
     <div>
       <Router> 
-        <Navbar />
+        <Navbar /> 
+        <Logout />
         <Switch>
           <>
-            <Route exact path="/" component={LandingPage} />
+            <Route exact path="/" component={Landing} />
             <Route path="/login" component={Login} />
             <Route path="/signup" component={SignUp} />
             <Route path="/scribe" component={Scribe} />
