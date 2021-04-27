@@ -58,22 +58,15 @@ const GalleryCardText = () => {
             value={details.synopsis}
           ></textarea>
         </div>
-        <div>
-          <FileBase
-            type="file"
-            multiple={false}
-            onDone={({ base64 }) => setDetails({ ...details, selectedFile: base64 })}
-          />
-        </div>
       </form>
       <br />
-      {/* <button
+      <button
         type="submit"
         className="btn btn-secondary btn-sm"
         onClick={submitHandler}
       >
         Add Text{" "}
-      </button> */}
+      </button>
     </div>
 
   );

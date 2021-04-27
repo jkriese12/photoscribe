@@ -10,7 +10,7 @@ function GalleryCard(props) {
                 <div className="row g-0">
                     <div className="col-md-4"> 
                         <div className="img-square-wrapper">
-                            <img className="" src={props.photo} alt="photo gallery image" />
+                            <img className="" src={props.photo} alt="gallery" />
                         </div>
                     </div>
                     <div class="col-md-8">

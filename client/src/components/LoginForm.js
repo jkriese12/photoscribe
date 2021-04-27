@@ -40,13 +40,10 @@ const LoginForm = ({ Login, error }) => {
   const handleChange = () => {};
 
   return (
-    <div className="container-fluid">
-      <div className="row justify-content-center">
-        <div className="col-12 col-sm-6 col-md-3">
+      <div className="container">
           <form className="form center" onSubmit={submitHandler}>
             <div className="form-inner">
             <h3 className="text-center">Log In</h3>
-            {/* {(error =! "") ? ( <div className="error">{error}</div>)  : ""}         */}
 
             <div className="form-group">
               <label>Email address</label>
@@ -100,8 +97,6 @@ const LoginForm = ({ Login, error }) => {
             /> 
             </div> 
           </form>
-        </div>
-      </div>
       <div></div>
     </div>
   );

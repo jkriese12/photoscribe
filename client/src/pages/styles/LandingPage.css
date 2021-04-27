@@ -1,0 +1,43 @@
+.landing-page-title {
+    padding-left: 250px;
+    padding-right: 250px;
+    text-align: center;
+} 
+
+.landing-page-svg {
+    padding-top: 50px;
+    padding-left: 250px;
+    padding-right: 250px;
+} 
+
+.landing-page-svg  svg {
+    height: 100%;
+    width: 100%;    
+} 
+
+.landing-page-info {
+    display: flex;
+    justify-content: space-around;
+    padding-left: 100px;
+    padding-right: 100px;
+}  
+
+.landing-page-card { 
+    margin-top: 60px;
+    width: 200px;
+    height: 225px;
+    text-align: center;
+    padding: 10px;
+    font-size: 15px;
+} 
+
+.landing-page-card-text {
+    margin-top: 15px;
+} 
+
+.landing-page-button {
+    padding-left: 250;
+    padding-right: 250;
+    text-align: center;
+    margin-bottom: 75px;
+}
