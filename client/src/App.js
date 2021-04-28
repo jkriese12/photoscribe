@@ -6,7 +6,7 @@ import Landing from "./pages/Landing"
 import SignUp from "./pages/SignUp";
 import Login from "./pages/Login";
 import Scribe from "./pages/Scribe";
-import GalleryTemplate from "./components/GalleryTemplate";
+import Gallery from "./pages/Gallery";
 import Testget from "./Testing/Testget";
 import { getPosts } from "./actions/posts";
 import { useDispatch } from "react-redux";
@@ -30,7 +30,7 @@ function App() {
             <Route path="/signup" component={SignUp} />
             <Route path="/scribe" component={Scribe} />
             <Route path="/get" component={Testget} /> 
-            <Route path="/gallery" component={GalleryTemplate} />
+            <Route path="/gallery" component={Gallery} />
           </>
         </Switch>
       </Router>

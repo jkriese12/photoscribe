@@ -1,31 +1,68 @@
-import React, { useEffect } from "react";
+import React, { useState } from 'react'; 
 import { Link } from "react-router-dom";
-import { Col, Row, Container } from "../components/Grid";
-import API from "../utils/API";
-import { useStoreContext } from "../utils/GlobalState";
-import { SET_CURRENT_POST } from "../utils/actions";
+import Container from "../components/Container";
+import Row from "../components/Row";
+import "./styles/Gallery.css"
+import GalleryImage from "../components/GalleryImage"
 
-  const Gallery = props => {
-  const [state, dispatch] = useStoreContext();
+const Gallery = () => {   
 
-    // useEffect(() => {
-    //   API.getPost(props.match.params.id)
-    //     .then(res => dispatch({ type: SET_CURRENT_POST, post: res.data }))
-    //     .catch(err => console.log(err));
-    // }, []);
-
-    // const addGalleryData = () => {
-    //   dispatch({
-    //     type: ADD_GALLERY_DATA,
-    //     post: state.currentPost
-    //   });
-    // };
-
-    return (
-      <div> 
-        
-      </div> 
-   ); 
-  } 
+const array = [{
+    image:"https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1027&q=80",
+    year: 2021,
+    locaton: "Ohio",
+    info: "This is a cat"
+},
+{
+    image:"https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1027&q=80",
+    year: 2021,
+    locaton: "Ohio",
+    info: "This is a cat"
+},
+{
+    image:"https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1027&q=80",
+    year: 2021,
+    locaton: "Ohio",
+    info: "This is a cat"
+},
+{
+    image:"https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1027&q=80",
+    year: 2021,
+    locaton: "Ohio",
+    info: "This is a cat"
+},
+{
+     image:"https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1027&q=80",
+    year: 2021,
+    locaton: "Ohio",
+    info: "This is a cat"
   
-  export default Gallery;
+},
+{
+    image:"https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1027&q=80",
+    year: 2021,
+    locaton: "Ohio",
+    info: "This is a cat"
+}
+]    
+   function galleryMap(card) {
+       const {image, year, location, info} = card 
+       return (
+           <GalleryImage  {...card}/>
+       )
+   }
+    return (
+        <Container className="selectedGallery"> 
+            <button className="btn btn-primary btn-sm" ><Link to="/">View Directory</Link></button>
+            <Row>
+                <h1 className="gallery-title">Gallery Name</h1>
+            </Row> 
+            <Row className="galImages">
+                {array.map(galleryMap)}
+            </Row>
+        </Container>
+    )
+}
+
+export default Gallery;
+

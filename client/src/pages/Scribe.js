@@ -1,38 +1,56 @@
 import React from "react"; 
 import Container from "../components/Container";
+import Row from "../components/Row";
 import CreateGalleryListForm from "../components/CreateGalleryListForm"
 import GalleryList from "../components/GalleryList";
 import ImageCropper from "../components/ImageCropper";
 import GalleryCardText from "../components/GalleryCardText"; 
+import SelectedGalleryForm from "../components/SelectedGalleryForm";
 import GalleryCardTemplate from "../components/GalleryCardTemplate"; 
-import "./styles/Scribe.css"
+import "./styles/Scribe.css";
 
 
 const Scribe = () => {
   return (   
 
-        <div>
-        <Container className="scribe-page">
-          <div className="row">
-            <div className="col-3">
-              <CreateGalleryListForm />
-              <GalleryList />
-            </div> 
-            <div className="col-9">
-              <ImageCropper />
-            </div>
+      <Container className="scribe-page"> 
+        <Row className="scribe-page-instructions">
+          <h7><b>How to Use PhotoScribe:</b>
+            <ol>
+              <li>Select an image. Crop image as desired then "add" image to the Gallery Card View. </li>
+              <li>Create a galley for your photo or select a gallery name from previously created galleries in your gallery list.</li>
+              <li>Enter details of your photo then "add" details to the Gallery Card View.</li>
+              <li>When ready, "add" your completed gallery card to the selected gallery.</li>
+              <li>Options to delete, print to PDF or email a link to your gallery are on the Gallery Page.</li>
+            </ol>
+          </h7>
+        </Row> 
+        <Row className="scribe-page-create-crop"> 
+          <div className="scribe-page-crop">
+            <ImageCropper />
           </div>
+          <div className="scribe-page-create">
+            <CreateGalleryListForm /> 
+            <GalleryList />
+            <GalleryCardText />
+          </div>   
+        </Row> 
+        <Row>
           <hr/>
-          <div className="row">
-            <div className="col-5">
-              <GalleryCardText />
-            </div> 
-            <div className="col"> 
-              <GalleryCardTemplate />
-            </div>
+        </Row> 
+        <Row className="scribe-page-text-card">
+          <div className="scribe-page-text">
+            
           </div>
-        </Container>
-      </div>
+          <div className="scribe-page-card">Gallery Card View
+            <GalleryCardTemplate />
+          </div>          
+          
+        </Row>
+
+      
+      </Container>
+    
   );
 };
 

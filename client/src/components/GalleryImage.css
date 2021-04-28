@@ -1,0 +1,21 @@
+.galleryImage {
+    max-height: 100%;
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+}  
+
+.myRow {
+    height: 100%;
+}
+
+.myRow > div {
+    height: 100%;
+} 
+
+@media only screen and (max-width: 1000px){ 
+    #mytext {
+        font-size: 10px;
+    }
+    
+}
