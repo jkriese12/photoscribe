@@ -3,13 +3,18 @@ import Cropper from "react-cropper";
 import "cropperjs/dist/cropper.css";
 import "./styles/imagecropper.css";
 
-const defaultSrc =
-  "https://raw.githubusercontent.com/roadmanfong/react-cropper/master/example/img/child.jpg";
+// const defaultSrc =
+//   "https://raw.githubusercontent.com/roadmanfong/react-cropper/master/example/img/child.jpg";
 
-export const Crop = () => {
-  const [image, setImage] = useState(defaultSrc);
-  const [cropData, setCropData] = useState("#");
-  const [cropper, setCropper] = useState("");
+export const Crop = ({
+  image,
+  setImage,
+  cropData,
+  setCropData,
+  cropper,
+  setCropper,
+  defaultSrc,
+}) => {
   const onChange = (e) => {
     e.preventDefault();
     let files;
@@ -62,25 +67,45 @@ export const Crop = () => {
       <div className="box-container">
         <br />
         <div className="box" style={{ width: "50%", float: "right" }}>
-
           <p></p>
-            <button className="btn btn-sm btn-secondary" style={{ float: "right"  }} onClick={getCropData}>
-              Crop Image
-            </button>
+          <button
+            className="btn btn-sm btn-secondary"
+            style={{ float: "right" }}
+            onClick={getCropData}
+          >
+            Crop Image
+          </button>
 
           <div
             className="img-preview"
-            style={{ width: "60%", float: "left", height: "300px", marginBottom: 10, padding: 10  }}
+            style={{
+              width: "60%",
+              float: "left",
+              height: "300px",
+              marginBottom: 10,
+              padding: 10,
+            }}
           />
         </div>
 
-        <div className="box" style={{ width: "50%", float: "right", height: "300px", marginBottom: 10, padding: 10 }}>
+        <div
+          className="box"
+          style={{
+            width: "50%",
+            float: "right",
+            height: "300px",
+            marginBottom: 10,
+            padding: 10,
+          }}
+        >
           <div>
             <span>Cropped Image</span>
-            
-
           </div>
-          <img style={{ width: "auto", height: "300px", padding: 15 }} src={cropData} alt="cropped" />
+          <img
+            style={{ width: "auto", height: "300px", padding: 15 }}
+            src={cropData}
+            alt="cropped"
+          />
         </div>
       </div>
       <br style={{ clear: "both" }} />
