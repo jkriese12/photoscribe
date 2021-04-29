@@ -10,11 +10,12 @@ const TestGalleryGet = () => {
   useEffect(() => {
     dispatch(getPostsGallery(albumName));
   }, [dispatch]);
+
   const posts = useSelector((state) => state.posts);
   const [user, setUser] = useState(JSON.parse(localStorage.getItem("profile")));
   console.log(posts);
   console.log(posts[0]);
-  const userId = user.result._id;
+  console.log(user);
   function sendEmail(e) {
     e.preventDefault();
 
