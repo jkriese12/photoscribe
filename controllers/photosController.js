@@ -1,28 +1,77 @@
 const db = require("../models");
+const Mongoose = require("mongoose");
 // Creating mongoose methods to use for our router calls
 module.exports = {
-  find: (req, res) => {
-    db.Photo.find()
-      .then((dbModel) => res.json(dbModel))
+  // Finding all data for the specifc user that is logged in
+  find: ({ userId }, res) => {
+    db.User.find({ _id: userId })
+      .populate("photos")
+      .then((dbModel) => {
+        res.json(dbModel);
+      })
       .catch((err) => res.status(422).json(err));
   },
-  create: async (req, res) => {
-    const post = req.body;
+  // Gets data specific to the album the user selects for that user
+  findGalleries: ({ userId, params }, res) => {
+    db.User.find({ _id: userId })
+      .populate("photos")
+      .then((dbModel) => {
+        const array = dbModel[0].photos.filter(
+          (data) => data.albumName === params.albumName
+        );
 
-    const newPostMessage = new db.Photo({ ...post, createdBy: req.email });
+        res.json(array);
+      })
+      .catch((err) => res.status(422).json(err));
+  },
+  // Gets data for specific gallery without auth so it can be sent as a link for anyone to view
+  findGalleriesNoAuth: ({ params }, res) => {
+    console.log(params);
+    db.User.find({ _id: params.id })
+      .populate("photos")
+      .then((dbModel) => {
+        const array = dbModel[0].photos.filter(
+          (data) => data.albumName === params.albumName
+        );
 
-    try {
-      await newPostMessage.save();
+        res.json(array);
+      });
+  },
+  // Creates post to the data base in the nested photos array of the user object of an entire photo object
+  create: ({ body, userId }, res) => {
+    console.log(userId, "User Token");
+    console.log(body);
+    db.Photo.create(body)
+      .then(({ _id }) => {
+        console.log(_id, "New Photo");
+        return db.User.findByIdAndUpdate(
+          userId,
+          { $push: { photos: _id } },
+          { new: true }
+        );
+      })
 
-      res.status(201).json(newPostMessage);
-      console.log(req.user);
-    } catch (error) {
-      res.status(409).json({ message: error.message });
-    }
+      .then((dbUser) => {
+        console.log(dbUser);
+        res.json(dbUser);
+      })
+      .catch((err) => {
+        res.json(err);
+      });
   },
   update: (req, res) => {
     db.Photo.findOneAndUpdate({ _id: req.params.id }, req.body)
       .then((dbModel) => res.json(dbModel))
       .catch((err) => res.status(422).json(err));
+  },
+  deleteOne: async (req, res) => {
+    const { id } = req.params;
+
+    if (!Mongoose.Types.ObjectId.isValid(id))
+      return res.status(404).send(`No post with id: ${id}`);
+
+    await db.Photo.findByIdAndRemove(id);
+
+    res.json({ message: "Post deleted successfully." });
   },
 };

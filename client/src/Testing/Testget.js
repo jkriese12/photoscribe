@@ -1,17 +1,27 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
+import { getPosts } from "../actions/posts";
+import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 
 const Testget = () => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getPosts());
+  }, [dispatch]);
   const posts = useSelector((state) => state.posts);
 
   console.log(posts);
-  console.log(posts[1]);
 
   return (
     <div>
       {posts.map((data) => (
         <div key={data._id}>
-          {data.synopsis}, {data.dateTaken}, {data.photoLocation}{" "}
+          {data.photos.map((arrayData) => (
+            <Link to={"/gets/" + arrayData.albumName} key={arrayData._id}>
+              {arrayData.albumName}
+            </Link>
+          ))}
           <img src={data.selectedFile} />
         </div>
       ))}

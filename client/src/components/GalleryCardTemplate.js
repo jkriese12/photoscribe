@@ -1,3 +1,4 @@
+
 import React from 'react';
 import "./styles/GalleryCardTemplate.css";
 
@@ -30,8 +31,7 @@ function GalleryCard(props) {
                      
         </div> 
                 
-    );
+    ); 
 }
 
 export default GalleryCard;
-

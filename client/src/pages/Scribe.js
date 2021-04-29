@@ -1,5 +1,6 @@
-import React from "react"; 
+import React from "react";
 import Container from "../components/Container";
+
 import Row from "../components/Row";
 import CreateGalleryListForm from "../components/CreateGalleryListForm"
 import GalleryList from "../components/GalleryList";
@@ -48,14 +49,10 @@ const Scribe = () => {
           <div className="scribe-page-card">
             <GalleryCardTemplate />
           </div>
-            
-          
         </Row>
+     </Container>
 
-      
-      </Container>
-    
-  );
+ );
 };
 
 export default Scribe;
