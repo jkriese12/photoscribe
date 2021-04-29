@@ -3,8 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Navbar from "./components/Navbar";
 
 import Logout from "./components/Logout";
-import Landing from "./pages/Landing"
-
+import Landing from "./pages/Landing";
 
 import SignUp from "./pages/SignUp";
 import Login from "./pages/Login";
@@ -22,9 +21,8 @@ import PrivateRoute from "./components/PrivateRoute";
 function App() {
   return (
     <div>
-
-      <Router> 
-        <Navbar /> 
+      <Router>
+        <Navbar />
         <Logout />
 
         <Switch>
@@ -34,16 +32,14 @@ function App() {
             <Route path="/signup" component={SignUp} />
             <Route path="/scribe" component={Scribe} />
 
-            <Route path="/get" component={Testget} /> 
-            <Route path="/gallery" component={Gallery} />
+            <Route path="/get" component={Testget} />
+            <Route path="/gallery/:albumName" component={Gallery} />
 
-            <PrivateRoute path="/get">
+            <Route path="/get">
               <Testget />
-            </PrivateRoute>
+            </Route>
             <Route exact path="/gets/:albumName" component={TestGalleryGet} />
             <Route exact path="/go/:id/:albumName" component={TestNoAuth} />
-
-            <Route path="/gallery" component={Gallery} />
 
           </>
         </Switch>

@@ -1,18 +1,22 @@
 import React from "react";
 import "./styles/GalleryCardTemplate.css";
 
-function GalleryCard({ data }) {
+function ScribeGalleryCard({ details, cropData }) {
   return (
     <div className="container">
       <div className="card mb-3">
         <div className="row no-gutters myRow">
           <div className="col-md-6">
-            <img className="galleryImage" src={data.selectedFile} alt="gallery" />
+            <img className="galleryImage" src={cropData} alt="gallery" />
           </div>
           <div className="col-md-6">
             <div className="card-body">
               <p className="card-text">
-                {data.dateTaken},{data.photoLocation},{data.synopsis}.
+                Year: {details.dateTaken}
+                <br />
+                Location:{details.photoLocation}
+                <br />
+                {details.synopsis}
               </p>
             </div>
           </div>
@@ -26,4 +30,4 @@ function GalleryCard({ data }) {
   );
 }
 
-export default GalleryCard;
+export default ScribeGalleryCard;

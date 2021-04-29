@@ -5,14 +5,14 @@ import { createPost } from "../actions/posts";
 
 import "./styles/GalleryCardText.css";
 
-const GalleryCardText = () => {
-  const [details, setDetails] = useState({
-    dateTaken: "",
-    photoLocation: "",
-    synopsis: "",
-    albumName: "",
-    selectedFile: "",
-  });
+const GalleryCardText = ({ details, setDetails }) => {
+  // const [details, setDetails] = useState({
+  //   dateTaken: "",
+  //   photoLocation: "",
+  //   synopsis: "",
+  //   albumName: "",
+  //   selectedFile: "",
+  // });
   const dispatch = useDispatch();
   const submitHandler = (e) => {
     e.preventDefault();
@@ -58,26 +58,6 @@ const GalleryCardText = () => {
             onChange={(e) => setDetails({ ...details, synopsis: e.target.value })}
             value={details.synopsis}
           ></textarea>
-        </div>
-
-        <div>
-          <label htmlFor="FormControlTextarea1" className="form-label">
-            Gallery Name
-          </label>
-          <textarea
-            className="form-control"
-            id="FormControlTextarea1"
-            rows="8"
-            onChange={(e) => setDetails({ ...details, albumName: e.target.value })}
-            value={details.albumName}
-          ></textarea>
-        </div>
-        <div>
-          <FileBase
-            type="file"
-            multiple={false}
-            onDone={({ base64 }) => setDetails({ ...details, selectedFile: base64 })}
-          />
         </div>
       </form>
       <br />
