@@ -81,16 +81,8 @@ const GalleryCardText = () => {
         </div>
       </form>
       <br />
+
       <button type="submit" className="btn btn-secondary btn-sm" onClick={submitHandler}>
-
-      </form>
-      <br />
-      <button
-        type="submit"
-        className="btn btn-secondary btn-sm"
-        onClick={submitHandler}
-      >
-
         Add Text{" "}
       </button>
     </div>
