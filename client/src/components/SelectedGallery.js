@@ -20,13 +20,10 @@ const [selectedGalleryName, setSelectedGalleryName] = useState({
         <form className="selected-gallery">
             <div className="form-group">
                 <label htmlFor="selected-gallery-name">Selected Gallery:</label><br/>
-                <input
+                <text
                     type="name"
-                    className="form-group"
-                    // onSubmit={(e) => setDetails({  name : e.target.value })}
-                    // value={details.name}
                  /> 
-            </div> 
+            </div><br/>
             <button type="submit" onClick={props.handleFormSubmit} className="btn btn-sm btn-secondary">View Gallery</button>
         </form> 
                      

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { createPost } from "../actions/posts";
 
-import "./CreateGalleryListForm.css";
+import "./styles/CreateGalleryListForm.css";
 
 const CreateGalleryListForm = (props) => { 
 

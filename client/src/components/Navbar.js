@@ -1,7 +1,7 @@
 import React from 'react'; 
 import { Link } from "react-router-dom"
 import { FaAddressCard } from "react-icons/fa";
-import "./Navbar.css";
+import "./styles/Navbar.css";
 
 const Navbar = () => { 
 

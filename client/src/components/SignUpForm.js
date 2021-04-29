@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./SignUpForm.css";
+import "./styles/SignUpForm.css";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 import { signUp } from "../actions/auth";

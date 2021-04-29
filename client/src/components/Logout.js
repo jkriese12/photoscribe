@@ -1,6 +1,6 @@
 import React from 'react'; 
 import { FaSignOutAlt } from "react-icons/fa";
-import "./Logout.css";
+import "./styles/Logout.css";
 
 const Logout = () => {
     return (

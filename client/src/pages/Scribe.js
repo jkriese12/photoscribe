@@ -5,7 +5,7 @@ import CreateGalleryListForm from "../components/CreateGalleryListForm"
 import GalleryList from "../components/GalleryList";
 import ImageCropper from "../components/ImageCropper";
 import GalleryCardText from "../components/GalleryCardText"; 
-import SelectedGalleryForm from "../components/SelectedGalleryForm";
+import SelectedGallery from "../components/SelectedGallery";
 import GalleryCardTemplate from "../components/GalleryCardTemplate"; 
 import "./styles/Scribe.css";
 
@@ -38,13 +38,17 @@ const Scribe = () => {
         <Row>
           <hr/>
         </Row> 
-        <Row className="scribe-page-text-card">
-          <div className="scribe-page-text">
-            
+        <Row className="scribe-page-select-card">
+          <div className="scribe-page-select-gallery">
+            <SelectedGallery />
           </div>
-          <div className="scribe-page-card">Gallery Card View
-            <GalleryCardTemplate />
+          <div className="scribe-page-card-label">
+            <h6>Gallery Card View</h6>
           </div>          
+          <div className="scribe-page-card">
+            <GalleryCardTemplate />
+          </div>
+            
           
         </Row>
 

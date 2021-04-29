@@ -10,3 +10,12 @@
     justify-items: center;
     grid-gap: 20px;
 } 
+
+.gallery-buttons {
+    color: #007bff;
+    padding: 12px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+}

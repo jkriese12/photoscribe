@@ -1,5 +1,5 @@
 import React from 'react';
-import "./GalleryCardTemplate.css";
+import "./styles/GalleryCardTemplate.css";
 
 function GalleryCard(props) { 
 
@@ -7,11 +7,9 @@ function GalleryCard(props) {
 
         <div className="container">
             <div className="card mb-3">
-                <div className="row g-0">
+                <div className="row no-gutters myRow">
                     <div className="col-md-6"> 
-                        <div className="img-square-wrapper">
-                            <img className="" src={props.photo} alt="gallery" />
-                        </div>
+                        <img className="galleryImage" src={props.photo} alt="gallery" />
                     </div>
                     <div class="col-md-6">
                         <div className="card-body">
@@ -27,7 +25,7 @@ function GalleryCard(props) {
             </div> 
             <div className="gallery-card-buttons">
                 <button type="submit" onClick={props.handleFormSubmit} className="btn btn-sm btn-secondary">Send to Gallery</button>           
-                <button type="submit" onClick={props.handleFormSubmit} className="btn btn-sm btn-secondary">Clear</button>   
+                <button type="submit" onClick={props.handleFormSubmit} className="btn btn-sm btn-secondary">Reset</button>   
             </div>
                      
         </div> 

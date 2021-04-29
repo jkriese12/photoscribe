@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Cropper from "react-cropper";
 import "cropperjs/dist/cropper.css";
-import "./imagecropper.css";
+import "./styles/imagecropper.css";
 
 const defaultSrc =
   "https://raw.githubusercontent.com/roadmanfong/react-cropper/master/example/img/child.jpg";
@@ -64,7 +64,7 @@ export const Crop = () => {
       <div className="box-container"><br/>
         <div className="box" style={{ width: "50%", float: "right" }}>
           <p></p>
-            <button className="btn btn-sm btn-secondary" style={{ float: "right" , padding: 10 }} onClick={getCropData}>
+            <button className="btn btn-sm btn-secondary" style={{ float: "right"  }} onClick={getCropData}>
               Crop Image
             </button>
           <div

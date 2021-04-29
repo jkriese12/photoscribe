@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./LoginForm.css";
+import "./styles/LoginForm.css";
 import { GoogleLogin } from "react-google-login";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
