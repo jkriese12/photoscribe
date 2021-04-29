@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./LoginForm.css";
+import "./styles/LoginForm.css";
 import { GoogleLogin } from "react-google-login";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
@@ -96,7 +96,8 @@ const LoginForm = ({ Login, error }) => {
               cookiePolicy="single_host_origin"
             /> 
             </div> 
-          </form>
+          </form><br/> 
+          <p className="small">Don't have your account yet? <a href="/signup">sign up</a> here</p>
       <div></div>
     </div>
   );

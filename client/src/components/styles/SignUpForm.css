@@ -15,4 +15,9 @@ body {
 
 h3 {
     padding-bottom: 25px;
+} 
+
+p {
+    font-style: italic;
+    float: right;
 }

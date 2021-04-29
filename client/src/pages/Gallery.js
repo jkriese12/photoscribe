@@ -1,31 +1,44 @@
-import React, { useEffect } from "react";
+import React, { useState } from 'react'; 
 import { Link } from "react-router-dom";
-import { Col, Row, Container } from "../components/Grid";
-import API from "../utils/API";
-import { useStoreContext } from "../utils/GlobalState";
-import { SET_CURRENT_POST } from "../utils/actions";
+import Container from "../components/Container";
+import Row from "../components/Row";
+import "./styles/Gallery.css";
+import GalleryCardTemplate from "../components/GalleryCardTemplate";
+import { TiArrowBack , TiArrowForward } from "react-icons/ti";
 
-  const Gallery = props => {
-  const [state, dispatch] = useStoreContext();
 
-    // useEffect(() => {
-    //   API.getPost(props.match.params.id)
-    //     .then(res => dispatch({ type: SET_CURRENT_POST, post: res.data }))
-    //     .catch(err => console.log(err));
-    // }, []);
+const Gallery = () => {   
 
-    // const addGalleryData = () => {
-    //   dispatch({
-    //     type: ADD_GALLERY_DATA,
-    //     post: state.currentPost
-    //   });
-    // };
+const array = []
+       
+   function galleryMap(card) { 
 
+       const {dateTaken, photoLocation, synopsis, selectedFile } = card 
+       return (
+           <GalleryCardTemplate  {...card}/>
+       )
+   }
     return (
-      <div> 
-        
-      </div> 
-   ); 
-  } 
-  
-  export default Gallery;
+        <Container className="selectedGallery">
+            <div className="gallery-buttons">
+                <div className="back-to-work">
+                    <Link to="/"><TiArrowBack size="2em" color="#007bff" />Back</Link>
+                </div> 
+                <div className="back-to-work">
+                    <Link to="/">View Directory<TiArrowForward size="2em" color="#007bff" /></Link>
+                </div> 
+            </div> 
+            
+            
+            <Row>
+                <h1 className="gallery-title">Gallery Name</h1>
+            </Row> 
+            <Row className="galImages">
+                {array.map(galleryMap)}
+            </Row>
+        </Container>
+    )
+}
+
+export default Gallery;
+

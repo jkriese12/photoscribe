@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./SignUpForm.css";
+import "./styles/SignUpForm.css";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 import { signUp } from "../actions/auth";
@@ -61,7 +61,10 @@ const SignUpForm = ({ SignUp, error }) => {
         <button type="submit" className="btn btn-primary btn-block">
           Submit
         </button>
-      </form>
+      </form><br/>
+      <div className="small">
+        <p>Already have an account? <a href="/login">login </a> here</p> 
+      </div> 
       {/* <div>{userName}</div> */}
     </div>
   );

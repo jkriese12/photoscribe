@@ -5,7 +5,7 @@ import Container from "../components/Container";
 import Card from "../components/Card";
 import { FaImage, FaLock, FaUserFriends } from "react-icons/fa"; 
 import Button from "../components/Button";
-import "./styles/LandingPage.css";
+import "./styles/Landing.css";
 
 const LandingPage = () => {
     return (
@@ -14,8 +14,8 @@ const LandingPage = () => {
             <Container >
                 <Row>
                     <div className="landing-page-title">
-                        <h5>Welcome to PhotoScribe<br/>an easy to use desktop 
-                        application to organize, detail and share photos.</h5> 
+                        <h4>Welcome to PhotoScribe<br/>an easy to use desktop 
+                        application to organize, detail and share photos.</h4> 
                     </div>   
                 </Row> 
                 <Row className="landing-page-svg">
@@ -48,10 +48,12 @@ const LandingPage = () => {
                         </Card>
                     </Col>
                 </Row> 
-            
                 <Button className="landing-page-button">
                     <button className="btn btn-primary btn-lg">CREATE AN ACCOUNT</button>
                 </Button>
+                <Row className="landing-page-redirect">
+                    <p>Already have an account?<a href="/login"> login</a> here</p>
+                </Row>
             </Container>
         </div>
     )

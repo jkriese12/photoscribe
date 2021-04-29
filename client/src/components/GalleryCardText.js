@@ -3,7 +3,7 @@ import FileBase from "react-file-base64";
 import { useDispatch } from "react-redux";
 import { createPost } from "../actions/posts";
 
-import "./GalleryCardText.css";
+import "./styles/GalleryCardText.css";
 
 const GalleryCardText = () => {
   const [details, setDetails] = useState({

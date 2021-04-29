@@ -1,13 +1,40 @@
-.gallery-list {
+.scribe-page { 
+    margin-left: 100px;
+    margin-right: 100px;
+    justify-content: center;
+    align-items: center;
+}  
 
+.scribe-page-create-crop {
+    display: flex; 
 }
+
+.scribe-page-crop {
+    width: 500px;
+}  
+
 .img-container {
-    width: 650px;
-    height: 480px;
+    width: 500px;
+    height: 330px;
 }
 
 .img-preview {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     float: left;
 }
+
+.scribe-page-create {
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+.scribe-page-select-gallery {
+    padding-top: 10px;
+}
+
+.scribe-page-card-label {
+    text-align: center;
+
+} 
+

@@ -1,5 +1,5 @@
 import React from 'react'
-import "./DirectorCard.css"
+import "./styles/DirectorCard.css"
 
 const DirectoryCard = (props) => {
    return (
