@@ -1,6 +1,8 @@
 import React, { useState } from "react";
-import { useDispatch } from "react-redux";
-import { createPost } from "../actions/posts";
+
+
+
+import { useSelector } from "react-redux";
 
 import "./styles/CreateGalleryListForm.css";
 
