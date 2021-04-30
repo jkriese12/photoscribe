@@ -5,7 +5,6 @@ import Navbar from "./components/Navbar";
 import Logout from "./components/Logout";
 import Landing from "./pages/Landing"
 
-
 import SignUp from "./pages/SignUp";
 import Login from "./pages/Login";
 import Scribe from "./pages/Scribe";
@@ -26,7 +25,6 @@ function App() {
       <Router> 
         <Navbar /> 
         <Logout />
-
         <Switch>
           <>
             <Route exact path="/" component={Landing} />

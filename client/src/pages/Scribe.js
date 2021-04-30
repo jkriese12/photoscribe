@@ -1,6 +1,5 @@
 import React from "react";
 import Container from "../components/Container";
-
 import Row from "../components/Row";
 import CreateGalleryListForm from "../components/CreateGalleryListForm"
 import GalleryList from "../components/GalleryList";
@@ -9,7 +8,6 @@ import GalleryCardText from "../components/GalleryCardText";
 import SelectedGallery from "../components/SelectedGallery";
 import GalleryCardTemplate from "../components/GalleryCardTemplate"; 
 import "./styles/Scribe.css";
-
 
 const Scribe = () => {
   return (   
@@ -51,7 +49,6 @@ const Scribe = () => {
           </div>
         </Row>
      </Container>
-
  );
 };
 

@@ -28,8 +28,6 @@ const array = []
                     <Link to="/">View Directory<TiArrowForward size="2em" color="#007bff" /></Link>
                 </div> 
             </div> 
-            
-            
             <Row>
                 <h1 className="gallery-title">Gallery Name</h1>
             </Row> 

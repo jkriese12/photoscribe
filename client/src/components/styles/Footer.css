@@ -1,0 +1,11 @@
+.photoscribe-footer {
+    height: 165px;
+    justify-content: center;
+    align-items: center;
+    background-color: #43494e;
+    color: whitesmoke;
+} 
+
+.footer-text {
+    text-align: center;
+}

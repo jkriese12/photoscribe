@@ -5,12 +5,12 @@ import "./styles/Logout.css";
 const Logout = () => {
     return (
         <div>
-            <div className="logout"><FaSignOutAlt /> Logout</div> 
+            <div className="logout-button"><FaSignOutAlt /> Logout</div> 
         </div>
     )
 }
 
-export default Logout
+export default Logout;
 
 
 

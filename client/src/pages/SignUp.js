@@ -4,7 +4,6 @@ import Container from "../components/Container";
 import SignUpForm from "../components/SignUpForm";
 import "./styles/SignUp.css";
 
-
 const SignUp = () => {
     return (
         <div>

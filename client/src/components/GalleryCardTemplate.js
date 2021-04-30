@@ -27,8 +27,7 @@ function GalleryCard(props) {
             <div className="gallery-card-buttons">
                 <button type="submit" onClick={props.handleFormSubmit} className="btn btn-sm btn-secondary">Send to Gallery</button>           
                 <button type="submit" onClick={props.handleFormSubmit} className="btn btn-sm btn-secondary">Reset</button>   
-            </div>
-                     
+            </div>    
         </div> 
                 
     ); 

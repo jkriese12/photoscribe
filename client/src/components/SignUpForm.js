@@ -62,8 +62,8 @@ const SignUpForm = ({ SignUp, error }) => {
           Submit
         </button>
       </form><br/>
-      <div className="small">
-        <p>Already have an account? <a href="/login">login </a> here</p> 
+      <div>
+        <p className="small">Already have an account?<a href="/login"> login</a> here</p> 
       </div> 
       {/* <div>{userName}</div> */}
     </div>
