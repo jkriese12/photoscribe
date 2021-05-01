@@ -3,20 +3,22 @@ import Row from "../components/Row";
 import Col from "../components/Col";
 import Container from "../components/Container";
 import Card from "../components/Card";
-import { FaImage, FaLock, FaUserFriends } from "react-icons/fa"; 
 import Button from "../components/Button"; 
 import Footer from "../components/Footer";
+import one from "../components/Images/one.png";
+import two from "../components/Images/two.png";
+import three from "../components/Images/three.png";
+import tryitnow from "../components/Images/try-it-now.jpg";
 import "./styles/Landing.css";
 
 const LandingPage = () => {
     return (
-    
-        <div> 
+        <div>
             <Container>
                 <Row>
                     <div className="landing-title">
                         <h2>Photoscribe</h2>
-                        <h5>easily organize, detail and share photos</h5> 
+                        <h5><b>Organize, detail and share photos in 3 easy steps!</b></h5> 
                     </div>   
                 </Row> 
                 <Row className="landing-svg">
@@ -25,37 +27,43 @@ const LandingPage = () => {
                 <Row className="landing-info">
                     <Col size="col-4">
                         <Card className="landing-card"> 
-                            <FaImage size="3em" color="#d7dbdd"/> 
+                            <img src={one} color="#d7dbdd"/> 
                             <div className="landing-card-text">
-                                <p>Great for family historians to easily list who is in a photo or share a photo story.</p>
+                                <p>Choose a photo from your computer or other device.</p>
                             </div>
                         </Card> 
                     </Col>
                     <Col size="col-4"> 
                         <Card className="landing-card">
-                            <FaLock size="2.5em" color="#d7dbdd"/>  
+                            <img src={two} color="#d7dbdd"/>  
                             <div className="landing-card-text">
-                            <p>PhotoScribe is the perfect companion to a photo vault.</p> 
+                            <p>Bring it to life with details like who is in the photo or what year it was taken.</p> 
                             </div>  
                         </Card>  
                     </Col>
                     <Col size="col-4"> 
                         <Card className="landing-card">
-                            <FaUserFriends size="3em" color="#d7dbdd"/>
+                            <img src={three}/>
                             <div className="landing-card-text">
-                                <p>PhotoScribe makes it easy to create and share a family photo album.</p>
+                                <p>Save it to a gallery and share with friends and family.</p>
                             </div>
                         </Card>
                     </Col>
-                </Row> 
+                </Row>
+                  
                 <Button className="landing-button">
-                    <button className="btn btn-primary btn-lg">CREATE AN ACCOUNT</button>
+                        <img src={tryitnow} alt="try it" /> 
+            
+                    {/* <button className="btn btn-primary btn-lg">
+                        CREATE AN ACCOUNT
+                    </button> */}
                 </Button>
                 <Row className="landing-redirect text-center">
                     <h7>Already have an account?<a href="/login"> login</a> here</h7>
                 </Row>
             </Container>
-            <Footer />
+            <Footer /> 
+            <div className="small icon">Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> 
         </div>
     )
 }

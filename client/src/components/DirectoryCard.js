@@ -1,20 +1,22 @@
 import React from 'react'
-import "./styles/DirectorCard.css"
+import { Link } from "react-router-dom";
+import "./styles/DirectoryCard.css"
 
 const DirectoryCard = (props) => {
-   return (
-    <div> 
-      <div className="card"> 
-        <div className="img-square-wrapper">
-          <img className="card-img-top" src={props.photo} alt="photo gallery image" />
-            <div className="card-body">
-              <p className="card-title">
-               <h5>{props.title}</h5>     
-              </p>
-            </div>
-        </div> 
+   return ( 
+
+    <div>
+      <div class="directory-card" >
+        <img className="card-img-top" src={props.photo} alt="directory" />
+        <div class="card-body">
+          <h5 class="card-title">{props.galleryName}</h5>
+        </div>
       </div>
+      <div className="directory-buttons">
+        <Link to="/" className="btn btn-sm btn-secondary link">View Gallery</Link>
+      </div> 
     </div>
+    
         
     );
 }

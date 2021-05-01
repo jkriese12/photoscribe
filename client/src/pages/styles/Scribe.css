@@ -25,6 +25,12 @@
 
 .scribe-create { 
     margin: 0;
-    
+} 
+
+.scribe-card-header {
+    text-align:center
 }
+ .scribe-card {
+     margin-bottom: 100px;
+ }
 

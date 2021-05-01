@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
-import "./styles/CreateGalleryListForm.css";
+import "./styles/CreateGalleryList.css";
 
-const CreateGalleryListForm = (props) => {
+const CreateGalleryList = (props) => {
   const [galleryName, setGalleryName] = useState({
     name: "",
   });
@@ -57,4 +57,4 @@ const CreateGalleryListForm = (props) => {
 };
 
 
-export default CreateGalleryListForm;
+export default CreateGalleryList;

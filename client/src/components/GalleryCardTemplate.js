@@ -15,9 +15,9 @@ function GalleryCard(props) {
                     <div class="col-md-6">
                         <div className="card-body">
                             <p className="card-text">
-                                {props.dateTaken},
-                                {props.photoLocation},
-                                {props.synopsis}.
+                                {props.dateTaken}
+                                {props.photoLocation}
+                                {props.synopsis}
                                 {props.selectedFile}
                             </p>
                         </div>
@@ -26,7 +26,7 @@ function GalleryCard(props) {
             </div> 
             <div className="gallery-card-buttons">
                 <button type="submit" onClick={props.handleFormSubmit} className="btn btn-sm btn-secondary">Send to Gallery</button>           
-                <button type="submit" onClick={props.handleFormSubmit} className="btn btn-sm btn-secondary">Reset</button>   
+                <button type="submit" onClick={props.handleFormSubmit} className="btn btn-sm btn-secondary">Reset Card</button>   
             </div>    
         </div> 
                 

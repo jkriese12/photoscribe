@@ -8,6 +8,7 @@ import SignUp from "./pages/SignUp";
 import Login from "./pages/Login";
 import Scribe from "./pages/Scribe";
 import Gallery from "./pages/Gallery";
+import Directory from "./pages/Directory";
 import Testget from "./Testing/Testget";
 
 import { getPosts } from "./actions/posts";
@@ -32,7 +33,7 @@ function App() {
 
             <Route path="/get" component={Testget} /> 
             <Route path="/gallery" component={Gallery} />
-
+            <Route path="/directory" component={Directory} />
             <PrivateRoute path="/get">
               <Testget />
             </PrivateRoute>

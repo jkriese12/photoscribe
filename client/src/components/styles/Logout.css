@@ -1,7 +1,6 @@
 .logout-button { 
-    margin-top: -49px;
-    padding-right: 20px;
+    padding-top: 5px;
+    padding-right: 12px;
     color: grey;
-    font-style: italic;
     text-align:right;
 }

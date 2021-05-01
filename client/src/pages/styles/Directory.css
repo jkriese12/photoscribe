@@ -4,21 +4,14 @@
     border-bottom: .5px solid lightgrey;
 } 
 
-.gallery-title {
+.directory-title {
     text-align: center;
     width: 100%;
     padding-bottom: 40px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 } 
 
-.galImages {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-items: center;
-    grid-gap: 20px;
-} 
-
-.gallery-buttons {
+.directory-buttons {
     color: #6c757d;
     padding: 12px;
     display: flex;
@@ -26,13 +19,13 @@
     justify-content:space-between;
 }  
 
-.send-email { 
-    float: right;
-    padding-right: 12px;
-    padding-bottom: 15px; 
-} 
-
 .link {
     color: #6c757d;
-}
+} 
 
+.dirImages {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    justify-items: center;
+    grid-gap: 20px;
+} 
