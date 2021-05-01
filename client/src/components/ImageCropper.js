@@ -41,7 +41,7 @@ export const Crop = () => {
         <br />
         <br />
         <Cropper
-          style={{ height: 400, width: "100%" }}
+          style={{ height: 290, width: "100%" }}
           zoomTo={1}
           initialAspectRatio={1}
           preview=".img-preview"
@@ -60,28 +60,22 @@ export const Crop = () => {
         />
       </div>
       <div className="box-container">
-        <br />
-        <div className="box" style={{ width: "50%", float: "right" }}>
-
-          <p></p>
-            <button className="btn btn-sm btn-secondary" style={{ float: "right"  }} onClick={getCropData}>
+        <br /><button className="btn btn-sm btn-secondary" style={{ float: "left"  }} onClick={getCropData}>
               Crop Image
             </button>
-
+        <div className="box" style={{ width: "50%", float: "right" }}>
+            
           <div
             className="img-preview"
-            style={{ width: "60%", float: "left", height: "300px", marginBottom: 10, padding: 10  }}
+            style={{ width: "58%", float: "left", height: "185px", marginBottom: 10 }}
           />
         </div>
-
-        <div className="box" style={{ width: "50%", float: "right", height: "300px", marginBottom: 10, padding: 10 }}>
+        {/* <div className="box" style={{ width: "50%", float: "right", height: "300px", marginBottom: 10, padding: 10 }}>
           <div>
             <span>Cropped Image</span>
-            
-
           </div>
           <img style={{ width: "auto", height: "300px", padding: 15 }} src={cropData} alt="cropped" />
-        </div>
+        </div> */}
       </div>
       <br style={{ clear: "both" }} />
     </div>

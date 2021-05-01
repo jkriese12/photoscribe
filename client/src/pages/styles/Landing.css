@@ -1,4 +1,5 @@
-.landing-page-title {
+.landing-title { 
+    margin-top: 20px;
     padding-left: 250px;
     padding-right: 250px;
     text-align: center;
@@ -6,27 +7,27 @@
     font-weight: bold;
 } 
 
-.landing-page-svg {
+.landing-svg {
     padding-top: 40px;
     padding-left: 250px;
     padding-right: 250px;
     text-align: center; 
 }  
 
-.landing-page-svg svg {
-    height: 200px;
-    width: 270px;
+.landing-svg svg {
+    height: 190px;
+    width: 260px;
 }
 
-.landing-page-info {
+.landing-info {
     display: flex;
     justify-content: space-around;
     padding-left: 200px;
     padding-right: 200px;
 }  
 
-.landing-page-card { 
-    margin-top: 40px;
+.landing-card { 
+    margin-top: 50px;
     width: 200px;
     height: 205px;
     text-align: center;
@@ -35,22 +36,22 @@
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 } 
 
-.landing-page-card-text {
+.landing-card-text {
     margin-top: 15px;
 } 
 
-.landing-page-button {
+.landing-button {
     padding-left: 250;
     padding-right: 250;
     text-align: center;
     margin-bottom: 15px;
 }  
 
-.landing-page-redirect {
+.landing-redirect {
     margin-bottom: 80px;
 }
 
-.landing-page-redirect h7 {  
+.landing-redirect h7 {  
     text-align: center;
     font-style: italic;
 }  

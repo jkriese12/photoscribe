@@ -1,28 +1,31 @@
-.signup-page-title-svg { 
+.signup {
+    margin-top: 50px;
+}
+
+.signup-top-svg { 
     justify-content: center;
     text-align: center;
 }
 
-.signup-page-title { 
-    margin-top: 45px;
-    text-align: center;
-}  
+.signup-svg {
+    margin-top:-38px;
+} 
 
-.signup-page-svg svg { 
-    width: 220px;
-    height: 220px;
+.signup-svg svg { 
+    width: 190px;
+    height: 190px;
     z-index: 1;
 }
 
-.signup-page-form-graphic {
+.signup-form-graphic {
     display: flex;
     justify-content: center;
     align-items:center;
 } 
 
-.signup-page-form { 
-    margin-top: -55px;
-    width: 400px;
+.signup-form { 
+    margin-top: -50px;
+    width: 370px;
     z-index: -1;
 }
 

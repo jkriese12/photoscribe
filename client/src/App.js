@@ -2,7 +2,6 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Navbar from "./components/Navbar";
 
-import Logout from "./components/Logout";
 import Landing from "./pages/Landing"
 
 import SignUp from "./pages/SignUp";
@@ -24,7 +23,6 @@ function App() {
 
       <Router> 
         <Navbar /> 
-        <Logout />
         <Switch>
           <>
             <Route exact path="/" component={Landing} />

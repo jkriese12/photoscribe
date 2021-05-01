@@ -59,26 +59,6 @@ const GalleryCardText = () => {
             value={details.synopsis}
           ></textarea>
         </div>
-
-        <div>
-          <label htmlFor="FormControlTextarea1" className="form-label">
-            Gallery Name
-          </label>
-          <textarea
-            className="form-control"
-            id="FormControlTextarea1"
-            rows="8"
-            onChange={(e) => setDetails({ ...details, albumName: e.target.value })}
-            value={details.albumName}
-          ></textarea>
-        </div>
-        <div>
-          <FileBase
-            type="file"
-            multiple={false}
-            onDone={({ base64 }) => setDetails({ ...details, selectedFile: base64 })}
-          />
-        </div>
       </form>
       <br />
 

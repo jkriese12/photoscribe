@@ -14,7 +14,7 @@ const SignUpForm = ({ SignUp, error }) => {
 
   return (
     <div class="container">
-      <form className="form" onSubmit={submitHandler}>
+      <form className="singup-form" onSubmit={submitHandler}>
         <div className="form-inner"></div>
         <h3 className="text-center">Create An Account</h3>
         {/* {(error =! "") ? ( <div className="error">{error}</div>)  : ""}      */}

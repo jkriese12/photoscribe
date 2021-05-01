@@ -28,13 +28,6 @@ const GalleryList = () => {
           ))} */}
           <option value="test" />
         </datalist>
-        <button
-          type="submit"
-          // onClick={props.handleFormSubmit}
-          className="btn btn-secondary"
-        >
-          Select Gallery
-        </button>
       </div>
     </form>
   );
