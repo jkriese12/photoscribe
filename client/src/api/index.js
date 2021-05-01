@@ -26,8 +26,6 @@ export const createPdf = (pdf) =>
       const pdfBlob = new Blob([res.data], { type: "application/pdf" });
       saveAs(pdfBlob, "newPdf.pdf");
     });
-// Routes for updating data
-// export const updatePost = (id, updatedPost) => axios.put(`${url}/${id}`, updatedPost);
 // Routes for deleting data
 export const deletePhoto = (id) => API.delete("/photos/" + id);
 // Authentication routes

@@ -10,9 +10,17 @@ const Testget = () => {
     dispatch(getPosts());
   }, [dispatch]);
   const posts = useSelector((state) => state.posts);
-
+  const array = posts.map((item) => item.photos.map((arrayData) => arrayData));
+  const arrayU = array
+    .map((item) => item.albumName)
+    .filter((item, idx) => array.indexOf(item) == idx);
   console.log(posts);
-
+  console.log(array);
+  console.log(arrayU);
+  // Array.prototype.unique = function () {
+  //   return Array.from(new Set(this));
+  // };
+  // console.log(array.unique());
   return (
     <div>
       {posts.map((data) => (

@@ -1,40 +1,32 @@
-import React, { useState } from "react";
-import FileBase from "react-file-base64";
+import React, { useEffect } from "react";
+import { useSelector } from "react-redux";
+import { getPosts } from "../actions/posts";
 import { useDispatch } from "react-redux";
-import { createPost } from "../actions/posts";
-
-const GalleryList = () => {
-  const [details, setDetails] = useState({
-    name: "",
-    selectedFile: "",
-  });
+const GalleryList = ({ details, setDetails }) => {
   const dispatch = useDispatch();
-  const submitHandler = (e) => {
-    e.preventDefault();
-  };
+  useEffect(() => {
+    dispatch(getPosts());
+  }, [dispatch]);
+  const posts = useSelector((state) => state.posts);
+
+  console.log(posts);
 
   return (
     <form className="search">
       <div className="form-group">
         <label htmlFor="gallery">Gallery List:</label>
-        {/* <input
-          // value={props.search}
-          // onChange={this.props.handleInputChange}
-          name="gallery"
-        /> */}
-        <datalist id="gallery">
-          {/* {props.gallery.map((gallery) => (
-            <option value={gallery} key={gallery} />
-          ))} */}
-          <option value="test" />
-        </datalist>
-        <button
-          type="submit"
-          // onClick={props.handleFormSubmit}
-          className="btn btn-secondary"
+
+        <select
+          id="gallery"
+          onChange={(e) => setDetails({ ...details, albumName: e.currentTarget.value })}
         >
-          Select Gallery
-        </button>
+          <option></option>
+          {posts.map((data) =>
+            data.photos.map((arrayData) => (
+              <option key={arrayData._id}>{arrayData.albumName}</option>
+            ))
+          )}
+        </select>
       </div>
     </form>
   );

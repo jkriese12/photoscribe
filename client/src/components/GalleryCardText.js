@@ -1,34 +1,17 @@
-import React, { useState } from "react";
-import FileBase from "react-file-base64";
-import { useDispatch } from "react-redux";
-import { createPost } from "../actions/posts";
+import React from "react";
 
 import "./styles/GalleryCardText.css";
 
 const GalleryCardText = ({ details, setDetails }) => {
-  // const [details, setDetails] = useState({
-  //   dateTaken: "",
-  //   photoLocation: "",
-  //   synopsis: "",
-  //   albumName: "",
-  //   selectedFile: "",
-  // });
-  const dispatch = useDispatch();
-  const submitHandler = (e) => {
-    e.preventDefault();
-
-    dispatch(createPost(details));
-  };
-
   return (
     <div className="form-container">
-      <form onSubmit={submitHandler}>
+      <form>
         <div>
           <label htmlFor="FormControlInput1" className="form-label">
             Photo Year
           </label>
           <input
-            type="email"
+            type="number"
             className="form-control"
             id="FormControlInput1"
             onChange={(e) => setDetails({ ...details, dateTaken: e.target.value })}
@@ -62,9 +45,9 @@ const GalleryCardText = ({ details, setDetails }) => {
       </form>
       <br />
 
-      <button type="submit" className="btn btn-secondary btn-sm" onClick={submitHandler}>
+      {/* <button type="submit" className="btn btn-secondary btn-sm" onClick={submitHandler}>
         Add Text{" "}
-      </button>
+      </button> */}
     </div>
   );
 };

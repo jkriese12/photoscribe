@@ -1,20 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import Cropper from "react-cropper";
 import "cropperjs/dist/cropper.css";
 import "./styles/imagecropper.css";
 
-// const defaultSrc =
-//   "https://raw.githubusercontent.com/roadmanfong/react-cropper/master/example/img/child.jpg";
-
-export const Crop = ({
-  image,
-  setImage,
-  cropData,
-  setCropData,
-  cropper,
-  setCropper,
-  defaultSrc,
-}) => {
+export const Crop = ({ image, setImage, cropData, setCropData, cropper, setCropper }) => {
   const onChange = (e) => {
     e.preventDefault();
     let files;
@@ -34,7 +23,7 @@ export const Crop = ({
     if (typeof cropper !== "undefined") {
       setCropData(cropper.getCroppedCanvas().toDataURL());
       // Need to pass this data to the back end object creation
-      console.log(image);
+      console.log(cropData);
     }
   };
 
@@ -49,7 +38,7 @@ export const Crop = ({
           style={{ height: 400, width: "100%" }}
           zoomTo={1}
           initialAspectRatio={1}
-          preview=".img-preview"
+          // preview=".img-preview"
           src={image}
           viewMode={1}
           guides={true}
@@ -98,14 +87,14 @@ export const Crop = ({
             padding: 10,
           }}
         >
-          <div>
+          {/* <div>
             <span>Cropped Image</span>
           </div>
           <img
             style={{ width: "auto", height: "300px", padding: 15 }}
             src={cropData}
             alt="cropped"
-          />
+          /> */}
         </div>
       </div>
       <br style={{ clear: "both" }} />

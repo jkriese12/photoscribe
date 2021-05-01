@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { createPost } from "../actions/posts";
 import Container from "../components/Container";
-import Cropper from "react-cropper";
 import Row from "../components/Row";
 import CreateGalleryListForm from "../components/CreateGalleryListForm";
 import GalleryList from "../components/GalleryList";
@@ -11,6 +12,7 @@ import ScribeGalleryCard from "../components/ScribeGalleryCard";
 import "./styles/Scribe.css";
 
 const Scribe = () => {
+  // State for card that will be displayed as preview and sent to the database
   const [details, setDetails] = useState({
     dateTaken: "",
     photoLocation: "",
@@ -18,11 +20,26 @@ const Scribe = () => {
     albumName: "",
     selectedFile: "",
   });
+  // Default picture and state for cropped image that will be displayed on the page
   const defaultSrc =
     "https://raw.githubusercontent.com/roadmanfong/react-cropper/master/example/img/child.jpg";
   const [image, setImage] = useState(defaultSrc);
   const [cropData, setCropData] = useState("#");
   const [cropper, setCropper] = useState("");
+  const img = document.getElementById("test");
+  // Submit button to post the card to the database linked to the specific user that is logged in
+  const dispatch = useDispatch();
+  const submitHandler = (e) => {
+    e.preventDefault();
+    if (details.selectedFile === "") {
+      alert("Please select a photo first");
+    } else if (details.albumName === "") {
+      alert("Please select a gallery first");
+    } else {
+      dispatch(createPost(details));
+    }
+  };
+
   return (
     <Container className="scribe-page">
       <Row className="scribe-page-instructions">
@@ -59,12 +76,11 @@ const Scribe = () => {
             setCropData={setCropData}
             cropper={cropper}
             setCropper={setCropper}
-            defaultSrc={defaultSrc}
           />
         </div>
         <div className="scribe-page-create">
           <CreateGalleryListForm />
-          <GalleryList />
+          <GalleryList details={details} setDetails={setDetails} />
           <GalleryCardText details={details} setDetails={setDetails} />
         </div>
       </Row>
@@ -73,13 +89,22 @@ const Scribe = () => {
       </Row>
       <Row className="scribe-page-select-card">
         <div className="scribe-page-select-gallery">
-          <SelectedGallery />
+          <SelectedGallery details={details} />
         </div>
         <div className="scribe-page-card-label">
           <h6>Gallery Card View</h6>
         </div>
         <div className="scribe-page-card">
-          <ScribeGalleryCard details={details} cropData={cropData} />
+          <ScribeGalleryCard
+            details={details}
+            setDetails={setDetails}
+            cropData={cropData}
+            submitHandler={submitHandler}
+            img={img}
+            defaultSrc={defaultSrc}
+            setImage={setImage}
+            setCropData={setCropData}
+          />
         </div>
       </Row>
     </Container>

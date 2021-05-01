@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Container from "../components/Container";
 import Row from "../components/Row";
@@ -16,12 +16,8 @@ const Gallery = () => {
   useEffect(() => {
     dispatch(getPostsGallery(albumName));
   }, [dispatch]);
-  const array = [];
+
   const posts = useSelector((state) => state.posts);
-  function galleryMap(card) {
-    const { dateTaken, photoLocation, synopsis, selectedFile } = card;
-    return <GalleryCardTemplate {...card} />;
-  }
 
   return (
     <Container className="selectedGallery">
