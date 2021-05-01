@@ -40,8 +40,6 @@ function App() {
             <Route exact path="/gets/:albumName" component={TestGalleryGet} />
             <Route exact path="/go/:id/:albumName" component={TestNoAuth} />
 
-            <Route path="/gallery" component={Gallery} />
-
           </>
         </Switch>
       </Router>
