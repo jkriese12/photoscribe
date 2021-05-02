@@ -1,32 +1,22 @@
 .signup {
-    margin-top: 50px;
-}
-
-.signup-top-svg { 
-    justify-content: center;
-    text-align: center;
-}
-
-.signup-svg {
-    margin-top:-38px;
-} 
-
-.signup-svg svg { 
-    width: 190px;
-    height: 190px;
-    z-index: 1;
-}
-
-.signup-form-graphic {
+    min-height: 100%;
+    width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items:center;
+    align-items: center;
+    margin-top: 3%;
 } 
 
-.signup-form { 
-    margin-top: -50px;
-    width: 370px;
-    z-index: -1;
+.signup-svg img { 
+    width: 200px;
+    height: 200px;
 }
+
+.redirect {
+    padding-top: 8px;
+    cursor: pointer;
+}
+
 
 

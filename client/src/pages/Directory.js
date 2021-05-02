@@ -25,7 +25,7 @@ const array = []
         <Container className="directory">
             <Wrapper className="wrapper"> 
                 <Logout />
-                <div className="directory-buttons small">
+                <div className="dir-buttons small">
                     <div className="back-to-work">
                         <Link to="/" className="link"><FaBackward size="1em" color="#6c757d" /> Scribe New Photo</Link>
                     </div> 
@@ -34,7 +34,7 @@ const array = []
                     </div> 
                 </div>         
                 <Row>
-                    <h2 className="directory-title">Gallery Directory</h2>
+                    <h2 className="title">Directory</h2>
                 </Row>
             </Wrapper>
             <Row className="dirImages">

@@ -12,7 +12,7 @@ function GalleryCard(props) {
                     <div className="col-md-6"> 
                         <img className="galleryImage" src={props.photo} alt="gallery" />
                     </div>
-                    <div class="col-md-6">
+                    <div className="col-md-6">
                         <div className="card-body">
                             <p className="card-text">
                                 {props.dateTaken}

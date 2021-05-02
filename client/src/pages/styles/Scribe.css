@@ -6,11 +6,16 @@
 
 .scribe-upper { 
     display: flex;
-}  
+}   
+
+.scribe-instructions h6 {
+    margin-left: -6%;
+}
 
 .scribe-instructions li {
     font-size: x-small;
     margin-left: -5%;
+    align-content: left;
 }
  
 .scribe-crop {
