@@ -36,7 +36,7 @@ export const createPost = (post) => async (dispatch) => {
     console.log(error.message);
   }
 };
-// Delete creator to delete a specific post
+// Delete a specific post
 export const deletePhoto = (id) => async (dispatch) => {
   try {
     await api.deletePhoto(id);

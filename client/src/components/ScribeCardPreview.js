@@ -1,16 +1,7 @@
 import React from "react";
 import "./styles/GalleryCardTemplate.css";
 
-function ScribeCardPreview({
-  details,
-  setDetails,
-  cropData,
-  submitHandler,
-  defaultSrc,
-  setImage,
-  setCropData,
-  reset,
-}) {
+function ScribeCardPreview({ details, setDetails, cropData, submitHandler, reset }) {
   return (
     <div className="container">
       <div className="card mb-3">
@@ -27,7 +18,13 @@ function ScribeCardPreview({
           <div class="col-md-6">
             <div className="card-body">
               <p className="card-text">
-                {details.dateTaken} {details.photoLocation} {details.synopsis}
+                <b>Year Taken:</b> {details.dateTaken}
+                <br />
+                <b>Location:</b> {details.photoLocation}
+                <br />
+                <b style={{ marginLeft: 85 }}>Details</b>
+                <br />
+                {details.synopsis}
               </p>
             </div>
           </div>

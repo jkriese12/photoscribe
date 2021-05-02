@@ -11,10 +11,7 @@ const SelectedGallery = ({ details }) => {
             View {details.albumName} Gallery
           </button>
         </Link>
-        <br />
-        <text type="name" />
       </div>
-      <br />
     </div>
   );
 };

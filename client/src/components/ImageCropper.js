@@ -3,7 +3,7 @@ import Cropper from "react-cropper";
 import "cropperjs/dist/cropper.css";
 import "./styles/imagecropper.css";
 
-export const Crop = ({ image, setImage, cropData, setCropData, cropper, setCropper }) => {
+export const Crop = ({ image, setImage, setCropData, cropper, setCropper }) => {
   const onChange = (e) => {
     e.preventDefault();
     let files;
@@ -22,8 +22,6 @@ export const Crop = ({ image, setImage, cropData, setCropData, cropper, setCropp
   const getCropData = () => {
     if (typeof cropper !== "undefined") {
       setCropData(cropper.getCroppedCanvas().toDataURL());
-      // Need to pass this data to the back end object creation
-      console.log(image);
     }
   };
   const rotate = () => {

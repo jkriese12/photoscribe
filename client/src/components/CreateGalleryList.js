@@ -5,6 +5,7 @@ const CreateGalleryList = (props) => {
   const [newGallery, setNewGallery] = useState("");
   const selector = document.getElementById("gallery");
   const option = document.createElement("option");
+  // Sending created gallery name to dropdown selection
   const submitToDropdown = (e) => {
     e.preventDefault();
     option.text = newGallery;

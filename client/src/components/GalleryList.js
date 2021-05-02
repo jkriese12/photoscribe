@@ -9,6 +9,7 @@ const GalleryList = ({ details, setDetails }) => {
     dispatch(getPosts());
   }, [dispatch]);
   const posts = useSelector((state) => state.posts);
+  // Creating new array only targeting names of galleries the user has without repeating any
   const unique = [...new Set(posts.map((a) => a.albumName))];
 
   return (

@@ -98,7 +98,6 @@ const Scribe = () => {
               <ImageCropper
                 image={image}
                 setImage={setImage}
-                cropData={cropData}
                 setCropData={setCropData}
                 cropper={cropper}
                 setCropper={setCropper}
@@ -131,9 +130,6 @@ const Scribe = () => {
             cropData={cropData}
             submitHandler={submitHandler}
             img={img}
-            defaultSrc={defaultSrc}
-            setImage={setImage}
-            setCropData={setCropData}
             reset={reset}
           />
         </div>
