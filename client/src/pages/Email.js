@@ -1,17 +1,17 @@
 import React from "react";
-import LoginForm from "../components/LoginForm";
 import Container from "../components/Container";
 import Row from "../components/Row";
 import Footer from "../components/Footer";
 import "./styles/Login.css";
+import EmailForm from "../components/EmailForm";
 
-const Login = () => {
+const Email = () => {
   return (
     <div>
       <Container className="login">
         <Row className="login-title-svg">
           <div className="login-title">
-            <h3>Welcome Back!</h3>
+            <h3>It's great to share!</h3>
           </div>
           <div className="login-svg">
             <svg
@@ -257,7 +257,7 @@ const Login = () => {
         </Row>
         <Row className="login-form-graphic">
           <div className="login-form">
-            <LoginForm />
+            <EmailForm />
           </div>
         </Row>
       </Container>
@@ -266,4 +266,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Email;

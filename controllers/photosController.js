@@ -7,7 +7,8 @@ module.exports = {
     db.User.find({ _id: userId })
       .populate("photos")
       .then((dbModel) => {
-        res.json(dbModel);
+        const array = dbModel[0].photos;
+        res.json(array);
       })
       .catch((err) => res.status(422).json(err));
   },

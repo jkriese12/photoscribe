@@ -13,7 +13,7 @@ const SignUpForm = ({ SignUp, error }) => {
   };
 
   return (
-    <div class="container">
+    <div className="container">
       <form className="singup-form" onSubmit={submitHandler}>
         <div className="form-inner"></div>
         <h3 className="text-center">Create An Account</h3>
@@ -51,20 +51,17 @@ const SignUpForm = ({ SignUp, error }) => {
             value={details.password}
           />
         </div>
-
-        <div className="form-group">
-          <div className="custom-control custom-checkbox">
-            <input type="checkbox" className="custom-control-input" id="customCheck1" />
-          </div>
-        </div>
-
+        <br />
         <button type="submit" className="btn btn-primary btn-block">
           Submit
         </button>
-      </form><br/>
+      </form>
+      <br />
       <div>
-        <p className="small">Already have an account?<a href="/login"> login</a> here</p> 
-      </div> 
+        <p className="small">
+          Already have an account?<a href="/login"> login</a> here
+        </p>
+      </div>
       {/* <div>{userName}</div> */}
     </div>
   );

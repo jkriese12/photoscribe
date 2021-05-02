@@ -3,13 +3,7 @@ import Cropper from "react-cropper";
 import "cropperjs/dist/cropper.css";
 import "./styles/imagecropper.css";
 
-const defaultSrc =
-  "https://raw.githubusercontent.com/roadmanfong/react-cropper/master/example/img/child.jpg";
-
-export const Crop = () => {
-  const [image, setImage] = useState(defaultSrc);
-  const [cropData, setCropData] = useState("#");
-  const [cropper, setCropper] = useState("");
+export const Crop = ({ image, setImage, cropData, setCropData, cropper, setCropper }) => {
   const onChange = (e) => {
     e.preventDefault();
     let files;
@@ -36,7 +30,7 @@ export const Crop = () => {
   return (
     <div>
       <div style={{ width: "100%" }}>
-        <input type="file" onChange={onChange} />
+        <input type="file" accept="image/jpeg" onChange={onChange} />
         {/* <button className="btn btn-sm btn-secondary"></button> */}
         <br />
         <br />
@@ -60,11 +54,15 @@ export const Crop = () => {
         />
       </div>
       <div className="box-container">
-        <br /><button className="btn btn-sm btn-secondary" style={{ float: "left"  }} onClick={getCropData}>
-              Crop Image
-            </button>
+        <br />
+        <button
+          className="btn btn-sm btn-secondary"
+          style={{ float: "left" }}
+          onClick={getCropData}
+        >
+          Crop Image
+        </button>
         <div className="box" style={{ width: "50%", float: "right" }}>
-            
           <div
             className="img-preview"
             style={{ width: "58%", float: "left", height: "185px", marginBottom: 10 }}
