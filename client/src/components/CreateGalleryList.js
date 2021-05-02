@@ -13,7 +13,7 @@ const CreateGalleryList = (props) => {
   return (
     <form className="create-name">
       <div className="form-group">
-        <label htmlFor="gallery-name">Create a Gallery:</label>
+        <label htmlFor="gallery-name">Add new Gallery to list:</label>
         <br />
         <input
           type="name"

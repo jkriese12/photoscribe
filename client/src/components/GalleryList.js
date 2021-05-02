@@ -10,24 +10,20 @@ const GalleryList = ({ details, setDetails }) => {
   }, [dispatch]);
   const posts = useSelector((state) => state.posts);
   const unique = [...new Set(posts.map((a) => a.albumName))];
-  console.log(posts);
-  console.log(unique);
 
   return (
-    <form className="search">
-      <div className="form-group">
-        <label htmlFor="gallery">Gallery List:</label>
-
-        <select
-          id="gallery"
-          onChange={(e) => setDetails({ ...details, albumName: e.currentTarget.value })}
-        >
-          <option></option>
-          {unique.map((data) => (
-            <option>{data}</option>
-          ))}
-        </select>
-      </div>
+    <form>
+      <label>Choose your Gallery</label>
+      <select
+        id="gallery"
+        class="custom-select"
+        onChange={(e) => setDetails({ ...details, albumName: e.currentTarget.value })}
+      >
+        <option></option>
+        {unique.map((data) => (
+          <option>{data}</option>
+        ))}
+      </select>
     </form>
   );
 };

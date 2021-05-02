@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useHistory, useLocation } from "react-router-dom";
+import { useHistory, useLocation, Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import decode from "jwt-decode";
 import * as actionType from "../constants/actionTypes";
@@ -33,11 +33,11 @@ const Logout = () => {
   }, [location]);
 
   return (
-    <div>
+    <Link>
       <div className="logout-button small" onClick={logout}>
         Logout <FaSignOutAlt onClick={logout} />
       </div>
-    </div>
+    </Link>
   );
 };
 

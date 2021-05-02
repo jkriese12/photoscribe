@@ -1,11 +1,7 @@
 import React from "react";
-import { deletePhoto } from "../actions/posts";
-import { useDispatch } from "react-redux";
 import "./styles/GalleryCardTemplate.css";
 
-function GalleryCard({ data }) {
-  const dispatch = useDispatch();
-
+function GalleryCardTemplateShare({ data }) {
   return (
     <div className="container">
       <div className="card mb-3">
@@ -16,9 +12,9 @@ function GalleryCard({ data }) {
           <div className="col-md-6">
             <div className="card-body">
               <p className="card-text">
-                {data.dateTaken}
+                Year Taken:{data.dateTaken}
                 <br />
-                {data.photoLocation}
+                Location:{data.photoLocation}
                 <br />
                 {data.synopsis}
               </p>
@@ -26,17 +22,8 @@ function GalleryCard({ data }) {
           </div>
         </div>
       </div>
-      <div className="gallery-card-buttons">
-        <button
-          type="submit"
-          className="btn btn-sm btn-secondary"
-          onClick={() => dispatch(deletePhoto(data._id))}
-        >
-          Delete Photo
-        </button>
-      </div>
     </div>
   );
 }
 
-export default GalleryCard;
+export default GalleryCardTemplateShare;

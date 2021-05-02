@@ -38,7 +38,7 @@ const EmailForm = () => {
               name="link"
               className="form-control"
               id="email"
-              value={`localhost:3000/go/${user.result._id}/${albumName}`}
+              value={`localhost:3000/gallery/${user.result._id}/${albumName}`}
             />
           </div>
           <div className="form-group">

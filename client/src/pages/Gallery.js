@@ -6,7 +6,6 @@ import "./styles/Gallery.css";
 import GalleryCardTemplate from "../components/GalleryCardTemplate";
 import { FaBackward, FaTh, FaRegEnvelope } from "react-icons/fa";
 import Logout from "../components/Logout";
-import sendEmail from "../components/sendEmail";
 import Wrapper from "../components/Wrapper";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
@@ -21,7 +20,7 @@ const Gallery = () => {
   }, [dispatch]);
 
   const posts = useSelector((state) => state.posts);
-
+  console.log(posts);
   return (
     <Container className="selectedGallery">
       <Wrapper className="wrapper">
@@ -38,14 +37,14 @@ const Gallery = () => {
             </Link>
           </div>
         </div>
-        <sendEmail />
+
         <div className="send-email small text-secondary">
           <Link to={"/email/" + albumName} className="link">
             Email Link <FaRegEnvelope size="1em" color="#6c757d" />
           </Link>
         </div>
         <Row>
-          <h2 className="gallery-title">{albumName}</h2>
+          <h1 className="gallery-title">{albumName}</h1>
         </Row>
       </Wrapper>
       <Row className="galImages">

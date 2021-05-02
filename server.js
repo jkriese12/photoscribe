@@ -16,9 +16,7 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 app.use(routes);
-// Mongo atlas DB set up
-const CONNECTION_URL =
-  "mongodb+srv://jkriese12:H0ldth3Door@cluster0.spksx.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+
 // Connect to the Mongo DB and starting the API server
 mongoose
   .connect(process.env.CONNECTION_URL, {

@@ -7,9 +7,7 @@ import Login from "./pages/Login";
 import Scribe from "./pages/Scribe";
 import Gallery from "./pages/Gallery";
 import Directory from "./pages/Directory";
-import Testget from "./Testing/Testget";
-import TestGalleryGet from "./Testing/TestGalleryGet";
-import TestNoAuth from "./Testing/TestNoAuth";
+import GalleryShare from "./pages/GalleryShare";
 import Email from "./pages/Email";
 
 function App() {
@@ -57,13 +55,12 @@ function App() {
             <AlreadyLoggedIn exact path="/" component={Landing} />
             <AlreadyLoggedIn path="/login" component={Login} />
             <AlreadyLoggedIn path="/signup" component={SignUp} />
-            <AuthenticatedRoute path="/scribe" component={Scribe} />
-            <AuthenticatedRoute path="/get" component={Testget} />
-            <AuthenticatedRoute path="/gallery/:albumName" component={Gallery} />
-            <AuthenticatedRoute path="/directory" component={Directory} />
-            <AuthenticatedRoute path="/email/:albumName" component={Email} />
-            <Route exact path="/gets/:albumName" component={TestGalleryGet} />
-            <Route exact path="/go/:id/:albumName" component={TestNoAuth} />
+            <AuthenticatedRoute exact path="/scribe" component={Scribe} />
+            <AuthenticatedRoute exact path="/gallery/" component={Scribe} />
+            <AuthenticatedRoute exact path="/gallery/:albumName" component={Gallery} />
+            <AuthenticatedRoute exact path="/directory" component={Directory} />
+            <AuthenticatedRoute exact path="/email/:albumName" component={Email} />
+            <Route exact path="/gallery/:id/:albumName" component={GalleryShare} />
           </>
         </Switch>
       </Router>

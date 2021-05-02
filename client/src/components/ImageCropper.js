@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Cropper from "react-cropper";
 import "cropperjs/dist/cropper.css";
 import "./styles/imagecropper.css";
@@ -26,7 +26,9 @@ export const Crop = ({ image, setImage, cropData, setCropData, cropper, setCropp
       console.log(image);
     }
   };
-
+  const rotate = () => {
+    cropper.rotate(90);
+  };
   return (
     <div>
       <div style={{ width: "100%" }}>
@@ -61,6 +63,13 @@ export const Crop = ({ image, setImage, cropData, setCropData, cropper, setCropp
           onClick={getCropData}
         >
           Crop Image
+        </button>
+        <button
+          className="btn btn-sm btn-secondary"
+          style={{ float: "left", marginLeft: 25 }}
+          onClick={rotate}
+        >
+          Rotate Image
         </button>
         <div className="box" style={{ width: "50%", float: "right" }}>
           <div

@@ -8,6 +8,7 @@ export const signIn = (details, history) => async (dispatch) => {
     history.push("/scribe");
   } catch (error) {
     console.log(error);
+    alert("Incorrect username or password");
   }
 };
 export const signUp = (details, history) => async (dispatch) => {
