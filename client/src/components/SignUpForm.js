@@ -3,6 +3,7 @@ import "./styles/SignUpForm.css";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 import { signUp } from "../actions/auth";
+import { Link } from "react-router-dom";
 const SignUpForm = ({ SignUp, error }) => {
   const [details, setDetails] = useState({ name: "", email: "", password: "" });
   const dispatch = useDispatch();
@@ -13,9 +14,8 @@ const SignUpForm = ({ SignUp, error }) => {
   };
 
   return (
-    <div className="container">
+
       <form className="singup-form" onSubmit={submitHandler}>
-        <div className="form-inner"></div>
         <h3 className="text-center">Create An Account</h3>
         {/* {(error =! "") ? ( <div className="error">{error}</div>)  : ""}      */}
 
@@ -50,20 +50,14 @@ const SignUpForm = ({ SignUp, error }) => {
             onChange={(e) => setDetails({ ...details, password: e.target.value })}
             value={details.password}
           />
-        </div>
-        <br />
+
+        </div><br />
         <button type="submit" className="btn btn-primary btn-block">
           Submit
-        </button>
-      </form>
-      <br />
-      <div>
-        <p className="small">
-          Already have an account?<a href="/login"> login</a> here
-        </p>
-      </div>
-      {/* <div>{userName}</div> */}
-    </div>
+        </button> 
+         {/* <div>{userName}</div> */}
+      </form> 
+
   );
 };
 

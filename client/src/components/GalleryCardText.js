@@ -36,7 +36,7 @@ const GalleryCardText = ({ details, setDetails }) => {
           <textarea
             className="form-control"
             id="FormControlTextarea1"
-            rows="8"
+            rows="9"
             onChange={(e) => setDetails({ ...details, synopsis: e.target.value })}
             value={details.synopsis}
           ></textarea>

@@ -6,6 +6,7 @@ import "./styles/GalleryCardTemplate.css";
 function GalleryCard({ data }) {
   const dispatch = useDispatch();
 
+
   return (
     <div className="container">
       <div className="card mb-3">
@@ -37,6 +38,7 @@ function GalleryCard({ data }) {
       </div>
     </div>
   );
+
 }
 
 export default GalleryCard;

@@ -1,22 +1,16 @@
-body {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
-} 
-
 .singup-form {
     background-color:#fff;
     border: 0.5px solid whitesmoke;
     -webkit-box-shadow: 5px 3px 15px -4px #000000; 
     box-shadow: 5px 3px 15px -4px #000000;
-    border-radius:10px;
-    align-items: center;
     padding: 30px;
     display: block;
-    max-width: 370px;
+    border-radius:12px;
+    max-width: 400px;
 } 
 
-.text-center h3 {
+h3 {
     padding-bottom: 25px;
 }  
-
 
 

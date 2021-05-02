@@ -31,9 +31,10 @@ const LoginForm = () => {
   };
 
   return (
-    <div className="container">
-      <form className="form center" onSubmit={submitHandler}>
-        <div className="form-inner">
+
+      
+        <form className="login-form" onSubmit={submitHandler}>
+
           <h3 className="text-center">Log In</h3>
 
           <div className="form-group">
@@ -41,7 +42,7 @@ const LoginForm = () => {
             <input
               type="email"
               className="form-control"
-              placeholder="Enter email"
+
               id="email"
               onChange={(e) => setDetails({ ...details, email: e.target.value })}
               value={details.email}
@@ -50,14 +51,15 @@ const LoginForm = () => {
 
           <div className="form-group">
             <label>Password</label>
-            <input
-              type="password"
-              className="form-control"
-              placeholder="Enter password"
-              id="password"
-              onChange={(e) => setDetails({ ...details, password: e.target.value })}
-              value={details.password}
-            />
+
+              <input
+                type="password"
+                className="form-control"
+                id="password"
+                onChange={(e) => setDetails({ ...details, password: e.target.value })}
+                value={details.password}
+              />
+
           </div>
 
           <div className="form-group">
@@ -66,9 +68,11 @@ const LoginForm = () => {
             </div>
           </div>
 
+
           <button type="submit" className="btn btn-primary btn-block">
             Submit
           </button>
+ 
 
           <GoogleLogin
             clientId="782624440107-ro26a2oc9duk8ok81lkd18kduknln1r2.apps.googleusercontent.com"
@@ -79,21 +83,16 @@ const LoginForm = () => {
                 onClick={renderProps.onClick}
                 disabled={renderProps.disabled}
               >
-                Google Sign-In
+
+               Google Sign-In
               </button>
             )}
-            onSuccess={googleSuccess}
-            onFailure={googleFailure}
-            cookiePolicy="single_host_origin"
-          />
-        </div>
-      </form>
-      <br />
-      <p className="small">
-        Don't have your account yet? <a href="/signup">sign up</a> here
-      </p>
-      <div></div>
-    </div>
+              onSuccess={googleSuccess}
+              onFailure={googleFailure}
+              cookiePolicy="single_host_origin"
+            /> 
+        </form>
+
   );
 };
 

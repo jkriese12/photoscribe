@@ -19,11 +19,12 @@ const Directory = () => {
   const posts = useSelector((state) => state.posts);
   const unique = [...new Set(posts.map((a) => a.albumName))];
 
+
   return (
     <Container className="directory">
       <Wrapper className="wrapper">
         <Logout />
-        <div className="directory-buttons small">
+        <div className="dir-buttons small">
           <div className="back-to-work">
             <Link to="/" className="link">
               <FaBackward size="1em" color="#6c757d" /> Scribe New Photo
@@ -31,7 +32,7 @@ const Directory = () => {
           </div>
         </div>
         <Row>
-          <h2 className="directory-title">Gallery Directory</h2>
+          <h2 className="title">Directory</h2>
         </Row>
       </Wrapper>
       <Row className="dirImages">
@@ -42,5 +43,6 @@ const Directory = () => {
     </Container>
   );
 };
+
 
 export default Directory;
