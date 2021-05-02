@@ -1,15 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import Cropper from "react-cropper";
 import "cropperjs/dist/cropper.css";
 import "./styles/imagecropper.css";
 
-const defaultSrc =
-  "https://raw.githubusercontent.com/roadmanfong/react-cropper/master/example/img/child.jpg";
-
-export const Crop = () => {
-  const [image, setImage] = useState(defaultSrc);
-  const [cropData, setCropData] = useState("#");
-  const [cropper, setCropper] = useState("");
+export const Crop = ({ image, setImage, setCropData, cropper, setCropper }) => {
   const onChange = (e) => {
     e.preventDefault();
     let files;
@@ -28,15 +22,15 @@ export const Crop = () => {
   const getCropData = () => {
     if (typeof cropper !== "undefined") {
       setCropData(cropper.getCroppedCanvas().toDataURL());
-      // Need to pass this data to the back end object creation
-      console.log(image);
     }
   };
-
+  const rotate = () => {
+    cropper.rotate(90);
+  };
   return (
     <div>
       <div style={{ width: "100%" }}>
-        <input type="file" onChange={onChange} />
+        <input type="file" accept="image/jpeg" onChange={onChange} />
         {/* <button className="btn btn-sm btn-secondary"></button> */}
         <br />
         <br />
@@ -60,11 +54,22 @@ export const Crop = () => {
         />
       </div>
       <div className="box-container">
-        <br /><button className="btn btn-sm btn-secondary" style={{ float: "left"  }} onClick={getCropData}>
-              Crop Image
-            </button>
+        <br />
+        <button
+          className="btn btn-sm btn-secondary"
+          style={{ float: "left" }}
+          onClick={getCropData}
+        >
+          Crop Image
+        </button>
+        <button
+          className="btn btn-sm btn-secondary"
+          style={{ float: "left", marginLeft: 25 }}
+          onClick={rotate}
+        >
+          Rotate Image
+        </button>
         <div className="box" style={{ width: "50%", float: "right" }}>
-            
           <div
             className="img-preview"
             style={{ width: "58%", float: "left", height: "185px", marginBottom: 10 }}

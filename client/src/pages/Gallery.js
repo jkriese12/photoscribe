@@ -1,52 +1,59 @@
-import React, { useState } from 'react'; 
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Container from "../components/Container";
 import Row from "../components/Row";
 import "./styles/Gallery.css";
 import GalleryCardTemplate from "../components/GalleryCardTemplate";
-import { FaBackward , FaTh, FaRegEnvelope } from "react-icons/fa";
+import { FaBackward, FaTh, FaRegEnvelope } from "react-icons/fa";
 import Logout from "../components/Logout";
-import sendEmail from "../components/sendEmail";
 import Wrapper from "../components/Wrapper";
+import { useParams } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { getPostsGallery } from "../actions/posts";
+import { useDispatch } from "react-redux";
 
+const Gallery = () => {
+  const dispatch = useDispatch();
+  const { albumName } = useParams();
+  useEffect(() => {
+    dispatch(getPostsGallery(albumName));
+  }, [dispatch]);
 
-const Gallery = () => {    
+  const posts = useSelector((state) => state.posts);
+  console.log(posts);
+  return (
+    <Container className="selectedGallery">
+      <Wrapper className="wrapper">
+        <Logout />
+        <div className="gallery-buttons small">
+          <div className="back-to-work">
+            <Link to="/scribe" className="link">
+              <FaBackward size="1em" color="#6c757d" /> Scribe New Photo
+            </Link>
+          </div>
+          <div className="back-to-work">
+            <Link to="/directory" className="link">
+              View Directory <FaTh size="1em" color="#6c757d" />
+            </Link>
+          </div>
+        </div>
 
-const array = []
-       
-   function galleryMap(card) { 
-
-       const {dateTaken, photoLocation, synopsis, selectedFile } = card 
-       return (
-           <GalleryCardTemplate  {...card}/>
-       )
-   }
-    return (
-        <Container className="selectedGallery">
-            <Wrapper className="wrapper"> 
-                <Logout />
-                <div className="gallery-buttons small">
-                    <div className="back-to-work">
-                        <Link to="/" className="link"><FaBackward size="1em" color="#6c757d" /> Scribe New Photo</Link>
-                    </div> 
-                    <div className="back-to-work">
-                        <Link to="/" className="link">View Directory <FaTh size="1em" color="#6c757d" /></Link>
-                    </div> 
-                </div> 
-                <sendEmail />
-                    <div className="send-email small text-secondary">
-                        <Link to="/" className="link">Email Link <FaRegEnvelope size="1em" color="#6c757d" /></Link>
-                    </div> 
-            <Row>
-                <h2 className="gallery-title">Gallery Name</h2>
-            </Row>
-            </Wrapper>
-            <Row className="galImages">
-                {array.map(galleryMap)}
-            </Row>
-        </Container>
-    )
-}
+        <div className="send-email small text-secondary">
+          <Link to={"/email/" + albumName} className="link">
+            Email Link <FaRegEnvelope size="1em" color="#6c757d" />
+          </Link>
+        </div>
+        <Row>
+          <h1 className="gallery-title">{albumName}</h1>
+        </Row>
+      </Wrapper>
+      <Row className="galImages">
+        {posts.map((data) => (
+          <GalleryCardTemplate key={data._id} data={data} />
+        ))}
+      </Row>
+    </Container>
+  );
+};
 
 export default Gallery;
-

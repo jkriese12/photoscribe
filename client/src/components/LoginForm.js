@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./styles/LoginForm.css";
 import { GoogleLogin } from "react-google-login";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 import { signIn } from "../actions/auth";
-const LoginForm = ({ Login, error }) => {
+const LoginForm = () => {
   const [details, setDetails] = useState({ email: "", password: "" });
   // Setting up hooks for imports
   const dispatch = useDispatch();
@@ -29,19 +29,12 @@ const LoginForm = ({ Login, error }) => {
   const googleFailure = () => {
     console.log("Google Sign In unsuccessful");
   };
-  // Setting user profile on local storage
-  const [user, setUser] = useState(JSON.parse(localStorage.getItem("profile")));
-
-  useEffect(() => {
-    const token = user?.token;
-    //JWT
-    setUser(JSON.parse(localStorage.getItem("profile")));
-  }, []);
-  const handleChange = () => {};
 
   return (
+
       
         <form className="login-form" onSubmit={submitHandler}>
+
           <h3 className="text-center">Log In</h3>
 
           <div className="form-group">
@@ -49,6 +42,7 @@ const LoginForm = ({ Login, error }) => {
             <input
               type="email"
               className="form-control"
+
               id="email"
               onChange={(e) => setDetails({ ...details, email: e.target.value })}
               value={details.email}
@@ -57,6 +51,7 @@ const LoginForm = ({ Login, error }) => {
 
           <div className="form-group">
             <label>Password</label>
+
               <input
                 type="password"
                 className="form-control"
@@ -64,6 +59,7 @@ const LoginForm = ({ Login, error }) => {
                 onChange={(e) => setDetails({ ...details, password: e.target.value })}
                 value={details.password}
               />
+
           </div>
 
           <div className="form-group">
@@ -72,10 +68,12 @@ const LoginForm = ({ Login, error }) => {
             </div>
           </div>
 
+
           <button type="submit" className="btn btn-primary btn-block">
             Submit
           </button>
  
+
           <GoogleLogin
             clientId="782624440107-ro26a2oc9duk8ok81lkd18kduknln1r2.apps.googleusercontent.com"
             render={(renderProps) => (
@@ -85,6 +83,7 @@ const LoginForm = ({ Login, error }) => {
                 onClick={renderProps.onClick}
                 disabled={renderProps.disabled}
               >
+
                Google Sign-In
               </button>
             )}
@@ -93,6 +92,7 @@ const LoginForm = ({ Login, error }) => {
               cookiePolicy="single_host_origin"
             /> 
         </form>
+
   );
 };
 

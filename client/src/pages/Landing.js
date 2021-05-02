@@ -1,9 +1,9 @@
-import React from 'react'
+import React from "react";
 import Row from "../components/Row";
 import Col from "../components/Col";
 import Container from "../components/Container";
 import Card from "../components/Card";
-import Button from "../components/Button"; 
+import Button from "../components/Button";
 import Footer from "../components/Footer";
 import one from "../components/Images/one.png";
 import two from "../components/Images/two.png";
@@ -12,6 +12,7 @@ import tryitnow from "../components/Images/try-it-now2.jpg";
 import "./styles/Landing.css";
 
 const LandingPage = () => {
+
     return (
         <div>
             <Container className="container"> 
@@ -66,5 +67,6 @@ const LandingPage = () => {
         </div>
     )
 }
+
 
 export default LandingPage;

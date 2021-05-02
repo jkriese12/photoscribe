@@ -1,11 +1,13 @@
-import React from 'react'; 
+import React from "react";
 import Row from "../components/Row";
-import Container from "../components/Container"; 
-import SignUpForm from "../components/SignUpForm"; 
+import Container from "../components/Container";
+import SignUpForm from "../components/SignUpForm";
 import Footer from "../components/Footer";
 import "./styles/SignUp.css";
 import moment from "../components/Images/snap_the_moment.svg";
 const SignUp = () => {
+
+
     return (
         <>
             <Container className="signup"> 
@@ -27,5 +29,6 @@ const SignUp = () => {
         </>    
     )
 }
+
 
 export default SignUp;

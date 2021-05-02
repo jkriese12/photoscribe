@@ -1,47 +1,48 @@
-import React, { useState } from 'react'; 
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { getPosts } from "../actions/posts";
+import { useDispatch } from "react-redux";
 import Container from "../components/Container";
 import Row from "../components/Row";
-import { FaBackward , FaTh, FaRegEnvelope } from "react-icons/fa";
+import { FaBackward } from "react-icons/fa";
 import Logout from "../components/Logout";
-import sendEmail from "../components/sendEmail";
-import Wrapper from "../components/Wrapper"; 
+import Wrapper from "../components/Wrapper";
 import DirectoryCard from "../components/DirectoryCard";
 import "./styles/Directory.css";
 
+const Directory = () => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getPosts());
+  }, [dispatch]);
+  const posts = useSelector((state) => state.posts);
+  const unique = [...new Set(posts.map((a) => a.albumName))];
 
-const Directory = () => {    
 
-const array = []
-       
-   function galleryData(data) { 
+  return (
+    <Container className="directory">
+      <Wrapper className="wrapper">
+        <Logout />
+        <div className="dir-buttons small">
+          <div className="back-to-work">
+            <Link to="/" className="link">
+              <FaBackward size="1em" color="#6c757d" /> Scribe New Photo
+            </Link>
+          </div>
+        </div>
+        <Row>
+          <h2 className="title">Directory</h2>
+        </Row>
+      </Wrapper>
+      <Row className="dirImages">
+        {unique.map((data) => (
+          <DirectoryCard key={data._id} data={data} posts={posts} />
+        ))}
+      </Row>
+    </Container>
+  );
+};
 
-      
-       return (
-           <DirectoryCard  {...data}/>
-       )
-   }
-    return (
-        <Container className="directory">
-            <Wrapper className="wrapper"> 
-                <Logout />
-                <div className="dir-buttons small">
-                    <div className="back-to-work">
-                        <Link to="/" className="link"><FaBackward size="1em" color="#6c757d" /> Scribe New Photo</Link>
-                    </div> 
-                    <div className="back-to-work">
-                        <Link to="/" className="link">Email Link <FaRegEnvelope size="1em" color="#6c757d" /></Link>
-                    </div> 
-                </div>         
-                <Row>
-                    <h2 className="title">Directory</h2>
-                </Row>
-            </Wrapper>
-            <Row className="dirImages">
-                {array.map(galleryData)}
-            </Row>
-        </Container>
-    )
-}
 
 export default Directory;

@@ -1,9 +1,9 @@
-import React, { useState } from "react";
-import { useDispatch } from "react-redux";
-import { createPost } from "../actions/posts";
+import React from "react";
+import { Link } from "react-router-dom";
 import "./styles/SelectedGallery.css";
 
 const SelectedGallery = ({ details }) => {
+
             
     return (     
         <form className="selected-gallery form-inline">
@@ -30,3 +30,5 @@ const SelectedGallery = ({ details }) => {
 
         export default SelectedGallery;
 
+
+export default SelectedGallery;

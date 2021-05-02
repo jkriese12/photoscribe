@@ -50,12 +50,14 @@ const SignUpForm = ({ SignUp, error }) => {
             onChange={(e) => setDetails({ ...details, password: e.target.value })}
             value={details.password}
           />
+
         </div><br />
         <button type="submit" className="btn btn-primary btn-block">
           Submit
         </button> 
          {/* <div>{userName}</div> */}
       </form> 
+
   );
 };
 

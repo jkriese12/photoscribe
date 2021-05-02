@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import LoginForm from "../components/LoginForm";
 import Container from "../components/Container";
 import Row from "../components/Row";
@@ -6,6 +6,7 @@ import Footer from "../components/Footer";
 import "./styles/Login.css";
 
 const Login = () => {
+
     return (
         <div>  
             <Container className="login">  
@@ -30,5 +31,6 @@ const Login = () => {
         </div> 
     )
 }
+
 
 export default Login;
