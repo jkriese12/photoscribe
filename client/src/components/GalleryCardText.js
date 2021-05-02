@@ -54,17 +54,13 @@ const GalleryCardText = () => {
           <textarea
             className="form-control"
             id="FormControlTextarea1"
-            rows="8"
+            rows="9"
             onChange={(e) => setDetails({ ...details, synopsis: e.target.value })}
             value={details.synopsis}
           ></textarea>
         </div>
       </form>
       <br />
-
-      <button type="submit" className="btn btn-secondary btn-sm" onClick={submitHandler}>
-        Add Text{" "}
-      </button>
     </div>
   );
 };

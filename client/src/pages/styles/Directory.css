@@ -4,14 +4,14 @@
     border-bottom: .5px solid lightgrey;
 } 
 
-.directory-title {
+.title {
     text-align: center;
     width: 100%;
     padding-bottom: 40px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 } 
 
-.directory-buttons {
+.dir-buttons {
     color: #6c757d;
     padding: 12px;
     display: flex;

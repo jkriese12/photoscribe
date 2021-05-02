@@ -1,7 +1,14 @@
+.container {
+    min-height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top:3%;
+} 
+
 .landing-title { 
-    margin-top: 20px;
-    padding-left: 250px;
-    padding-right: 250px;
     text-align: center;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: bold;
@@ -9,8 +16,6 @@
 
 .landing-svg {
     padding-top: 40px;
-    padding-left: 250px;
-    padding-right: 250px;
     text-align: center; 
 }  
 
@@ -19,12 +24,10 @@
     width: 260px;
 }
 
-.landing-info {
+.info {
     display: flex;
     justify-content: space-around;
-    padding-left: 200px;
-    padding-right: 200px;
-}  
+}
 
 .landing-card { 
     margin-top: 50px;
@@ -45,14 +48,13 @@
 } 
 
 .landing-button {
-    padding-left: 250px;
-    padding-right: 250px;
     text-align: center;
+    cursor: pointer;
 }   
 
 .landing-button img {
-    height: 73px;
-    width: 195px;
+    height: 75px;
+    width: 205px;
     cursor: pointer
 }
 

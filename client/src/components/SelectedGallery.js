@@ -6,15 +6,7 @@ import "./styles/SelectedGallery.css";
 const SelectedGallery = ({ details }) => {
             
     return (     
-        <form className="selected-gallery">
-            <div className="form-group">
-                <label htmlFor="selected-gallery-name">
-                    Selected Gallery: {}
-                </label>
-                <br />
-                <text type="name" />
-            </div>
-                <br />
+        <form className="selected-gallery form-inline">
             <button
                 type="submit"
                 // onClick={props.handleFormSubmit}
@@ -22,6 +14,15 @@ const SelectedGallery = ({ details }) => {
             >
                 View
             </button>
+            <div className="form-group">
+                <label htmlFor="selected-gallery-name">
+                    &nbsp;Selected Gallery: {}
+                </label>
+                <br />
+                <data type="name" />
+            </div>
+                <br />
+            
             </form> 
             );
           }
