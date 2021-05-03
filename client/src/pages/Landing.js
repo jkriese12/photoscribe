@@ -8,13 +8,13 @@ import Footer from "../components/Footer";
 import one from "../components/Images/one.png";
 import two from "../components/Images/two.png";
 import three from "../components/Images/three.png";
-import tryitnow from "../components/Images/try-it-now.jpg";
+import tryitnow from "../components/Images/try-it-now2.jpg";
 import "./styles/Landing.css";
 
 const LandingPage = () => {
   return (
     <div>
-      <Container>
+      <Container className="container">
         <Row>
           <div className="landing-title">
             <h2>Photoscribe</h2>
@@ -232,10 +232,10 @@ const LandingPage = () => {
             />
           </svg>
         </Row>
-        <Row className="landing-info">
+        <Row className="info">
           <Col size="col-4">
             <Card className="landing-card">
-              <img src={one} color="#d7dbdd" alt="scribe" />
+              <img src={one} color="#d7dbdd" />
               <div className="landing-card-text">
                 <p>Choose a photo from your computer or other device.</p>
               </div>
@@ -243,7 +243,7 @@ const LandingPage = () => {
           </Col>
           <Col size="col-4">
             <Card className="landing-card">
-              <img src={two} color="#d7dbdd" alt="scriber" />
+              <img src={two} color="#d7dbdd" />
               <div className="landing-card-text">
                 <p>
                   Bring it to life with details like who is in the photo or what year it
@@ -254,7 +254,7 @@ const LandingPage = () => {
           </Col>
           <Col size="col-4">
             <Card className="landing-card">
-              <img src={three} alt="scribest" />
+              <img src={three} />
               <div className="landing-card-text">
                 <p>Save it to a gallery and share with friends and family.</p>
               </div>
@@ -270,22 +270,12 @@ const LandingPage = () => {
                     </button> */}
         </Button>
         <Row className="landing-redirect text-center">
-          <h6>
+          <h7>
             Already have an account?<a href="/login"> login</a> here
-          </h6>
+          </h7>
         </Row>
       </Container>
       <Footer />
-      <div className="small icon">
-        Icons made by{" "}
-        <a href="https://www.freepik.com" title="Freepik">
-          Freepik
-        </a>{" "}
-        from{" "}
-        <a href="https://www.flaticon.com/" title="Flaticon">
-          www.flaticon.com
-        </a>
-      </div>
     </div>
   );
 };
