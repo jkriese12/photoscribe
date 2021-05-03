@@ -1,14 +1,14 @@
-import React from 'react';
+import React from "react";
 import "./styles/Footer.css";
 
 const Footer = () => {
-    return (
-        <div className="photoscribe-footer">
-            <div className="footer-text">
-                <p>PhotoScribe 2021</p>   
-            </div> 
-        </div>
-    )
-}
+  return (
+    <div className="photoscribe-footer">
+      <div className="footer-text">
+        <p>PhotoScribe 2021</p>
+      </div>
+    </div>
+  );
+};
 
 export default Footer;
