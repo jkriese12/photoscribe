@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Row from "../components/Row";
 import Col from "../components/Col";
 import Container from "../components/Container";
@@ -261,14 +262,11 @@ const LandingPage = () => {
             </Card>
           </Col>
         </Row>
-
-        <Button className="landing-button">
-          <img src={tryitnow} alt="try it" />
-
-          {/* <button className="btn btn-primary btn-lg">
-                        CREATE AN ACCOUNT
-                    </button> */}
-        </Button>
+        <Link to="/signup">
+          <Button className="landing-button">
+            <img src={tryitnow} alt="try it" />
+          </Button>
+        </Link>
         <Row className="landing-redirect text-center">
           <h7>
             Already have an account?<a href="/login"> login</a> here
