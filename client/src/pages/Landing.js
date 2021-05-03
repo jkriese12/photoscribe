@@ -268,7 +268,7 @@ const LandingPage = () => {
           </Button>
         </Link>
         <Row className="landing-redirect text-center">
-          <Link>
+          <Link to="/login">
             <h6>Already have an account? login here</h6>
           </Link>
         </Row>

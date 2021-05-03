@@ -38,7 +38,7 @@ const EmailForm = () => {
               name="link"
               className="form-control"
               id="email"
-              value={`https://photoscribe.herokuapp.com/${user.result._id}/${albumName}`}
+              value={`https://photoscribe.herokuapp.com/gallery/${user.result._id}/${albumName}`}
             />
           </div>
           <div className="form-group">
