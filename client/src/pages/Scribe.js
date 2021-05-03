@@ -12,6 +12,7 @@ import GalleryCardText from "../components/GalleryCardText";
 import SelectedGallery from "../components/SelectedGallery";
 import ScribeCardPreview from "../components/ScribeCardPreview";
 import Logout from "../components/Logout";
+import photo from "../components/Images/undraw_cms_re_asu0.png";
 import "./styles/Scribe.css";
 
 const Scribe = () => {
@@ -26,7 +27,7 @@ const Scribe = () => {
   const [newGallery, setNewGallery] = useState("");
   // Default picture and state for cropped image that will be displayed on the page
 
-  const [image, setImage] = useState("");
+  const [image, setImage] = useState(photo);
   const [cropData, setCropData] = useState("#");
   const [cropper, setCropper] = useState("");
   const img = document.getElementById("test");
@@ -39,7 +40,7 @@ const Scribe = () => {
       photoLocation: "",
       synopsis: "",
     });
-    setImage("");
+    setImage(photo);
     setCropData("#");
     setNewGallery("");
   };

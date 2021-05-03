@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const routes = require("./routes");
 const dotenv = require("dotenv");
+const path = require("path");
 // Setting up express
 const app = express();
 dotenv.config();
@@ -16,7 +17,9 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 app.use(routes);
-
+app.use("*", function (req, res) {
+  res.sendFile(path.join(__dirname, "../client/build/index.html"));
+});
 // Connect to the Mongo DB and starting the API server
 mongoose
   .connect(process.env.MONGODB_URI || "mongodb:localhost/photoscribe", {

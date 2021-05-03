@@ -31,7 +31,7 @@ const Directory = () => {
           </div>
         </div>
         <Row>
-          <h2 className="directory-title">Gallery Directory</h2>
+          <h2 className="directory-title">Directory</h2>
         </Row>
       </Wrapper>
       <Row className="dirImages">
