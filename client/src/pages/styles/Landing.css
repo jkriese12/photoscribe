@@ -1,0 +1,70 @@
+.container {
+  min-height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3%;
+}
+
+.landing-title {
+  text-align: center;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
+    Arial, sans-serif;
+  font-weight: bold;
+}
+
+.landing-svg {
+  padding-top: 40px;
+  text-align: center;
+}
+
+.landing-svg svg {
+  height: 190px;
+  width: 260px;
+}
+
+.info {
+  display: flex;
+  justify-content: space-around;
+}
+
+.landing-card {
+  margin-top: 50px;
+  width: 200px;
+  height: 190px;
+  text-align: center;
+  padding: 15px;
+  font-size: 13px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
+    Arial, sans-serif;
+}
+
+.landing-card img {
+  height: 40px;
+}
+
+.landing-card-text {
+  margin-top: 15px;
+}
+
+.landing-button {
+  text-align: center;
+  cursor: pointer;
+}
+
+.landing-button img {
+  height: 75px;
+  width: 205px;
+  cursor: pointer;
+}
+
+.landing-redirect {
+  margin-bottom: 80px;
+}
+
+.landing-redirect h7 {
+  text-align: center;
+  font-style: italic;
+}

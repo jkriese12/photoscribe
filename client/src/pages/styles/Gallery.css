@@ -1,0 +1,44 @@
+.wrapper {
+  background-color: #f4f6f6;
+  margin-top: -20px;
+  border-bottom: 0.5px solid lightgrey;
+}
+
+.gallery-title {
+  text-align: center;
+  width: 100%;
+  padding-bottom: 40px;
+  /* padding-top: 40px; */
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
+    Arial, sans-serif;
+}
+
+.galImages {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  grid-gap: 20px;
+}
+
+.gallery-buttons {
+  color: #6c757d;
+  padding: 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.send-email {
+  float: right;
+  padding-right: 12px;
+  padding-bottom: 15px;
+}
+
+.link {
+  color: #6c757d;
+}
+
+.signUp {
+  text-align: center;
+  margin-top: 1px;
+}
