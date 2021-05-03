@@ -32,7 +32,7 @@ const Gallery = () => {
             </Link>
           </div>
           <div className="back-to-work">
-            <Link to="/directory" className="link">
+            <Link to="/directory" target="blank" className="link">
               View Directory <FaTh size="1em" color="#6c757d" />
             </Link>
           </div>

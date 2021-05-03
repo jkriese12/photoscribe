@@ -13,7 +13,11 @@ const DirectoryCard = ({ data, posts }) => {
         <div className="card-body"></div>
       </div>
       <div className="directory-buttons">
-        <Link to={"/gallery/" + data} className="btn btn-sm btn-secondary link">
+        <Link
+          to={"/gallery/" + data}
+          target="blank"
+          className="btn btn-sm btn-secondary link"
+        >
           View Gallery
         </Link>
       </div>

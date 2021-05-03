@@ -1,13 +1,26 @@
 import React from "react";
+import { Link, useParams } from "react-router-dom";
 import Container from "../components/Container";
 import Row from "../components/Row";
-import "./styles/Login.css";
+import { FaBackward } from "react-icons/fa";
+import Wrapper from "../components/Wrapper";
+import "./styles/Email.css";
 import EmailForm from "../components/EmailForm";
 
 const Email = () => {
+  const { albumName } = useParams();
   return (
     <div>
       <Container className="login">
+        <Wrapper>
+          <div className="directory-buttons small">
+            <div className="back-to-work">
+              <Link to={"/gallery/" + albumName} className="link">
+                <FaBackward size="1em" color="#6c757d" /> Back to Gallery
+              </Link>
+            </div>
+          </div>
+        </Wrapper>
         <Row className="login-title-svg">
           <div className="login-title">
             <h3>It's great to share!</h3>
