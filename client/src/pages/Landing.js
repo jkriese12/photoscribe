@@ -236,7 +236,7 @@ const LandingPage = () => {
         <Row className="info">
           <Col size="col-4">
             <Card className="landing-card">
-              <img src={one} color="#d7dbdd" />
+              <img src={one} color="#d7dbdd" alt="" />
               <div className="landing-card-text">
                 <p>Choose a photo from your computer or other device.</p>
               </div>
@@ -244,7 +244,7 @@ const LandingPage = () => {
           </Col>
           <Col size="col-4">
             <Card className="landing-card">
-              <img src={two} color="#d7dbdd" />
+              <img src={two} color="#d7dbdd" alt="" />
               <div className="landing-card-text">
                 <p>
                   Bring it to life with details like who is in the photo or what year it
@@ -255,7 +255,7 @@ const LandingPage = () => {
           </Col>
           <Col size="col-4">
             <Card className="landing-card">
-              <img src={three} />
+              <img src={three} alt="" />
               <div className="landing-card-text">
                 <p>Save it to a gallery and share with friends and family.</p>
               </div>
@@ -268,9 +268,9 @@ const LandingPage = () => {
           </Button>
         </Link>
         <Row className="landing-redirect text-center">
-          <h7>
+          <h6>
             Already have an account?<a href="/login"> login</a> here
-          </h7>
+          </h6>
         </Row>
       </Container>
       <Footer />

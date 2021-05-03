@@ -17,7 +17,7 @@ const GalleryShare = () => {
   const { id, albumName } = useParams();
   useEffect(() => {
     dispatch(getPostsGalleryNoAuth(id, albumName));
-  }, [dispatch]);
+  }, [id, albumName, dispatch]);
 
   const posts = useSelector((state) => state.posts);
   console.log(posts);

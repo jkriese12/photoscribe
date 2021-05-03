@@ -3,7 +3,7 @@ import "./styles/SignUpForm.css";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 import { signUp } from "../actions/auth";
-import { Link } from "react-router-dom";
+
 const SignUpForm = ({ SignUp, error }) => {
   const [details, setDetails] = useState({ name: "", email: "", password: "" });
   const dispatch = useDispatch();

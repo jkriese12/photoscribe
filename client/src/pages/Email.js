@@ -1,7 +1,6 @@
 import React from "react";
 import Container from "../components/Container";
 import Row from "../components/Row";
-import Footer from "../components/Footer";
 import "./styles/Login.css";
 import EmailForm from "../components/EmailForm";
 
@@ -261,7 +260,6 @@ const Email = () => {
           </div>
         </Row>
       </Container>
-      <Footer />
     </div>
   );
 };

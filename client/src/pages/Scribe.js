@@ -45,7 +45,7 @@ const Scribe = () => {
   const submitHandler = (e) => {
     e.preventDefault();
     if (
-      details.selectedFile === "" ||
+      // details.selectedFile === "" ||
       details.albumName === "" ||
       details.dateTaken === "" ||
       details.synopsis === "" ||

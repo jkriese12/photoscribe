@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useParams, useHistory } from "react-router-dom";
 import emailjs from "emailjs-com";
 const EmailForm = () => {
-  const [user, setUser] = useState(JSON.parse(localStorage.getItem("profile")));
+  const [user] = useState(JSON.parse(localStorage.getItem("profile")));
   const { albumName } = useParams();
   const history = useHistory();
   console.log(user);

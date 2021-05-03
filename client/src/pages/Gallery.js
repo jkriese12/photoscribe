@@ -17,7 +17,7 @@ const Gallery = () => {
   const { albumName } = useParams();
   useEffect(() => {
     dispatch(getPostsGallery(albumName));
-  }, [dispatch]);
+  }, [albumName, dispatch]);
 
   const posts = useSelector((state) => state.posts);
   console.log(posts);

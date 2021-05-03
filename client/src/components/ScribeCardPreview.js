@@ -22,9 +22,8 @@ function ScribeCardPreview({ details, setDetails, cropData, submitHandler, reset
                 <br />
                 <b style={{ marginBottom: 10 }}>Location:</b> {details.photoLocation}
                 <br />
-                <b style={{ marginLeft: 60 }}>Details</b>
                 <br />
-                {details.synopsis}
+                <b>Details:</b> {details.synopsis}
               </p>
             </div>
           </div>
