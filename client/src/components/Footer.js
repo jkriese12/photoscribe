@@ -3,7 +3,7 @@ import "./styles/Footer.css";
 
 const Footer = () => {
   return (
-    <div className="footer">
+    <div className="photoscribe-footer">
       <div className="footer-text">
         <p>PhotoScribe 2021</p>
       </div>
