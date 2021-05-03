@@ -15,6 +15,7 @@ const GalleryCardText = ({ details, setDetails }) => {
             id="FormControlInput1"
             onChange={(e) => setDetails({ ...details, dateTaken: e.target.value })}
             value={details.dateTaken}
+            maxLength="6"
           />
         </div>
         <div>
@@ -39,6 +40,7 @@ const GalleryCardText = ({ details, setDetails }) => {
             rows="8"
             onChange={(e) => setDetails({ ...details, synopsis: e.target.value })}
             value={details.synopsis}
+            maxLength="175"
           ></textarea>
         </div>
       </form>

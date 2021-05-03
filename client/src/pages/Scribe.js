@@ -24,6 +24,7 @@ const Scribe = () => {
     albumName: "",
     selectedFile: "",
   });
+  const [newGallery, setNewGallery] = useState("");
   // Default picture and state for cropped image that will be displayed on the page
 
   const [image, setImage] = useState(photo);
@@ -41,6 +42,7 @@ const Scribe = () => {
     });
     setImage(photo);
     setCropData("#");
+    setNewGallery("");
   };
   const submitHandler = (e) => {
     e.preventDefault();
@@ -107,7 +109,7 @@ const Scribe = () => {
         </Col>
         <Col className="scribe-right">
           <div className="scribe-create">
-            <CreateGalleryList />
+            <CreateGalleryList newGallery={newGallery} setNewGallery={setNewGallery} />
             <GalleryList details={details} setDetails={setDetails} />
             <GalleryCardText details={details} setDetails={setDetails} />
           </div>
