@@ -33,7 +33,7 @@ const Logout = () => {
   }, [location]);
 
   return (
-    <Link>
+    <Link to="/">
       <div className="logout-button small" onClick={logout}>
         Logout <FaSignOutAlt onClick={logout} />
       </div>

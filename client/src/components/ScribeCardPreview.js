@@ -15,7 +15,7 @@ function ScribeCardPreview({ details, setDetails, cropData, submitHandler, reset
               alt="gallery"
             />
           </div>
-          <div class="col-md-6">
+          <div className="col-md-6">
             <div className="card-body">
               <p className="card-text">
                 <b>Year Taken:</b> {details.dateTaken}

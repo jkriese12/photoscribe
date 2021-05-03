@@ -36,7 +36,7 @@ const Directory = () => {
       </Wrapper>
       <Row className="dirImages">
         {unique.map((data) => (
-          <DirectoryCard key={data._id} data={data} posts={posts} />
+          <DirectoryCard key={data} data={data} posts={posts} />
         ))}
       </Row>
     </Container>

@@ -17,12 +17,12 @@ const GalleryList = ({ details, setDetails }) => {
       <label>Choose your Gallery</label>
       <select
         id="gallery"
-        class="custom-select"
+        className="custom-select"
         onChange={(e) => setDetails({ ...details, albumName: e.currentTarget.value })}
       >
-        <option></option>
+        <option key="blank"></option>
         {unique.map((data) => (
-          <option>{data}</option>
+          <option key={data}>{data}</option>
         ))}
       </select>
     </form>

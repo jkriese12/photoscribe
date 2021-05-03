@@ -270,9 +270,9 @@ const LandingPage = () => {
                     </button> */}
         </Button>
         <Row className="landing-redirect text-center">
-          <h7>
+          <h6>
             Already have an account?<a href="/login"> login</a> here
-          </h7>
+          </h6>
         </Row>
       </Container>
       <Footer />
