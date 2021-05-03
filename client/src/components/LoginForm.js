@@ -31,74 +31,60 @@ const LoginForm = () => {
   };
 
   return (
-    <div className="container">
-      <form className="form center" onSubmit={submitHandler}>
-        <div className="form-inner">
-          <h3 className="text-center">Log In</h3>
+    <form className="login-form" onSubmit={submitHandler}>
+      <h3 className="text-center">Log In</h3>
 
-          <div className="form-group">
-            <label>Email address</label>
-            <input
-              type="email"
-              className="form-control"
-              placeholder="Enter email"
-              id="email"
-              onChange={(e) => setDetails({ ...details, email: e.target.value })}
-              value={details.email}
-            />
-          </div>
+      <div className="form-group">
+        <label>Email address</label>
+        <input
+          type="email"
+          className="form-control"
+          id="email"
+          onChange={(e) => setDetails({ ...details, email: e.target.value })}
+          value={details.email}
+        />
+      </div>
 
-          <div className="form-group">
-            <label>Password</label>
-            <input
-              type="password"
-              className="form-control"
-              placeholder="Enter password"
-              id="password"
-              onChange={(e) => setDetails({ ...details, password: e.target.value })}
-              value={details.password}
-            />
-          </div>
+      <div className="form-group">
+        <label>Password</label>
 
-          <div className="form-group">
-            <div className="custom-control custom-checkbox">
-              <input type="checkbox" className="custom-control-input" id="customCheck1" />
-            </div>
-          </div>
+        <input
+          type="password"
+          className="form-control"
+          id="password"
+          onChange={(e) => setDetails({ ...details, password: e.target.value })}
+          value={details.password}
+        />
+      </div>
 
-          <button type="submit" className="btn btn-primary btn-block">
-            Submit
-          </button>
-
-          <GoogleLogin
-            clientId="782624440107-ro26a2oc9duk8ok81lkd18kduknln1r2.apps.googleusercontent.com"
-            render={(renderProps) => (
-              <button
-                type="submit"
-                className="btn btn-primary btn-block"
-                onClick={renderProps.onClick}
-                disabled={renderProps.disabled}
-              >
-                Google Sign-In
-              </button>
-            )}
-            onSuccess={googleSuccess}
-            onFailure={googleFailure}
-            cookiePolicy="single_host_origin"
-          />
+      <div className="form-group">
+        <div className="custom-control custom-checkbox">
+          <input type="checkbox" className="custom-control-input" id="customCheck1" />
         </div>
-      </form>
-      <br />
-      <p className="small">
-        Don't have your account yet? <a href="/signup">sign up</a> here
-      </p>
-      <div></div>
-    </div>
+      </div>
+
+      <button type="submit" className="btn btn-primary btn-block">
+        Submit
+      </button>
+
+      <GoogleLogin
+        clientId="782624440107-ro26a2oc9duk8ok81lkd18kduknln1r2.apps.googleusercontent.com"
+        render={(renderProps) => (
+          <button
+            type="submit"
+            className="btn btn-primary btn-block"
+            onClick={renderProps.onClick}
+            disabled={renderProps.disabled}
+          >
+            Google Sign-In
+          </button>
+        )}
+        onSuccess={googleSuccess}
+        onFailure={googleFailure}
+        cookiePolicy="single_host_origin"
+      />
+    </form>
   );
 };
 
 export default LoginForm;
-
-// Google sign in
-// authenticate then go to server and check to see if user exists - looking for user record that matches google id, if not find create
-// return user to client and store in local storage

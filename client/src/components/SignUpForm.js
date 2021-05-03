@@ -3,6 +3,7 @@ import "./styles/SignUpForm.css";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 import { signUp } from "../actions/auth";
+import { Link } from "react-router-dom";
 const SignUpForm = ({ SignUp, error }) => {
   const [details, setDetails] = useState({ name: "", email: "", password: "" });
   const dispatch = useDispatch();
@@ -13,57 +14,48 @@ const SignUpForm = ({ SignUp, error }) => {
   };
 
   return (
-    <div className="container">
-      <form className="singup-form" onSubmit={submitHandler}>
-        <div className="form-inner"></div>
-        <h3 className="text-center">Create An Account</h3>
-        {/* {(error =! "") ? ( <div className="error">{error}</div>)  : ""}      */}
+    <form className="singup-form" onSubmit={submitHandler}>
+      <h3 className="text-center">Create An Account</h3>
+      {/* {(error =! "") ? ( <div className="error">{error}</div>)  : ""}      */}
 
-        <div className="form-group">
-          <label>Name</label>
-          <input
-            type="name"
-            className="form-control"
-            id="name"
-            onChange={(e) => setDetails({ ...details, name: e.target.value })}
-            value={details.name}
-          />
-        </div>
-
-        <div className="form-group">
-          <label>Email address</label>
-          <input
-            type="email"
-            className="form-control"
-            id="email"
-            onChange={(e) => setDetails({ ...details, email: e.target.value })}
-            value={details.email}
-          />
-        </div>
-
-        <div className="form-group">
-          <label>Password</label>
-          <input
-            type="password"
-            className="form-control"
-            id="password"
-            onChange={(e) => setDetails({ ...details, password: e.target.value })}
-            value={details.password}
-          />
-        </div>
-        <br />
-        <button type="submit" className="btn btn-primary btn-block">
-          Submit
-        </button>
-      </form>
-      <br />
-      <div>
-        <p className="small">
-          Already have an account?<a href="/login"> login</a> here
-        </p>
+      <div className="form-group">
+        <label>Name</label>
+        <input
+          type="name"
+          className="form-control"
+          id="name"
+          onChange={(e) => setDetails({ ...details, name: e.target.value })}
+          value={details.name}
+        />
       </div>
+
+      <div className="form-group">
+        <label>Email address</label>
+        <input
+          type="email"
+          className="form-control"
+          id="email"
+          onChange={(e) => setDetails({ ...details, email: e.target.value })}
+          value={details.email}
+        />
+      </div>
+
+      <div className="form-group">
+        <label>Password</label>
+        <input
+          type="password"
+          className="form-control"
+          id="password"
+          onChange={(e) => setDetails({ ...details, password: e.target.value })}
+          value={details.password}
+        />
+      </div>
+      <br />
+      <button type="submit" className="btn btn-primary btn-block">
+        Submit
+      </button>
       {/* <div>{userName}</div> */}
-    </div>
+    </form>
   );
 };
 

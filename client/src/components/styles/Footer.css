@@ -1,12 +1,17 @@
-.photoscribe-footer {
-    height: 165px;
-    padding-top:80px;
-    justify-content: center;
-    align-items: center;
-    background-color: #43494e;
-    color: whitesmoke;
-} 
+.footer {
+  margin-top: auto;
+  height: 165px;
+  padding-top: 80px;
+  justify-content: center;
+  align-items: center;
+  background-color: #43494e;
+  color: whitesmoke;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
 
 .footer-text {
-    text-align: center;
+  text-align: center;
 }

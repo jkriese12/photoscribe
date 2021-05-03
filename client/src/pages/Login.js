@@ -9,8 +9,8 @@ const Login = () => {
   return (
     <div>
       <Container className="login">
-        <Row className="login-title-svg">
-          <div className="login-title">
+        <Row className="title-svg">
+          <div className="title">
             <h3>Welcome Back!</h3>
           </div>
           <div className="login-svg">
@@ -255,9 +255,14 @@ const Login = () => {
             </svg>
           </div>
         </Row>
-        <Row className="login-form-graphic">
-          <div className="login-form">
-            <LoginForm />
+        <Row className="form">
+          <LoginForm />
+        </Row>
+        <Row className="redirect">
+          <div>
+            <p className="small">
+              Don't have your account yet? <a href="/signup">sign up</a> here
+            </p>
           </div>
         </Row>
       </Container>
