@@ -15,14 +15,14 @@ function ScribeCardPreview({ details, setDetails, cropData, submitHandler, reset
               alt="gallery"
             />
           </div>
-          <div class="col-md-6">
+          <div className="col-md-6">
             <div className="card-body">
               <p className="card-text">
                 <b>Year Taken:</b> {details.dateTaken}
                 <br />
                 <b>Location:</b> {details.photoLocation}
                 <br />
-                <b style={{ marginLeft: 85 }}>Details</b>
+                <b>Details:</b>
                 <br />
                 {details.synopsis}
               </p>

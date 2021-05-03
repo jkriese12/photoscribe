@@ -52,29 +52,36 @@ export const Crop = ({ image, setImage, setCropData, cropper, setCropper }) => {
             setCropper(instance);
           }}
         />
-      </div>
+      </div> 
+
       <div className="box-container">
-        <br />
-        <button
-          className="btn btn-sm btn-secondary"
-          style={{ float: "left" }}
-          onClick={getCropData}
-        >
-          Crop Image
-        </button>
-        <button
-          className="btn btn-sm btn-secondary"
-          style={{ float: "left", marginLeft: 25 }}
-          onClick={rotate}
-        >
-          Rotate Image
-        </button>
-        <div className="box" style={{ width: "50%", float: "right" }}>
+        <br /> 
+         <div className="box" style={{ width: "50%", float: "right" }}>
           <div
             className="img-preview"
-            style={{ width: "58%", float: "left", height: "185px", marginBottom: 10 }}
+            style={{ width: "65%", float: "left", height: "185px", marginBottom: 10 }}
           />
+        </div> 
+
+        <div className="box-buttons">
+          <button
+            className="btn btn-sm btn-secondary"
+            style={{ float: "left" }}
+            onClick={getCropData}
+          >
+            Crop Image
+          </button> 
+          <br/>
+          <button
+            className="btn btn-sm btn-secondary"
+            style={{ float: "left" }}
+            onClick={rotate}
+          >
+            Rotate Image
+          </button> 
         </div>
+        
+       
         {/* <div className="box" style={{ width: "50%", float: "right", height: "300px", marginBottom: 10, padding: 10 }}>
           <div>
             <span>Cropped Image</span>

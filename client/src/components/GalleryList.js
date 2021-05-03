@@ -17,7 +17,7 @@ const GalleryList = ({ details, setDetails }) => {
       <label>Choose your Gallery</label>
       <select
         id="gallery"
-        class="custom-select"
+        className="custom-select"
         onChange={(e) => setDetails({ ...details, albumName: e.currentTarget.value })}
       >
         <option></option>

@@ -78,7 +78,7 @@ const Scribe = () => {
               </Col>
           </Row>
           <Row className="scribe-create-crop">
-            <div className="scribe-crop">
+            <div className="scribe-crop">ch
               <ImageCropper
                 image={image}
                 setImage={setImage}

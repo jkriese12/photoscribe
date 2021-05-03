@@ -27,8 +27,4 @@ const SelectedGallery = ({ details }) => {
             );
           }
           
-
-        export default SelectedGallery;
-
-
 export default SelectedGallery;
