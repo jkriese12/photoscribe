@@ -8,7 +8,7 @@ const SelectedGallery = ({ details }) => {
       <div className="form-group">
         <Link to={"/gallery/" + details.albumName} target="blank">
           <button className="btn btn-sm btn-secondary">
-            View {details.albumName} Gallery
+            View Selected Gallery: {details.albumName}
           </button>
         </Link>
       </div>

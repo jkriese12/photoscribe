@@ -12,9 +12,11 @@ function GalleryCardTemplateShare({ data }) {
           <div className="col-md-6">
             <div className="card-body">
               <p className="card-text">
-                Year Taken:{data.dateTaken}
+                <b>Year Taken:</b> {data.dateTaken}
                 <br />
-                Location:{data.photoLocation}
+                <b style={{ marginBottom: 10 }}>Location:</b> {data.photoLocation}
+                <br />
+                <b style={{ marginLeft: 60 }}>Details</b>
                 <br />
                 {data.synopsis}
               </p>

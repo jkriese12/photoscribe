@@ -20,9 +20,9 @@ function ScribeCardPreview({ details, setDetails, cropData, submitHandler, reset
               <p className="card-text">
                 <b>Year Taken:</b> {details.dateTaken}
                 <br />
-                <b>Location:</b> {details.photoLocation}
+                <b style={{ marginBottom: 10 }}>Location:</b> {details.photoLocation}
                 <br />
-                <b style={{ marginLeft: 85 }}>Details</b>
+                <b style={{ marginLeft: 60 }}>Details</b>
                 <br />
                 {details.synopsis}
               </p>
