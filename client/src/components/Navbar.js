@@ -7,7 +7,7 @@ const Navbar = () => {
   return (
     <div className="navbar navbar-dark bg-dark">
       <div className="navbar-brand">
-        <Link to="/">
+        <Link to="/directory" target="blank">
           <FaAddressCard size="2em" color="#fff" />
           <b> PhotoScribe</b>
         </Link>
