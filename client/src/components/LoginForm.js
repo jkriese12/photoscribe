@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./styles/LoginForm.css";
-import { GoogleLogin } from "react-google-login";
+// import { GoogleLogin } from "react-google-login";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 import { signIn } from "../actions/auth";
@@ -15,20 +15,20 @@ const LoginForm = () => {
     dispatch(signIn(details, history));
   };
   // Google functions
-  const googleSuccess = async (res) => {
-    const result = res?.profileObj;
-    const token = res?.tokenId;
+  // const googleSuccess = async (res) => {
+  //   const result = res?.profileObj;
+  //   const token = res?.tokenId;
 
-    try {
-      dispatch({ type: "AUTH", data: { result, token } });
-      history.push("/scribe");
-    } catch (error) {
-      console.log(error);
-    }
-  };
-  const googleFailure = () => {
-    console.log("Google Sign In unsuccessful");
-  };
+  //   try {
+  //     dispatch({ type: "AUTH", data: { result, token } });
+  //     history.push("/scribe");
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
+  // const googleFailure = () => {
+  //   console.log("Google Sign In unsuccessful");
+  // };
 
   return (
     <form className="login-form" onSubmit={submitHandler}>
@@ -67,7 +67,7 @@ const LoginForm = () => {
         Submit
       </button>
 
-      <GoogleLogin
+      {/* <GoogleLogin
         clientId="782624440107-ro26a2oc9duk8ok81lkd18kduknln1r2.apps.googleusercontent.com"
         render={(renderProps) => (
           <button
@@ -82,7 +82,7 @@ const LoginForm = () => {
         onSuccess={googleSuccess}
         onFailure={googleFailure}
         cookiePolicy="single_host_origin"
-      />
+      /> */}
     </form>
   );
 };
