@@ -41,8 +41,34 @@ No prior installation is required to properly use PhotoScribe. Simply head to th
 
 ## Technologies-Used
 
-* [Open Weather Map api](https://openweathermap.org/api)
-* [Bootstrap Framework](https://getbootstrap.com/)
+"bcryptjs": "^2.4.3",   
+"body-parser": "^1.19.0",   
+"cors": "^2.8.5",   
+"dotenv": "^8.2.0",   
+"express": "^4.16.3",    
+"file-saver": "^2.0.5",    
+"if-env": "^1.0.4",    
+"is-empty": "^1.2.0",    
+"jsonwebtoken": "^8.5.1",    
+"mongoose": "^5.3.16",    
+"passport": "^0.4.1",    
+"passport-jwt": "^4.0.0",   
+"react-file-base64": "^1.0.3",    
+"validator": "^13.6.0" 
+"axios": "^0.21.1",    
+"bootstrap": "^4.6.0",    
+"jwt-decode": "^3.1.2",    
+"emailjs-com": "^2.6.4", 
+"react": "^16.14.0",    
+"react-cropper": "^2.1.7",    
+"react-dom": "^16.13.1",   
+"react-google-login": "^5.2.2",    
+"react-icons": "^4.2.0",    
+"react-redux": "^7.2.3",    
+"react-router-dom": "^5.1.2",   
+ "react-scripts": "3.4.3",   
+ "redux": "^4.0.5",   
+ "redux-thunk": "^2.3.0"
 
 ## Deployed-Link
 
