@@ -1,7 +1,7 @@
 import axios from "axios";
 import { saveAs } from "file-saver";
 // Defining URL for the DB
-const API = axios.create({ baseURL: "https://photoscribe.herokuapp.com/api" });
+const API = axios.create({ baseURL: "/api" });
 // Sending the token and user profile of the logged in user to the back end for DB calls
 API.interceptors.request.use((req) => {
   if (localStorage.getItem("profile")) {
