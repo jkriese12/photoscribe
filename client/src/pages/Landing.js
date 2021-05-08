@@ -247,7 +247,7 @@ const LandingPage = () => {
               <img src={two} color="#d7dbdd" alt="" />
               <div className="landing-card-text">
                 <p>
-                  Bring it to life with details like who is in the photo or what year it
+                  Bring your photo to life with details like who is in the photo or what year it
                   was taken.
                 </p>
               </div>

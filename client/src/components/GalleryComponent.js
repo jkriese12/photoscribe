@@ -25,7 +25,7 @@ import { SET_CURRENT_POST } from "../utils/actions";
       <div> 
         
       </div> 
-   ); 
-  } 
+    ); 
+  }; 
   
   export default Gallery;

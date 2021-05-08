@@ -24,6 +24,6 @@ function GalleryCardTemplateShare({ data }) {
       </div>
     </div>
   );
-}
+};
 
 export default GalleryCardTemplateShare;
