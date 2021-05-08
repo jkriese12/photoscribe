@@ -37,7 +37,7 @@ const GalleryShare = () => {
       <h4 className="signUp">Ready to create your own memories?</h4>
       <Link to="/signup">
         <Button className="landing-button">
-          <img src={tryitnow} alt="try it" />
+           <img src={tryitnow} alt="try it" />
         </Button>
       </Link>
     </Container>
