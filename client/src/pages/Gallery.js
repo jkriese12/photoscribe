@@ -22,7 +22,7 @@ const Gallery = () => {
   const posts = useSelector((state) => state.posts);
   console.log(posts);
   return (
-    <Container className="selected-gallery">
+    <Container className="selectedGallery">
       <Wrapper className="wrapper">
         <Logout />
         <div className="gallery-buttons small">
