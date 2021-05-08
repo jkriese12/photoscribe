@@ -43,7 +43,7 @@ const Gallery = () => {
             Email Link <FaRegEnvelope size="1em" color="#6c757d" />
           </Link>
         </div>
-        <Row>
+        <Row className="gallery-name">
           <h1 className="gallery-title">{albumName}</h1>
         </Row>
       </Wrapper>
