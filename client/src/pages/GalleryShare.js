@@ -6,7 +6,7 @@ import Button from "../components/Button";
 import "./styles/GalleryShare.css";
 import GalleryCardTemplateShare from "../components/GalleryCardTemplateShare";
 import Wrapper from "../components/Wrapper";
-import tryitnow from "../components/Images/try-it-now.jpg";
+import tryitnow from "../components/Images/try-it-now2.jpg";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { getPostsGalleryNoAuth } from "../actions/posts";
@@ -38,10 +38,6 @@ const GalleryShare = () => {
       <Link to="/signup">
         <Button className="landing-button">
           <img src={tryitnow} alt="try it" />
-
-          {/* <button className="btn btn-primary btn-lg">
-                        CREATE AN ACCOUNT
-                    </button> */}
         </Button>
       </Link>
     </Container>
