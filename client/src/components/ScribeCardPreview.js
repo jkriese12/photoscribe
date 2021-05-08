@@ -15,7 +15,7 @@ function ScribeCardPreview({ details, setDetails, cropData, submitHandler, reset
               alt="gallery"
             />
           </div>
-          <div className="col-md-6">
+          {/* <div className="col-md-6">
             <div className="card-body">
               <div className="card-text">
                 <b>Year:</b>&nbsp;&nbsp;{data.dateTaken}
@@ -25,7 +25,7 @@ function ScribeCardPreview({ details, setDetails, cropData, submitHandler, reset
                 <b>Details:</b>&nbsp;&nbsp;{data.synopsis}
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
       <div className="gallery-card-buttons">

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Container from "../components/Container";
 import Row from "../components/Row";
 import "./styles/Gallery.css";
-import GalleryCard from "../components/GalleryCard";
+import GalleryCardTemplate from "../components/GalleryCardTemplate";
 import { FaBackward, FaTh, FaRegEnvelope } from "react-icons/fa";
 import Logout from "../components/Logout";
 import Wrapper from "../components/Wrapper";
@@ -49,7 +49,7 @@ const Gallery = () => {
       </Wrapper>
       <Row className="galImages">
         {posts.map((data) => (
-          <GalleryCard key={data._id} data={data} />
+          <GalleryCardTemplate key={data._id} data={data} />
         ))}
       </Row>
     </Container>
