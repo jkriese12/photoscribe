@@ -1,5 +1,5 @@
 .wrapper {
-    background-color :#F4F6F6 ;
+    background-color :#f4f6f6 ;
     margin-top: -20px;
     border-bottom: .5px solid lightgrey;
 } 
@@ -9,6 +9,13 @@
     width: 100%;
     padding-bottom: 40px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}  
+
+.dirImages {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    justify-items: center;
+    grid-gap: 20px;
 } 
 
 .directory-buttons {
@@ -21,11 +28,4 @@
 
 .link {
     color: #6c757d;
-} 
-
-.dirImages {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    justify-items: center;
-    grid-gap: 20px;
 } 

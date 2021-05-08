@@ -20,7 +20,7 @@ const GalleryList = ({ details, setDetails }) => {
         className="custom-select"
         onChange={(e) => setDetails({ ...details, albumName: e.currentTarget.value })}
       >
-        <option key="blank"></option>
+        <option key="blank">Click to select</option>
         {unique.map((data) => (
           <option key={data}>{data}</option>
         ))}

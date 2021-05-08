@@ -16,13 +16,11 @@ function GalleryCard({ data }) {
           <div className="col-md-6">
             <div className="card-body">
               <p className="card-text">
-                <b>Year Taken:</b> {data.dateTaken}
-                <br />
-                <b style={{ marginBottom: 10 }}>Location:</b> {data.photoLocation}
-                <br />
-                <b style={{ marginLeft: 60 }}>Details</b>
-                <br />
-                {data.synopsis}
+                <b>Year:</b>&nbsp;&nbsp;{data.dateTaken}
+                <br/> 
+                <b>Location:</b>&nbsp;&nbsp;{data.photoLocation}
+                <br/>
+                <b>Details:</b>&nbsp;&nbsp;{data.synopsis}
               </p>
             </div>
           </div>

@@ -55,8 +55,8 @@
 }
 
 .landing-button img {
-  height: 75px;
-  width: 205px;
+  height: 65px;
+  width: 185px;
   cursor: pointer;
 }
 
@@ -64,7 +64,7 @@
   margin-bottom: 80px;
 }
 
-.landing-redirect h7 {
+.landing-redirect h6 {
   text-align: center;
   font-style: italic;
 }

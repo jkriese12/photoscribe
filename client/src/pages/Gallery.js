@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Container from "../components/Container";
 import Row from "../components/Row";
 import "./styles/Gallery.css";
-import GalleryCardTemplate from "../components/GalleryCardTemplate";
+import GalleryCard from "../components/GalleryCard";
 import { FaBackward, FaTh, FaRegEnvelope } from "react-icons/fa";
 import Logout from "../components/Logout";
 import Wrapper from "../components/Wrapper";
@@ -22,7 +22,7 @@ const Gallery = () => {
   const posts = useSelector((state) => state.posts);
   console.log(posts);
   return (
-    <Container className="selectedGallery">
+    <Container className="selected-gallery">
       <Wrapper className="wrapper">
         <Logout />
         <div className="gallery-buttons small">
@@ -49,7 +49,7 @@ const Gallery = () => {
       </Wrapper>
       <Row className="galImages">
         {posts.map((data) => (
-          <GalleryCardTemplate key={data._id} data={data} />
+          <GalleryCard key={data._id} data={data} />
         ))}
       </Row>
     </Container>

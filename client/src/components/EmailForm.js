@@ -62,18 +62,18 @@ const EmailForm = () => {
           </div>
 
           <div className="form-group">
-            <label>Send a note</label>
+            <label>Add a note</label>
             <input
               type="text"
               name="user"
               className="form-control"
-              placeholder="Send a note"
+              placeholder="Add a note"
               id="password"
             />
           </div>
           <br />
           <button type="submit" value="send" className="btn btn-primary btn-block">
-            Submit
+            Send
           </button>
         </div>
       </form>
