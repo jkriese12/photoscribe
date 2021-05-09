@@ -23,7 +23,7 @@ const Gallery = () => {
   console.log(posts);
   return (
     <Container className="selectedGallery">
-      <Wrapper className="wrapper">
+      <Wrapper className="header-wrapper">
         <Logout />
         <div className="gallery-buttons small">
           <div className="back-to-work">
@@ -46,12 +46,15 @@ const Gallery = () => {
         <Row className="gallery-name">
           <h1 className="gallery-title">{albumName}</h1>
         </Row>
-      </Wrapper>
-      <Row className="galImages">
+      </Wrapper> 
+      <Wrapper className="image-wrapper">
+        <Row className="galImages">
         {posts.map((data) => (
           <GalleryCardTemplate key={data._id} data={data} />
         ))}
       </Row>
+      </Wrapper>
+      
     </Container>
   );
 };

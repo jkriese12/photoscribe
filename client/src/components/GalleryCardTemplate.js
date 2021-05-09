@@ -37,6 +37,6 @@ function GalleryCard({ data }) {
       </div>
     </div>
   );
-}
+};
 
 export default GalleryCard;

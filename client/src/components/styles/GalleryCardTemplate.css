@@ -1,7 +1,7 @@
 .card {
   border: 1px solid lightgrey;
   height: 250px;
-  width: 540px;
+  max-width: 540px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   margin: 0 auto;
   margin-top: 30px;
@@ -25,7 +25,7 @@
 .gallery-card-buttons {
   display: flex;
   justify-content: space-evenly;
-  width: 540px;
+  max-width: 540px;
 }
 
 @media only screen and (max-width: 1000px) {

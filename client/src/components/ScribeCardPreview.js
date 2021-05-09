@@ -1,5 +1,5 @@
 import React from "react";
-import "./styles/GalleryCardTemplate.css";
+import "./styles/ScribeCardPreview.css";
 
 function ScribeCardPreview({ details, setDetails, cropData, submitHandler, reset }) {
   return (
@@ -18,11 +18,11 @@ function ScribeCardPreview({ details, setDetails, cropData, submitHandler, reset
           <div className="col-md-6">
             <div className="card-body">
               <div className="card-text">
-                <b>Year:</b>&nbsp;&nbsp;{data.dateTaken}
+                <b>Year:</b>&nbsp;&nbsp;{details.dateTaken}
                 <br/> 
-                <b>Location:</b>&nbsp;&nbsp;{data.photoLocation}
+                <b>Location:</b>&nbsp;&nbsp;{details.photoLocation}
                 <br/>
-                <b>Details:</b>&nbsp;&nbsp;{data.synopsis}
+                <b>Details:</b>&nbsp;&nbsp;{details.synopsis}
               </div>
             </div>
           </div>
