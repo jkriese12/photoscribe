@@ -18,7 +18,7 @@ const Logout = () => {
 
   return (
     <Link to="/">
-      <div className="logout-button small" onClick={logout}>
+      <div className="logout-button" onClick={logout}>
         Logout <FaSignOutAlt onClick={logout} />
       </div>
     </Link>

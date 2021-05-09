@@ -4,8 +4,8 @@ import Container from "../components/Container";
 import Row from "../components/Row";
 import "./styles/Gallery.css";
 import GalleryCardTemplate from "../components/GalleryCardTemplate";
-import { FaBackward, FaTh, FaRegEnvelope } from "react-icons/fa";
 import Logout from "../components/Logout";
+import { FaBackward, FaTh, FaRegEnvelope } from "react-icons/fa";
 import Wrapper from "../components/Wrapper";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
@@ -24,8 +24,7 @@ const Gallery = () => {
   return (
     <Container className="selectedGallery">
       <Wrapper className="header-wrapper">
-        <Logout />
-        <div className="gallery-buttons small">
+        <Row className="gallery-buttons small">
           <div className="back-to-work">
             <Link to="/scribe" className="link">
               <FaBackward size="1em" color="#6c757d" /> Scribe New Photo
@@ -36,25 +35,24 @@ const Gallery = () => {
               View Directory <FaTh size="1em" color="#6c757d" />
             </Link>
           </div>
-        </div>
-
-        <div className="send-email small text-secondary">
-          <Link to={"/email/" + albumName} className="link">
-            Email Link <FaRegEnvelope size="1em" color="#6c757d" />
-          </Link>
-        </div>
+          <div className="send-email text-secondary">
+            <Link to={"/email/" + albumName} className="link">
+              Share Your Gallery <FaRegEnvelope size="1em" color="#6c757d" />
+            </Link>
+          </div> 
+          <Logout />
+        </Row>   
         <Row className="gallery-name">
           <h1 className="gallery-title">{albumName}</h1>
         </Row>
       </Wrapper> 
       <Wrapper className="image-wrapper">
         <Row className="galImages">
-        {posts.map((data) => (
-          <GalleryCardTemplate key={data._id} data={data} />
-        ))}
-      </Row>
+          {posts.map((data) => (
+            <GalleryCardTemplate key={data._id} data={data} />
+          ))}
+        </Row>
       </Wrapper>
-      
     </Container>
   );
 };

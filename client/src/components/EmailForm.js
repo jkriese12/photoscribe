@@ -30,8 +30,7 @@ const EmailForm = () => {
   return (
     <div className="container">
       <form className="form center" onSubmit={sendEmail}>
-        <div className="form-inner">
-          <h3 className="text-center">Share Gallery</h3>
+        <h3 className="text-center">Share Your Gallery!</h3>
           <div className="form-group">
             <input
               type="hidden"
@@ -75,7 +74,6 @@ const EmailForm = () => {
           <button type="submit" value="send" className="btn btn-primary btn-block">
             Send
           </button>
-        </div>
       </form>
       <br />
     </div>

@@ -20,7 +20,7 @@
   text-align: center;
 }
 
-.landing-svg svg {
+.landing-svg img {
   height: 190px;
   width: 260px;
 }
@@ -55,8 +55,8 @@
 }
 
 .landing-button img {
-  height: 65px;
-  width: 185px;
+  height: 63px;
+  width: 183px;
   cursor: pointer;
 }
 

@@ -34,7 +34,7 @@ const GalleryShare = () => {
           <GalleryCardTemplateShare key={data._id} data={data} />
         ))}
       </Row>
-      <h4 className="signUp">Ready to create your own memories?</h4>
+      <h6 className="signUp">Ready to share your own memories?</h6>
       <Link to="/signup">
         <Button className="landing-button">
            <img src={tryitnow} alt="try it" />

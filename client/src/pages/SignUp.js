@@ -4,14 +4,14 @@ import Container from "../components/Container";
 import SignUpForm from "../components/SignUpForm";
 import Footer from "../components/Footer";
 import "./styles/SignUp.css";
-import moment from "../components/Images/snap_the_moment.svg";
+import snap_the_moment from "../components/Images/snap_the_moment.svg";
 const SignUp = () => {
   return (
     <>
       <Container className="signup">
         <Row>
           <div className="signup-svg">
-            <img src={moment} alt="undraw content" />
+            <img src={snap_the_moment} alt="undraw content" />
           </div>
         </Row>
         <Row className="form">

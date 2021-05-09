@@ -17,13 +17,14 @@
 
 .title {
   text-align: center;
+  padding-bottom: 5px;
 }
 
 .login-svg {
   margin-top: -63px;
 }
 
-.login-svg svg {
+.login-svg img {
   width: 195px;
   height: 192px;
 }

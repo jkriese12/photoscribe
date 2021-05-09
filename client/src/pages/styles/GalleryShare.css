@@ -20,25 +20,18 @@
   grid-gap: 20px;
 }
 
-.gallery-buttons {
-  color: #6c757d;
-  padding: 12px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.send-email {
-  float: right;
-  padding-right: 12px;
-  padding-bottom: 15px;
-}
-
-.link {
-  color: #6c757d;
-}
-
 .signUp {
   text-align: center;
-  margin-top: 1px;
+  padding-top: 50px;
+} 
+
+.landing-button {
+  text-align: center;
+  cursor: pointer;
+}
+
+.landing-button img {
+  height: 53px;
+  width: 173px;
+  cursor: pointer;
 }
