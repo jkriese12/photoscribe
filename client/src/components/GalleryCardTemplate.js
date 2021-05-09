@@ -7,7 +7,7 @@ function GalleryCard({ data }) {
   const dispatch = useDispatch();
 
   return (
-    <div className="container">
+    <div>
       <div className="card mb-3">
         <div className="row no-gutters myRow">
           <div className="col-md-6">
@@ -23,17 +23,19 @@ function GalleryCard({ data }) {
                 <b>Details:</b>&nbsp;&nbsp;{data.synopsis}
               </p>
             </div>
+            <div className="card-body"> 
+              <div className="gallery-card-buttons">
+                <button
+                  type="submit"
+                  className="btn btn-sm btn-secondary"
+                  onClick={() => dispatch(deletePhoto(data._id))}
+                >
+                  Delete Photo
+                </button>
+              </div>
+            </div> 
           </div>
         </div>
-      </div>
-      <div className="gallery-card-buttons">
-        <button
-          type="submit"
-          className="btn btn-sm btn-secondary"
-          onClick={() => dispatch(deletePhoto(data._id))}
-        >
-          Delete Photo
-        </button>
       </div>
     </div>
   );

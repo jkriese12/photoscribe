@@ -20,25 +20,27 @@ const Directory = () => {
   const unique = [...new Set(posts.map((a) => a.albumName))];
 
   return (
-    <Container className="directory">
-      <Wrapper className="wrapper">
-        <Logout />
-        <div className="directory-buttons small">
+    <Container>
+      <Wrapper className="header-wrapper"> 
+        <Row className="nav-links small">
           <div className="back-to-work">
-            <Link to="/" className="link">
-              <FaBackward size="1em" color="#6c757d" /> Scribe New Photo
+            <Link to="/scribe" className="link">
+              <FaBackward size="1em" color="#6c757d"/> Scribe New Photo
             </Link>
           </div>
-        </div>
+          <Logout />  
+        </Row>
         <Row>
-          <h2 className="directory-title">Directory</h2>
+          <h2 className="title">Directory</h2>
+        </Row>
+      </Wrapper> 
+      <Wrapper className="cards-wrapper">
+        <Row className="dirCards">
+          {unique.map((data) => (
+            <DirectoryCard key={data} data={data} posts={posts} />
+          ))}
         </Row>
       </Wrapper>
-      <Row className="dirImages">
-        {unique.map((data) => (
-          <DirectoryCard key={data} data={data} posts={posts} />
-        ))}
-      </Row>
     </Container>
   );
 };

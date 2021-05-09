@@ -1,12 +1,8 @@
-
-
-
 .card {
   border: 1px solid lightgrey;
-  height: 250px;
+  max-height: 250px;
   max-width: 540px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  margin: 0 auto;
   margin-top: 30px;
 }
 
@@ -26,9 +22,7 @@
 }
 
 .gallery-card-buttons {
-  display: flex;
-  justify-content: space-evenly;
-  max-width: 540px;
+  padding-left: 200px;
 }
 
 @media only screen and (max-width: 1000px) {

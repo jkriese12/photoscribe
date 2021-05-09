@@ -22,9 +22,9 @@ const Gallery = () => {
   const posts = useSelector((state) => state.posts);
   console.log(posts);
   return (
-    <Container className="selectedGallery">
+    <Container>
       <Wrapper className="header-wrapper">
-        <Row className="gallery-buttons small">
+        <Row className="nav-links small">
           <div className="back-to-work">
             <Link to="/scribe" className="link">
               <FaBackward size="1em" color="#6c757d" /> Scribe New Photo

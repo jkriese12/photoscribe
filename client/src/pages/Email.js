@@ -15,7 +15,7 @@ const Email = () => {
     <div>
       <Container>
         <Wrapper className="header-wrapper"> 
-          <Row className="gallery-buttons small"> 
+          <Row className="nav-links small"> 
             <div className="back-to-work">
               <Link to={"/gallery/" + albumName} className="link">
                 <FaBackward size="1em" color="#6c757d" /> View Gallery

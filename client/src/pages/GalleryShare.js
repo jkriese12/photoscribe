@@ -6,7 +6,8 @@ import Button from "../components/Button";
 import "./styles/GalleryShare.css";
 import GalleryCardTemplateShare from "../components/GalleryCardTemplateShare";
 import Wrapper from "../components/Wrapper";
-import tryitnow from "../components/Images/try-it-now2.jpg";
+import tryitnow from "../components/Images/try-it-now2.jpg"; 
+import Logout from "../components/Logout";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { getPostsGalleryNoAuth } from "../actions/posts";
@@ -28,13 +29,14 @@ const GalleryShare = () => {
         <Row>
           <h1 className="gallery-title">{albumName}</h1>
         </Row>
+        <Logout />
       </Wrapper>
       <Row className="galImages">
         {posts.map((data) => (
           <GalleryCardTemplateShare key={data._id} data={data} />
         ))}
       </Row>
-      <h6 className="signUp">Ready to share your own memories?</h6>
+      <h6 className="signUp">Ready to create your own albums to share?</h6>
       <Link to="/signup">
         <Button className="landing-button">
            <img src={tryitnow} alt="try it" />

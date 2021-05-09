@@ -2,8 +2,17 @@
   background-color: #f4f6f6;
   margin-top: -20px;
   border-bottom: 0.5px solid lightgrey;
-}
+  width: 100%;
+} 
 
+.nav-links {
+  color: #6c757d;
+  padding: 12px; 
+  display: flex; 
+  justify-content: space-around;
+  background-color: #e6e6e6;
+  border-bottom: 0.5px solid lightgrey;
+}
 .gallery-title {
   text-align: center;
   width: 100%;
@@ -12,11 +21,8 @@
     Arial, sans-serif;
 }
 
-.gallery-buttons {
+.link {
   color: #6c757d;
-  padding: 12px;
-  background-color: #e6e6e6;
-  border-bottom: 0.5px solid lightgrey;
 } 
 
 .share {
