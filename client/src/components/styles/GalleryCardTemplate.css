@@ -1,16 +1,20 @@
+.container {
+  margin-top: 30px;
+}
+
 .card {
   border: 1px solid lightgrey;
-  max-height: 250px;
-  max-width: 540px;
+  height: 250px;
+  width: 540px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  margin-top: 30px;
+  margin: 0 auto;
 }
 
 .myRow {
   height: 100%;
 }
 
-.myRow > div {
+.myRow div {
   height: 100%;
 }
 

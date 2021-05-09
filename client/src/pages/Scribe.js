@@ -118,25 +118,27 @@ const Scribe = () => {
       </Wrapper>
       <Row>
         <hr />
-      </Row>
-      <Row className="scribe-select-card">
-        <div className="scribe-select-gallery">
-          <SelectedGallery details={details} />
-        </div>
-        <div className="scribe-card-header">
-          <h5>Gallery Card View</h5>
-        </div>
-        <div className="scribe-card">
-          <ScribeCardPreview
-            details={details}
-            setDetails={setDetails}
-            cropData={cropData}
-            submitHandler={submitHandler}
-            img={img}
-            reset={reset}
-          />
-        </div>
-      </Row>
+      </Row> 
+      <Wrapper>
+        <Row className="scribe-select-gallery">
+            <SelectedGallery details={details} />
+        </Row>
+        <Row className="scribe-card-header">
+          <div >
+            <h5>Gallery Card View</h5>
+          </div>
+          <div className="scribe-card">
+            <ScribeCardPreview
+              details={details}
+              setDetails={setDetails}
+              cropData={cropData}
+              submitHandler={submitHandler}
+              img={img}
+              reset={reset}
+            />
+          </div>
+        </Row>
+      </Wrapper>
     </Container>
   );
 };
