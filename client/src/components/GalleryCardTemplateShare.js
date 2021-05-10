@@ -3,7 +3,7 @@ import "./styles/GalleryCardTemplate.css";
 
 function GalleryCardTemplateShare({ data }) {
   return (
-    <div className="container">
+    <div>
       <div className="card mb-3">
         <div className="row no-gutters myRow">
           <div className="col-md-6">

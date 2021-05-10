@@ -25,9 +25,14 @@
 
 .scribe-create {
   margin: 0;
-} 
+}  
+
+.scribe-select-gallery {
+  
+}
 
 .scribe-card-header {
+  margin-top: 35px;
   text-align: center;
 } 
 

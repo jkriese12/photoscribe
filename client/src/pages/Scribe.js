@@ -120,13 +120,15 @@ const Scribe = () => {
         <hr />
       </Row> 
       <Wrapper>
-        <Row className="scribe-select-gallery">
+        <Row className="scribe-select-gallery text-right">
             <SelectedGallery details={details} />
         </Row>
         <Row className="scribe-card-header">
           <div >
             <h5>Gallery Card View</h5>
           </div>
+        </Row> 
+        <Row>  
           <div className="scribe-card">
             <ScribeCardPreview
               details={details}

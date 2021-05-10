@@ -7,11 +7,11 @@ function GalleryCard({ data }) {
   const dispatch = useDispatch();
 
   return (
-    <div className="container">
+    <div>
       <div className="card mb-3">
         <div className="row no-gutters myRow">
           <div className="col-md-6">
-            <img className="galleryImage" src={data.selectedFile} alt="gallery" />
+            <img className="galleryImage" src={data.selectedFile} alt="gallery"/>
           </div>
           <div className="col-md-6">
             <div className="card-body">
@@ -24,7 +24,7 @@ function GalleryCard({ data }) {
               </p>
             </div>
           </div>
-          <div className="gallery-card-buttons">
+          <div className="gallery-card-button">
             <button
               type="submit"
               className="btn btn-sm btn-secondary"
