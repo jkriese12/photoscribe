@@ -15,7 +15,7 @@ function GalleryCard({ data }) {
           </div>
           <div className="col-md-6">
             <div className="card-body">
-              <p className="card-text">
+              <p className="card-text myText">
                 <b>Year:</b>&nbsp;&nbsp;{data.dateTaken}
                 <br/> 
                 <b>Location:</b>&nbsp;&nbsp;{data.photoLocation}

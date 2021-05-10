@@ -3,7 +3,7 @@ import "./styles/ScribeCardPreview.css";
 
 function ScribeCardPreview({ details, setDetails, cropData, submitHandler, reset }) {
   return (
-    <div className="container">
+    <div>
       <div className="card mb-3">
         <div className="row no-gutters myRow">
           <div className="col-md-6">
@@ -27,7 +27,8 @@ function ScribeCardPreview({ details, setDetails, cropData, submitHandler, reset
             </div>
           </div>
         </div>
-      </div>
+      </div> 
+
       <div className="gallery-card-buttons">
         <button
           type="submit"

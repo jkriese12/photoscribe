@@ -26,14 +26,14 @@
     Arial, sans-serif;
 }
 
-.galImages { 
+.galCards { 
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   justify-items: center;
   grid-gap: 20px;
 } 
 
-.image-wrapper {
+.cards-wrapper {
   margin-top: .5%; 
   padding-bottom: 100px;
 } 

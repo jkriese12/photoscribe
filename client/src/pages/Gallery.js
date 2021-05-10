@@ -46,8 +46,8 @@ const Gallery = () => {
           <h1 className="gallery-title">{albumName}</h1>
         </Row>
       </Wrapper> 
-      <Wrapper className="image-wrapper">
-        <Row className="galImages">
+      <Wrapper className="cards-wrapper">
+        <Row className="galCards">
           {posts.map((data) => (
             <GalleryCardTemplate key={data._id} data={data} />
           ))}
