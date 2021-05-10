@@ -4,11 +4,11 @@ import "./styles/ScribeCardPreview.css";
 function ScribeCardPreview({ details, setDetails, cropData, submitHandler, reset }) {
   return (
     <div>
-      <div className="card mb-3">
-        <div className="row no-gutters myRow">
+      <div className="card mb-3 previewCard">
+        <div className="row no-gutters previewRow">
           <div className="col-md-6">
             <img
-              className="galleryImage"
+              className="previewImage"
               id="test"
               src={cropData}
               onLoad={(e) => setDetails({ ...details, selectedFile: e.target.src })}
@@ -29,7 +29,7 @@ function ScribeCardPreview({ details, setDetails, cropData, submitHandler, reset
         </div>
       </div> 
 
-      <div className="gallery-card-buttons">
+      <div className="preview-card-buttons">
         <button
           type="submit"
           onClick={submitHandler}

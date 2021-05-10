@@ -1,8 +1,16 @@
-.scribe-page {
-  margin-top: 1%;
+.scribe-page { 
+  min-width: 768px;
+  margin-top: 2%;
   padding-left: 5%;
-  padding-right: 5%;
-}
+  padding-right: 3%;
+} 
+
+.nav-link {
+  color: #6c757d;
+  padding: 12px; 
+  background-color: #e6e6e6;
+  border-bottom: 0.5px solid lightgrey;
+} 
 
 .scribe-upper {
   display: flex;
@@ -18,8 +26,8 @@
 }
 
 .scribe-right {
-  padding-left: 3%;
-  padding-right: 1%;
+  padding-left: 2%;
+  padding-right: 2%;
   width: 80%;
 }
 
@@ -27,8 +35,12 @@
   margin: 0;
 }  
 
+.scribe-lower {
+  left: 0;
+}
+
 .scribe-select-gallery {
-  
+ margin-right: 2%; 
 }
 
 .scribe-card-header {
@@ -36,6 +48,6 @@
   text-align: center;
 } 
 
-.scribe-card {
-  margin-bottom: 100px;
+.scribe-card { 
+  margin-bottom: 80px;
 }

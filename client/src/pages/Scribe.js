@@ -61,8 +61,13 @@ const Scribe = () => {
     }
   };
   return (
+    <>
+    <Wrapper className="header-wrapper">
+      <Row className="nav-link small">
+        <Logout />
+      </Row>
+    </Wrapper> 
     <Container className="scribe-page">
-      <Logout />
       <Wrapper className="scribe-upper">
         <Col size="col-7" className="scribe-left">
           <Row className="scribe-instructions">
@@ -119,7 +124,7 @@ const Scribe = () => {
       <Row>
         <hr />
       </Row> 
-      <Wrapper>
+      <Wrapper className="scribe-lower">
         <Row className="scribe-select-gallery text-right">
             <SelectedGallery details={details} />
         </Row>
@@ -141,7 +146,8 @@ const Scribe = () => {
           </div>
         </Row>
       </Wrapper>
-    </Container>
+    </Container> 
+  </>
   );
 };
 

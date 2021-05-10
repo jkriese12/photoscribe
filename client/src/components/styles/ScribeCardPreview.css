@@ -1,32 +1,31 @@
 .container {
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
-.card {
+.previewCard {
     border: 1px solid lightgrey;
     height: 250px;
     width: 540px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
     margin: 0 auto;
-  }
+}
   
-  .myRow {
+.previewRow {
     height: 100%;
   }
   
-  .myRow > div {
+.previewRow > div {
     height: 100%;
-  }
+}
   
-  .galleryImage {
+.previewImage {
     max-height: 100%;
     max-width: 100%;
     width: 100%;
     height: 100%;
-  }
+}
   
-  .gallery-card-buttons {
+.preview-card-buttons {
     display: flex;
     justify-content: space-evenly;
-    width: 540px;
-  }
+}

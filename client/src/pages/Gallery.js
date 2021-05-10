@@ -22,7 +22,7 @@ const Gallery = () => {
   const posts = useSelector((state) => state.posts);
   console.log(posts);
   return (
-    <Container>
+    <Container className="gallery">
       <Wrapper className="header-wrapper">
         <Row className="nav-links small">
           <div className="back-to-work">

@@ -34,7 +34,7 @@ const LandingPage = () => {
             <Card className="landing-card">
               <img src={one} color="#d7dbdd" alt="" />
               <div className="landing-card-text">
-                <p>Choose a photo from your computer or other device.</p>
+                <p>Choose a photo from your desktop pc or laptop device.</p>
               </div>
             </Card>
           </Col>
@@ -43,8 +43,7 @@ const LandingPage = () => {
               <img src={two} color="#d7dbdd" alt="" />
               <div className="landing-card-text">
                 <p>
-                  Bring your photo to life with details like who is in the photo or what year it
-                  was taken.
+                  Bring your photo to life with details like who is in the photo or the year taken.
                 </p>
               </div>
             </Card>

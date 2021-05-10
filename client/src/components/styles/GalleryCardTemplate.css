@@ -2,18 +2,18 @@
   margin-top: 30px;
 }
 
-.card {
+.galleryCard {
   border: 1px solid lightgrey;
   max-width: 540px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   margin: 0 auto;
 }
 
-.myRow {
+.galleryRow {
   height: 100%;
 }
 
-.myRow div {
+.galleryRow > div {
   height: 100%;
 }
 
@@ -29,8 +29,7 @@
 
 }
 
-@media only screen and (max-width: 1000px) {
-  .myText {
-    font-size: 10px;
-  }
+@media only screen and (max-width: 768px) { 
+
+ 
 }
