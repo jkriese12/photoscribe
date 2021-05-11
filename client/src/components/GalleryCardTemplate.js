@@ -8,12 +8,12 @@ function GalleryCard({ data }) {
 
   return (
     <div>
-      <div className="card mb-3 galleryCard">
+      <div className="card galleryCard">
         <div className="row no-gutters galleryRow">
-          <div className="col-md-6">
+          <div className="col-6">
             <img className="galleryImage" src={data.selectedFile} alt="gallery"/>
           </div>
-          <div className="col-md-6">
+          <div className="col-6">
             <div className="card-body">
               <p className="card-text galleryText">
                 <b>Year:</b>&nbsp;&nbsp;{data.dateTaken}
@@ -30,7 +30,7 @@ function GalleryCard({ data }) {
               className="btn btn-sm btn-secondary"
               onClick={() => dispatch(deletePhoto(data._id))}
             >
-              Delete Photo
+              Remove
             </button>
           </div> 
         </div>

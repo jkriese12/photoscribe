@@ -17,7 +17,7 @@ function ScribeCardPreview({ details, setDetails, cropData, submitHandler, reset
           </div>
           <div className="col-md-6">
             <div className="card-body">
-              <div className="card-text">
+              <div className="card-text previewText">
                 <b>Year:</b>&nbsp;&nbsp;{details.dateTaken}
                 <br/> 
                 <b>Location:</b>&nbsp;&nbsp;{details.photoLocation}

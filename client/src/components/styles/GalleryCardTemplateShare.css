@@ -1,0 +1,23 @@
+.shareCard {
+    border: 1px solid lightgrey;
+    max-height: 250px;
+    max-width: 540px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    margin: 0 auto;
+  }
+  
+  .shareRow {
+    height: 100%;
+  }
+  
+  .shareRow > div {
+    height: 100%;
+  }
+  
+  .shareImage {
+    max-height: 100%;
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+  } 
+  

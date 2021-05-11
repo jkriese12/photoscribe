@@ -1,3 +1,6 @@
+.gallery {
+  width: 100%;
+}
 
 .header-wrapper {
   background-color: #f4f6f6;
@@ -25,34 +28,53 @@
   padding-bottom: 40px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
     Arial, sans-serif;
-}
+}  
 
 .galCards { 
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  justify-items: center;
-  grid-gap: 20px;
-} 
-
-.card-wrapper { 
-  margin: 20px;
-  padding-right: 100px;
-  justify-items: center;
-  align-items: center;
-}
-
-
-@media only screen and (max-width: 1000px) { 
-
-  .galCards { 
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     justify-items: center;
-    grid-gap: 20px;
-  } 
+    grid-gap: 50px;
+}  
 
-
-  #myText {
-    font-size: 10px;
-  }
+.galleryText {
+  font-size: 15px;
 }
+
+.cards-wrapper { 
+  justify-content: center;
+  padding: 25px;
+}
+
+@media only screen and (max-width: 768px) {   
+
+  .galCards {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+}  
+
+@media only screen and (min-width: 1100px) and (max-width: 1280px) { 
+  .galCards { 
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    grid-gap: 50px;
+  } 
+}
+ 
+@media only screen and (min-width: 1280px) { 
+  .galCards { 
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    grid-gap: 50px;
+  } 
+}
+ 
+
+
+
+
+

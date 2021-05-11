@@ -1,5 +1,5 @@
 .scribe-page { 
-  min-width: 768px;
+  min-width: 760px;
   margin-top: 2%;
   padding-left: 5%;
   padding-right: 3%;
@@ -27,7 +27,7 @@
 
 .scribe-right {
   padding-left: 2%;
-  padding-right: 2%;
+  padding-right: 1%;
   width: 80%;
 }
 

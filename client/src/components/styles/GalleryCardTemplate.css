@@ -1,10 +1,7 @@
-.container {
-  margin-top: 30px;
-}
-
 .galleryCard {
   border: 1px solid lightgrey;
-  max-width: 540px;
+  height: 165px;
+  width: 354px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   margin: 0 auto;
 }
@@ -24,12 +21,12 @@
   height: 100%;
 } 
 
-.gallery-card-button { 
-  padding-top: 15px;
-
+.galleryText {
+  font-size: 11px;
 }
 
-@media only screen and (max-width: 768px) { 
+.gallery-card-button { 
+  padding-top: 10px;
+  padding-bottom: 15px;
 
- 
 }

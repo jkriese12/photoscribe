@@ -40,7 +40,7 @@ const GalleryCardText = ({ details, setDetails }) => {
             rows="8"
             onChange={(e) => setDetails({ ...details, synopsis: e.target.value })}
             value={details.synopsis}
-            maxLength="185"
+            maxLength="142"
           ></textarea>
         </div>
       </form>
