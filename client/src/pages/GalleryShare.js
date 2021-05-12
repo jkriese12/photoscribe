@@ -25,7 +25,7 @@ const GalleryShare = () => {
   console.log(posts);
 
   return (
-    <Container>
+    <Container className="shareGallery">
       <Wrapper className="header-wrapper"> 
         <Row className="nav-links small"> 
           <div className="back-to-work">
@@ -39,8 +39,8 @@ const GalleryShare = () => {
           <h1 className="gallery-title">{albumName}</h1>
         </Row>
       </Wrapper> 
-      <Wrapper>
-        <Row className="galImages">
+      <Wrapper className="cards-wrapper"> 
+        <Row className="shareCards">
           {posts.map((data) => (
             <GalleryCardTemplateShare key={data._id} data={data} />
           ))}

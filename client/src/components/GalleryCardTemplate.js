@@ -27,7 +27,7 @@ function GalleryCard({ data }) {
           <div className="gallery-card-button">
             <button
               type="submit"
-              className="btn btn-sm btn-secondary"
+              className="btn btn-sm btn-light"
               onClick={() => dispatch(deletePhoto(data._id))}
             >
               Remove

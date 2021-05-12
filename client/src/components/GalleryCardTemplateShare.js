@@ -4,7 +4,7 @@ import "./styles/GalleryCardTemplateShare.css";
 function GalleryCardTemplateShare({ data }) {
   return (
     <div>
-      <div className="card mb-3 shareCard" >
+      <div className="card mb-3 shareCard">
         <div className="row no-gutters shareRow">
           <div className="col-md-6">
             <img className="shareImage" src={data.selectedFile} alt="gallery" />

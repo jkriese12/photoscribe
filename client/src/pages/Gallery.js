@@ -6,7 +6,7 @@ import "./styles/Gallery.css";
 import GalleryCardTemplate from "../components/GalleryCardTemplate";
 import Logout from "../components/Logout";
 import { FaBackward, FaTh, FaRegEnvelope } from "react-icons/fa";
-import Wrapper from "../components/Wrapper";
+import Wrapper from "../components/Wrapper"; 
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { getPostsGallery } from "../actions/posts";
@@ -50,7 +50,7 @@ const Gallery = () => {
         <Row className="galCards">
           {posts.map((data) => (
             <GalleryCardTemplate key={data._id} data={data} />
-          ))}
+          ))} 
         </Row>
       </Wrapper>
     </Container>
