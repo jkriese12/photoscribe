@@ -6,7 +6,6 @@ import Button from "../components/Button";
 import GalleryCardTemplateShare from "../components/GalleryCardTemplateShare";
 import Wrapper from "../components/Wrapper";
 import tryitnow from "../components/Images/try-ps-now.png"; 
-import { FaTh } from "react-icons/fa";
 import Logout from "../components/Logout";
 import "./styles/GalleryShare.css";
 import { useParams } from "react-router-dom";
@@ -27,7 +26,7 @@ const GalleryShare = () => {
   return (
     <Container className="shareGallery">
       <Wrapper className="header-wrapper"> 
-        <Row className="nav-links small"> 
+        <Row className="logout-link"> 
           <Logout /> 
         </Row>
         <Row>
