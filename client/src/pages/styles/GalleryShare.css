@@ -9,13 +9,12 @@
   width: 100%;
 }
 
-.logout-link {
+.nav-link {
   color: #6c757d;
   padding: 12px; 
-  float: right;
   background-color: #e6e6e6;
   border-bottom: 0.5px solid lightgrey;
-} 
+}
 
 .link {
   color: #6c757d;
