@@ -4,14 +4,14 @@ import "./styles/GalleryCardTemplateShare.css";
 function GalleryCardTemplateShare({ data }) {
   return (
     <div>
-      <div className="card mb-3 shareCard">
-        <div className="row no-gutters shareRow">
-          <div className="col-md-6">
-            <img className="shareImage" src={data.selectedFile} alt="gallery" />
+      <div className="card mb-3 galleryCard">
+        <div className="row no-gutters galleryRow">
+          <div className="col-6">
+            <img className="galleryImage" src={data.selectedFile} alt="gallery" />
           </div>
-          <div className="col-md-6">
+          <div className="col-6">
             <div className="card-body">
-              <div className="card-text shareText">
+              <div className="card-text galleryText">
                 <b>Year:</b>&nbsp;{data.dateTaken}
                 <br/> 
                 <b>Location:</b>&nbsp;{data.photoLocation}

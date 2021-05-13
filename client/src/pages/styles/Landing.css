@@ -55,12 +55,13 @@
 }
 
 .landing-button img {
-  height: 85px;
-  width: 195px;
+  height: 48px;
+  width: 220px;
   cursor: pointer;
 }
 
 .landing-redirect {
+  margin-top:10px;
   margin-bottom: 80px;
 }
 

@@ -1,4 +1,4 @@
-.shareCard {
+.galleryCard {
   border: 1px solid lightgrey;
   height: 165px;
   width: 354px;
@@ -6,21 +6,21 @@
   margin: 0 auto;
 } 
 
-.shareRow {
+.galleryRow {
   height: 100%;
 }
 
-.shareRow > div {
+.galleryRow > div {
   height: 100%;
 }
 
-.shareImage {
+.galleryImage {
   max-height: 100%;
   max-width: 100%;
   width: 100%;
   height: 100%;
 } 
 
-.shareText {
+.galleryText {
   font-size: 11px;
 }

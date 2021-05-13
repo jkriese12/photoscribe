@@ -23,7 +23,7 @@ const CreateGalleryList = ({ newGallery, setNewGallery }) => {
             setNewGallery(e.target.value);
           }}
           value={newGallery}
-          maxLength="14"
+          maxLength="25"
         />
       </div>
       <button

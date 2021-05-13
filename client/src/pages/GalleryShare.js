@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 import Container from "../components/Container";
 import Row from "../components/Row";
 import Button from "../components/Button";
-import "./styles/GalleryShare.css";
 import GalleryCardTemplateShare from "../components/GalleryCardTemplateShare";
 import Wrapper from "../components/Wrapper";
-import tryitnow from "../components/Images/try-it-now2.jpg"; 
+import tryitnow from "../components/Images/try-ps-now.png"; 
 import { FaTh } from "react-icons/fa";
 import Logout from "../components/Logout";
+import "./styles/GalleryShare.css";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { getPostsGalleryNoAuth } from "../actions/posts";
@@ -40,7 +40,7 @@ const GalleryShare = () => {
         </Row>
       </Wrapper> 
       <Wrapper className="cards-wrapper"> 
-        <Row className="shareCards">
+        <Row className="galleryCards">
           {posts.map((data) => (
             <GalleryCardTemplateShare key={data._id} data={data} />
           ))}

@@ -28,8 +28,12 @@
   padding: 40px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
     Arial, sans-serif;
-}  
+}   
 
+.cards-wrapper { 
+  justify-content: center;
+  padding: 25px;
+}
 .galCards { 
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -41,10 +45,6 @@
   font-size: 11px;
 }
 
-.cards-wrapper { 
-  justify-content: center;
-  padding: 25px;
-}
 
 @media only screen and (max-width: 768px) {   
 

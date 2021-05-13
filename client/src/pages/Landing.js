@@ -9,7 +9,7 @@ import Footer from "../components/Footer";
 import one from "../components/Images/one.png";
 import two from "../components/Images/two.png";
 import three from "../components/Images/three.png";
-import tryitnow from "../components/Images/try-it-now2.jpg";
+import tryitnow from "../components/Images/try-ps-now.png";
 import "./styles/Landing.css";
 import landing from "../components/Images/site_content.svg"
 const LandingPage = () => {
@@ -18,7 +18,7 @@ const LandingPage = () => {
       <Container className="container">
         <Row>
           <div className="landing-title">
-            <h2>Photoscribe</h2>
+            <h2>PhotoScribe</h2>
             <h5>
               <b>Organize, detail and share photos in 3 easy steps!</b>
             </h5>
