@@ -33,7 +33,8 @@
 .cards-wrapper { 
   justify-content: center;
   padding: 25px;
-}
+} 
+
 .galCards { 
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -43,10 +44,23 @@
 
 .galleryText {
   font-size: 11px;
+} 
+
+@media only screen and (max-width: 576px) {
+  .galCards {
+    display: flex;
+    flex-direction: column;
+    gap: 50px; 
+  }  
+
+  .cards-wrapper { 
+    justify-content: center; 
+    padding-top: 25px;
+    padding-left: 1px;
+  } 
 }
 
-
-@media only screen and (max-width: 768px) {   
+@media only screen and (min-width: 768px) and (max-width: 1099.98) {   
 
   .galCards {
     display: flex;
