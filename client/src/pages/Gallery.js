@@ -27,7 +27,7 @@ const Gallery = () => {
         <Row className="nav-links small">
           <div className="back-to-work">
             <Link to="/scribe" className="link">
-              <FaBackward size="1em" color="#6c757d" /> Scribe New Photo
+              <FaBackward size="1em" color="#6c757d" /> Scribe Photo
             </Link>
           </div>
           <div className="back-to-work">
@@ -37,7 +37,7 @@ const Gallery = () => {
           </div>
           <div className="send-email text-secondary">
             <Link to={"/email/" + albumName} className="link">
-              Share Your Gallery <FaRegEnvelope size="1em" color="#6c757d" />
+              Share Gallery <FaRegEnvelope size="1em" color="#6c757d" />
             </Link>
           </div> 
           <Logout />

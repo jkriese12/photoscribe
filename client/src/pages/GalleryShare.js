@@ -5,7 +5,8 @@ import Row from "../components/Row";
 import Button from "../components/Button";
 import GalleryCardTemplateShare from "../components/GalleryCardTemplateShare";
 import Wrapper from "../components/Wrapper";
-import tryitnow from "../components/Images/try-ps-now.png"; 
+import tryitnow from "../components/Images/try-ps-now.png";
+import { FaTh } from "react-icons/fa"; 
 import Logout from "../components/Logout";
 import "./styles/GalleryShare.css";
 import { useParams } from "react-router-dom";
@@ -26,7 +27,12 @@ const GalleryShare = () => {
   return (
     <Container className="shareGallery">
       <Wrapper className="header-wrapper"> 
-      <Row className="nav-link small">
+      <Row className="nav-links small"> 
+        <div className="back-to-work">
+            <Link to="/directory" target="blank" className="link">
+              View Directory <FaTh size="1em" color="#6c757d" />
+            </Link>
+          </div>
         <Logout />
       </Row>
         <Row>

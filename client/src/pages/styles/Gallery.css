@@ -46,7 +46,7 @@
   font-size: 11px;
 } 
 
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 575.99px) {
   .galCards {
     display: flex;
     flex-direction: column;
@@ -54,13 +54,13 @@
   }  
 
   .cards-wrapper { 
-    justify-content: center; 
+    justify-content: center;  
     padding-top: 25px;
     padding-left: 1px;
   } 
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1099.98) {   
+@media only screen and (min-width: 576px) and (max-width: 767.99) {   
 
   .galCards {
     display: flex;
@@ -69,7 +69,7 @@
   } 
 }  
 
-@media only screen and (min-width: 1100px) and (max-width: 1280px) { 
+@media only screen and (min-width: 1100px) and (max-width: 1279.99px) { 
   .galCards { 
     display: grid;
     grid-template-columns: repeat(3, 1fr);
