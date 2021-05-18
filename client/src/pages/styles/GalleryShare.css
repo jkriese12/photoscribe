@@ -48,45 +48,32 @@
 }
 
 
-@media only screen and (max-width: 575.99px) {
+@media only screen and (max-width: 768px) {   
+
   .galCards {
-    display: flex;
-    flex-direction: column;
-    gap: 50px; 
-  }  
-
-  .cards-wrapper { 
-    justify-content: center;
-    padding-top: 25px;
-    padding-left: 1px; 
-  } 
-}
-
-@media only screen and (min-width: 576px) and (max-width: 767.99) {   
-
-  .galleryCards {
     display: flex;
     flex-direction: column;
     gap: 50px;
   } 
 }  
 
-@media only screen and (min-width: 1100px) and (max-width: 1279.99px) { 
-  .galleryCards { 
+@media only screen and (min-width: 1100px) and (max-width: 1280px) { 
+  .galCards { 
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-items: center;
     grid-gap: 50px;
   }  
 }
- 
+
 @media only screen and (min-width: 1280px) { 
-  .galleryCards { 
+  .galCards { 
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     justify-items: center;
     grid-gap: 50px;
   } 
+  
 }
  
 .signUp {
