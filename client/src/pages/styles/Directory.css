@@ -19,16 +19,14 @@
     grid-gap: 20px;
 } 
 
-.nav-links {
+nav-link {
     color: #6c757d;
     padding: 12px; 
-    display: flex; 
-    justify-content: space-around;
     background-color: #e6e6e6;
-    border-bottom: 0.5px solid lightgrey;
+    border-bottom: 0.5px solid lightgrey; 
     width: 100%;
-}
-
+  } 
+  
 .link {
     color: #6c757d;
 } 

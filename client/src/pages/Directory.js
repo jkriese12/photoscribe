@@ -22,12 +22,7 @@ const Directory = () => {
   return (
     <Container>
       <Wrapper className="header-wrapper"> 
-        <Row className="nav-links small">
-          <div className="back-to-work">
-            <Link to="/scribe" className="link">
-              <FaBackward size="1em" color="#6c757d"/> Scribe New Photo
-            </Link>
-          </div>
+        <Row className="nav-link small">
           <Logout />  
         </Row>
         <Row>

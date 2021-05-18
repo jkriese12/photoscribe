@@ -23,7 +23,7 @@ const Email = () => {
             </div> 
             <div className="back-to-work">
               <Link to="/scribe" className="link">
-                <FaBackward size="1em" color="#6c757d" /> Scribe New Photo
+                <FaBackward size="1em" color="#6c757d" /> Scribe Photo
               </Link>
             </div>
             <div className="back-to-work">

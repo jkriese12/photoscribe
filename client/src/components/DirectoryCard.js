@@ -7,19 +7,17 @@ const DirectoryCard = ({ data, posts }) => {
 
   return (
     <div> 
-      <div className="directory-card">
+      <div className="card directory-card">
         <h5 className="card-title">{data}</h5>{" "}
         <img className="card-img-top" src={photo[0].selectedFile} alt="directory" />
         <div className="card-body">
-          <div className="card-button">
-            <Link
-              to={"/gallery/" + data}
-              target="blank"
-              className="btn btn-sm btn-secondary link"
-            >
-              View Gallery
-            </Link>
-          </div>
+          <Link
+            to={"/gallery/" + data}
+            target="_blank"
+            className="btn btn-light"
+          >
+            View Gallery
+          </Link>
         </div>
       </div>
     </div>
