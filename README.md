@@ -74,8 +74,9 @@ No prior installation is required to properly use PhotoScribe. Simply head to th
 
 https://photoscribe.herokuapp.com/
 
-## Contact
+## Contact 
 
+jkriese12@gmail.com  
 crockett.tiff@gmail.com
 
 
