@@ -48,7 +48,25 @@
 }
 
 
-@media only screen and (max-width: 768px) {   
+@media only screen and (max-width: 576px ) { 
+
+  .galleryCards {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  } 
+
+  .galleryText {
+    font-size: 8px;
+  } 
+
+  .cards-wrapper { 
+    justify-content: center;
+    padding-left: 15px;
+  }
+}
+
+@media only screen and (min-width: 577px) and (max-width: 800px) {   
 
   .galleryCards {
     display: flex;
@@ -57,7 +75,8 @@
   } 
 }  
 
-@media only screen and (min-width: 1100px) and (max-width: 1280px) { 
+@media only screen and (min-width: 1100px) and (max-width: 1281px) { 
+  
   .galleryCards { 
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -67,6 +86,7 @@
 }
 
 @media only screen and (min-width: 1280px) { 
+ 
   .galleryCards { 
     display: grid;
     grid-template-columns: repeat(4, 1fr);

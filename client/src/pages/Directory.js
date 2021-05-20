@@ -1,11 +1,9 @@
 import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { getPosts } from "../actions/posts";
 import { useDispatch } from "react-redux";
 import Container from "../components/Container";
 import Row from "../components/Row";
-import { FaBackward } from "react-icons/fa";
 import Logout from "../components/Logout";
 import Wrapper from "../components/Wrapper";
 import DirectoryCard from "../components/DirectoryCard";

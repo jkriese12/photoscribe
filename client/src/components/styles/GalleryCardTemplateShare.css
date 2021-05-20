@@ -24,4 +24,15 @@
 .galleryText {
   font-size: 11px;
   margin-top: -8px;
+} 
+
+@media only screen and (max-width: 578px ) {
+
+  .galleryCard {
+    border: 1px solid lightgrey;
+    height: 122px;
+    width: 270px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    margin: 0 auto;
+  } 
 }

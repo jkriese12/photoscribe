@@ -46,7 +46,7 @@
   font-size: 11px;
 } 
 
-@media only screen and (max-width: 768px) {   
+@media only screen and (max-width: 800px) {   
 
   .galCards {
     display: flex;
