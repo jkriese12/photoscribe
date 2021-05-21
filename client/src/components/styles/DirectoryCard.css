@@ -24,4 +24,8 @@
 .card-title {
   padding-top: 8px; 
   font-size: 18px;
-}  
+}   
+
+.btn {
+  margin-bottom: 10px;
+}
