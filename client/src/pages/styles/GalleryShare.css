@@ -75,7 +75,7 @@
   } 
 }  
 
-@media only screen and (min-width: 1150px) and (max-width: 1279px) { 
+@media only screen and (min-width: 1100px) and (max-width: 1280px) { 
   
   .galleryCards { 
     display: grid;
@@ -85,7 +85,7 @@
   }  
 }
 
-@media only screen and (min-width: 1280px) { 
+@media only screen and (min-width: 1300px) { 
  
   .galleryCards { 
     display: grid;
