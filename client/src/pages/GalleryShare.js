@@ -27,12 +27,7 @@ const GalleryShare = () => {
   return (
     <Container className="shareGallery">
       <Wrapper className="header-wrapper"> 
-      <Row className="nav-links small"> 
-        <div className="back-to-work">
-            <Link to="/directory" target="blank" className="link">
-              View Directory <FaTh size="1em" color="#6c757d" />
-            </Link>
-          </div>
+      <Row className="nav-link small"> 
         <Logout />
       </Row>
         <Row>
